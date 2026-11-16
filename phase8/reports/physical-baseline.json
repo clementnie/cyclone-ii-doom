@@ -1,0 +1,19 @@
+{
+  "source_checkpoint": "35095c6",
+  "physical": true,
+  "cycles": 490705687,
+  "retired": 31416374,
+  "frames": 8,
+  "fetch_stalls": 108911495,
+  "data_stalls": 275976795,
+  "cache_hits": 30397394,
+  "cache_misses": 1018980,
+  "mul_entries": 100853,
+  "div_entries": 8485,
+  "underflows": 0,
+  "fps": 0.8151525661857675,
+  "cpi": 15.619424666895041,
+  "mips": 3.201142235793978,
+  "ceiling_no_data_wait_fps": 1.8628140641642206,
+  "ceiling_no_fetch_or_data_wait_fps": 3.780096764240005
+}

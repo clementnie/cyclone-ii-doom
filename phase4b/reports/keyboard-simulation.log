@@ -1,0 +1,8 @@
+Keyboard stimulus starts
+Keyboard test cycles=10000000 hb=1 pc=0000043c enabled=1 slot=0 keys=0000001
+Second image active: hb=2
+Keyboard test cycles=20000000 hb=2 pc=000004b0 enabled=1 slot=1 keys=1000001
+Diagnostic fallback active: hb=3
+Keyboard test cycles=30000000 hb=3 pc=000004c4 enabled=0 slot=0 keys=1000000
+PASS serialized PS/2 -> CPU firmware -> moved SDRAM rectangle -> RGB; Escape fallback/restore; heartbeat=4
+phase4b/sim/tb_keyboard.sv:29: $finish called at 688640130000 (1ps)

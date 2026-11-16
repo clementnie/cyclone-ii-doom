@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+ 319615	  59716	 244064	 623395	  98323	<checkout>/phase5/artifacts/doom-rv32i.elf

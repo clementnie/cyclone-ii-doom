@@ -1,0 +1,13 @@
+make: Entering directory '<checkout>/phase6'
+python3 build.py
+   text	   data	    bss	    dec	    hex	filename
+ 319723	  59736	 244068	 623527	  983a7	<checkout>/phase6/artifacts/doom-rv32i.elf
+
+ELF: <checkout>/phase6/artifacts/doom-rv32i.elf file bytes: 473972
+python3 verify_elf.py
+PASS executable ELF, zero undefined symbols, 55270 RV32I instruction words; no M/C/F/D/CSR
+llvm-nm -n artifacts/doom-rv32i.elf > build/symbols.txt
+cd .. && python3 phase6/tools/upload.py > phase6/reports/upload-manifest.json
+cd .. && phase6/build/cpu/Vcpu_top phase6/artifacts/doom-rv32i.elf phase6/assets/doom1.wad phase6/build/symbols.txt 10000000000 50 phase6/build/loader.bin phase6/build/upload.hex > phase6/reports/loader-boot.log 2>&1
+cp reports/cpu-boot.json reports/loader-boot.json
+make: Leaving directory '<checkout>/phase6'

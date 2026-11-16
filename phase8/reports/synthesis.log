@@ -1,0 +1,493 @@
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Copyright (C) 1991-2013 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Sat Nov 14 03:37:31 2026
+Info: Command: quartus_map phase8
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/phase8/rtl/phase8_sdram_controller.v
+    Info (12023): Found entity 1: phase8_sdram_controller
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/phase8/rtl/phase8_bus.v
+    Info (12023): Found entity 1: phase8_bus
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/phase8/rtl/phase8_soc.v
+    Info (12023): Found entity 1: phase8_soc
+Info (12021): Found 2 design units, including 2 entities, in source file <checkout>/phase8/rtl/starter_phase8.v
+    Info (12023): Found entity 1: starter_phase8
+    Info (12023): Found entity 2: phase4_pll
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/phase4b/rtl/diagnostic_text.v
+    Info (12023): Found entity 1: diagnostic_text
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/phase2/rtl/onchip_memory.v
+    Info (12023): Found entity 1: onchip_memory
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/phase4/rtl/rv32i_cpu.v
+    Info (12023): Found entity 1: rv32i_cpu
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/phase2/rtl/vga_tiles.v
+    Info (12023): Found entity 1: vga_tiles
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/phase2/rtl/diagnostic_font.v
+    Info (12023): Found entity 1: diagnostic_font
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/rtl/ps2_keyboard_mmio.v
+    Info (12023): Found entity 1: ps2_keyboard_mmio
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/rtl/ps2_receiver.v
+    Info (12023): Found entity 1: ps2_receiver
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/rtl/ps2_scancode_decoder.v
+    Info (12023): Found entity 1: ps2_scancode_decoder
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/phase4b/rtl/framebuffer.v
+    Info (12023): Found entity 1: framebuffer
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/phase8/rtl/phase8_sdram_arbiter.v
+    Info (12023): Found entity 1: phase8_sdram_arbiter
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/phase8/rtl/phase8_mailbox.v
+    Info (12023): Found entity 1: phase8_mailbox
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/phase8/rtl/instruction_cache.v
+    Info (12023): Found entity 1: instruction_cache
+Info (12021): Found 1 design units, including 1 entities, in source file <checkout>/phase8/rtl/performance.v
+    Info (12023): Found entity 1: performance
+Info (12127): Elaborating entity "starter_phase8" for the top level hierarchy
+Info (12128): Elaborating entity "phase4_pll" for hierarchy "phase4_pll:clocks"
+Info (12128): Elaborating entity "altpll" for hierarchy "phase4_pll:clocks|altpll:pll"
+Info (12130): Elaborated megafunction instantiation "phase4_pll:clocks|altpll:pll"
+Info (12133): Instantiated megafunction "phase4_pll:clocks|altpll:pll" with the following parameter:
+    Info (12134): Parameter "inclk0_input_frequency" = "20000"
+    Info (12134): Parameter "operation_mode" = "NORMAL"
+    Info (12134): Parameter "compensate_clock" = "CLK0"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "pll_type" = "AUTO"
+    Info (12134): Parameter "clk0_multiply_by" = "1"
+    Info (12134): Parameter "clk0_divide_by" = "1"
+    Info (12134): Parameter "clk0_phase_shift" = "0"
+    Info (12134): Parameter "clk1_multiply_by" = "1"
+    Info (12134): Parameter "clk1_divide_by" = "1"
+    Info (12134): Parameter "clk1_phase_shift" = "8000"
+    Info (12134): Parameter "port_inclk0" = "PORT_USED"
+    Info (12134): Parameter "port_clk0" = "PORT_USED"
+    Info (12134): Parameter "port_clk1" = "PORT_USED"
+    Info (12134): Parameter "port_locked" = "PORT_USED"
+Info (12128): Elaborating entity "altsource_probe" for hierarchy "altsource_probe:host"
+Info (12130): Elaborated megafunction instantiation "altsource_probe:host"
+Info (12133): Instantiated megafunction "altsource_probe:host" with the following parameter:
+    Info (12134): Parameter "instance_id" = "DOOM6"
+    Info (12134): Parameter "source_width" = "480"
+    Info (12134): Parameter "probe_width" = "96"
+    Info (12134): Parameter "sld_auto_instance_index" = "NO"
+    Info (12134): Parameter "sld_instance_index" = "0"
+    Info (12134): Parameter "source_initial_value" = "0"
+    Info (12134): Parameter "enable_metastability" = "NO"
+Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "altsource_probe:host|altsource_probe_body:altsource_probe_body_inst"
+Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "altsource_probe:host|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst"
+Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "altsource_probe:host|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\instance_id_gen:rom_info_inst"
+Info (12128): Elaborating entity "phase8_soc" for hierarchy "phase8_soc:soc"
+Info (12128): Elaborating entity "instruction_cache" for hierarchy "phase8_soc:soc|instruction_cache:icache"
+Info (12128): Elaborating entity "performance" for hierarchy "phase8_soc:soc|performance:counters"
+Info (12128): Elaborating entity "phase8_sdram_arbiter" for hierarchy "phase8_soc:soc|phase8_sdram_arbiter:arbiter"
+Info (12128): Elaborating entity "phase8_sdram_controller" for hierarchy "phase8_soc:soc|phase8_sdram_controller:external_memory"
+Warning (10230): Verilog HDL assignment warning at phase8_sdram_controller.v(24): truncated value with size 32 to match size of target (15)
+Info (12128): Elaborating entity "rv32i_cpu" for hierarchy "phase8_soc:soc|rv32i_cpu:cpu"
+Warning (10230): Verilog HDL assignment warning at rv32i_cpu.v(123): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at rv32i_cpu.v(171): truncated value with size 32 to match size of target (4)
+Info (10264): Verilog HDL Case Statement information at rv32i_cpu.v(144): all case item expressions in this case statement are onehot
+Info (12128): Elaborating entity "phase8_bus" for hierarchy "phase8_soc:soc|phase8_bus:fabric"
+Info (12128): Elaborating entity "phase8_mailbox" for hierarchy "phase8_soc:soc|phase8_bus:fabric|phase8_mailbox:loader_io"
+Warning (10270): Verilog HDL Case Statement warning at phase8_mailbox.v(23): incomplete case statement has no default case item
+Info (12128): Elaborating entity "onchip_memory" for hierarchy "phase8_soc:soc|phase8_bus:fabric|onchip_memory:memory"
+Warning (10030): Net "rom.data_a" at onchip_memory.v(7) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "rom.waddr_a" at onchip_memory.v(7) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "rom.we_a" at onchip_memory.v(7) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "ps2_keyboard_mmio" for hierarchy "phase8_soc:soc|phase8_bus:fabric|ps2_keyboard_mmio:keyboard"
+Info (10264): Verilog HDL Case Statement information at ps2_keyboard_mmio.v(87): all case item expressions in this case statement are onehot
+Info (12128): Elaborating entity "ps2_receiver" for hierarchy "phase8_soc:soc|phase8_bus:fabric|ps2_keyboard_mmio:keyboard|ps2_receiver:rx"
+Info (12128): Elaborating entity "ps2_scancode_decoder" for hierarchy "phase8_soc:soc|phase8_bus:fabric|ps2_keyboard_mmio:keyboard|ps2_scancode_decoder:decoder"
+Info (12128): Elaborating entity "framebuffer" for hierarchy "phase8_soc:soc|phase8_bus:fabric|framebuffer:pixels"
+Warning (10230): Verilog HDL assignment warning at framebuffer.v(22): truncated value with size 10 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at framebuffer.v(30): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "vga_tiles" for hierarchy "phase8_soc:soc|phase8_bus:fabric|vga_tiles:video"
+Info (12128): Elaborating entity "diagnostic_text" for hierarchy "phase8_soc:soc|phase8_bus:fabric|vga_tiles:video|diagnostic_text:dashboard"
+Warning (10762): Verilog HDL Case Statement warning at diagnostic_text.v(59): can't check case statement for completeness because the case expression has too many possible states
+Info (10264): Verilog HDL Case Statement information at diagnostic_text.v(59): all case item expressions in this case statement are onehot
+Warning (10230): Verilog HDL assignment warning at diagnostic_text.v(73): truncated value with size 320 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at diagnostic_text.v(76): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "diagnostic_font" for hierarchy "phase8_soc:soc|phase8_bus:fabric|vga_tiles:video|diagnostic_text:dashboard|diagnostic_font:font"
+Warning (10030): Net "font.data_a" at diagnostic_font.v(5) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "font.waddr_a" at diagnostic_font.v(5) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "font.we_a" at diagnostic_font.v(5) has no driver or initial value, using a default initial value '0'
+Warning (276020): Inferred RAM node "phase8_soc:soc|phase8_bus:fabric|ps2_keyboard_mmio:keyboard|fifo_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (276020): Inferred RAM node "phase8_soc:soc|phase8_bus:fabric|framebuffer:pixels|line0_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (276020): Inferred RAM node "phase8_soc:soc|phase8_bus:fabric|framebuffer:pixels|line1_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "phase8_soc:soc|phase8_sdram_controller:external_memory|open_row" is uninferred due to inappropriate RAM size
+Info (19000): Inferred 13 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "phase8_soc:soc|instruction_cache:icache|tags_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 11
+        Info (286033): Parameter WIDTHAD_A set to 10
+        Info (286033): Parameter NUMWORDS_A set to 1024
+        Info (286033): Parameter WIDTH_B set to 11
+        Info (286033): Parameter WIDTHAD_B set to 10
+        Info (286033): Parameter NUMWORDS_B set to 1024
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "phase8_soc:soc|phase8_bus:fabric|vga_tiles:video|tiles_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 11
+        Info (286033): Parameter NUMWORDS_A set to 2048
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 11
+        Info (286033): Parameter NUMWORDS_B set to 2048
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "phase8_soc:soc|phase8_bus:fabric|vga_tiles:video|diagnostic_text:dashboard|diagnostic_font:font|font_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 9
+        Info (286033): Parameter NUMWORDS_A set to 512
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/phase8.ram0_diagnostic_font_b51d1ec0.hdl.mif
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "phase8_soc:soc|phase8_bus:fabric|framebuffer:pixels|palette_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 12
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter WIDTH_B set to 12
+        Info (286033): Parameter WIDTHAD_B set to 8
+        Info (286033): Parameter NUMWORDS_B set to 256
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "phase8_soc:soc|instruction_cache:icache|data_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 10
+        Info (286033): Parameter NUMWORDS_A set to 1024
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 10
+        Info (286033): Parameter NUMWORDS_B set to 1024
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "phase8_soc:soc|phase8_bus:fabric|ps2_keyboard_mmio:keyboard|fifo_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 4
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 4
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "phase8_soc:soc|phase8_bus:fabric|framebuffer:pixels|line0_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 7
+        Info (286033): Parameter NUMWORDS_A set to 80
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 7
+        Info (286033): Parameter NUMWORDS_B set to 80
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "phase8_soc:soc|phase8_bus:fabric|framebuffer:pixels|line1_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 7
+        Info (286033): Parameter NUMWORDS_A set to 80
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 7
+        Info (286033): Parameter NUMWORDS_B set to 80
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "phase8_soc:soc|phase8_bus:fabric|onchip_memory:memory|rom_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 11
+        Info (286033): Parameter NUMWORDS_A set to 2048
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/phase8.ram0_onchip_memory_93db947.hdl.mif
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "phase8_soc:soc|phase8_bus:fabric|onchip_memory:memory|ram0_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 11
+        Info (286033): Parameter NUMWORDS_A set to 2048
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 11
+        Info (286033): Parameter NUMWORDS_B set to 2048
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "phase8_soc:soc|phase8_bus:fabric|onchip_memory:memory|ram1_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 11
+        Info (286033): Parameter NUMWORDS_A set to 2048
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 11
+        Info (286033): Parameter NUMWORDS_B set to 2048
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "phase8_soc:soc|phase8_bus:fabric|onchip_memory:memory|ram3_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 11
+        Info (286033): Parameter NUMWORDS_A set to 2048
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 11
+        Info (286033): Parameter NUMWORDS_B set to 2048
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "phase8_soc:soc|phase8_bus:fabric|onchip_memory:memory|ram2_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 11
+        Info (286033): Parameter NUMWORDS_A set to 2048
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 11
+        Info (286033): Parameter NUMWORDS_B set to 2048
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+Info (12130): Elaborated megafunction instantiation "phase8_soc:soc|instruction_cache:icache|altsyncram:tags_rtl_0"
+Info (12133): Instantiated megafunction "phase8_soc:soc|instruction_cache:icache|altsyncram:tags_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "11"
+    Info (12134): Parameter "WIDTHAD_A" = "10"
+    Info (12134): Parameter "NUMWORDS_A" = "1024"
+    Info (12134): Parameter "WIDTH_B" = "11"
+    Info (12134): Parameter "WIDTHAD_B" = "10"
+    Info (12134): Parameter "NUMWORDS_B" = "1024"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_i0h1.tdf
+    Info (12023): Found entity 1: altsyncram_i0h1
+Info (12130): Elaborated megafunction instantiation "phase8_soc:soc|phase8_bus:fabric|vga_tiles:video|altsyncram:tiles_rtl_0"
+Info (12133): Instantiated megafunction "phase8_soc:soc|phase8_bus:fabric|vga_tiles:video|altsyncram:tiles_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "11"
+    Info (12134): Parameter "NUMWORDS_A" = "2048"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "11"
+    Info (12134): Parameter "NUMWORDS_B" = "2048"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_eug1.tdf
+    Info (12023): Found entity 1: altsyncram_eug1
+Info (12130): Elaborated megafunction instantiation "phase8_soc:soc|phase8_bus:fabric|vga_tiles:video|diagnostic_text:dashboard|diagnostic_font:font|altsyncram:font_rtl_0"
+Info (12133): Instantiated megafunction "phase8_soc:soc|phase8_bus:fabric|vga_tiles:video|diagnostic_text:dashboard|diagnostic_font:font|altsyncram:font_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "9"
+    Info (12134): Parameter "NUMWORDS_A" = "512"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/phase8.ram0_diagnostic_font_b51d1ec0.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9g71.tdf
+    Info (12023): Found entity 1: altsyncram_9g71
+Info (12130): Elaborated megafunction instantiation "phase8_soc:soc|phase8_bus:fabric|framebuffer:pixels|altsyncram:palette_rtl_0"
+Info (12133): Instantiated megafunction "phase8_soc:soc|phase8_bus:fabric|framebuffer:pixels|altsyncram:palette_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "12"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "WIDTH_B" = "12"
+    Info (12134): Parameter "WIDTHAD_B" = "8"
+    Info (12134): Parameter "NUMWORDS_B" = "256"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_erg1.tdf
+    Info (12023): Found entity 1: altsyncram_erg1
+Info (12130): Elaborated megafunction instantiation "phase8_soc:soc|instruction_cache:icache|altsyncram:data_rtl_0"
+Info (12133): Instantiated megafunction "phase8_soc:soc|instruction_cache:icache|altsyncram:data_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "10"
+    Info (12134): Parameter "NUMWORDS_A" = "1024"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "10"
+    Info (12134): Parameter "NUMWORDS_B" = "1024"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_o0h1.tdf
+    Info (12023): Found entity 1: altsyncram_o0h1
+Info (12130): Elaborated megafunction instantiation "phase8_soc:soc|phase8_bus:fabric|ps2_keyboard_mmio:keyboard|altsyncram:fifo_rtl_0"
+Info (12133): Instantiated megafunction "phase8_soc:soc|phase8_bus:fabric|ps2_keyboard_mmio:keyboard|altsyncram:fifo_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "4"
+    Info (12134): Parameter "WIDTHAD_A" = "5"
+    Info (12134): Parameter "NUMWORDS_A" = "32"
+    Info (12134): Parameter "WIDTH_B" = "4"
+    Info (12134): Parameter "WIDTHAD_B" = "5"
+    Info (12134): Parameter "NUMWORDS_B" = "32"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_25c1.tdf
+    Info (12023): Found entity 1: altsyncram_25c1
+Info (12130): Elaborated megafunction instantiation "phase8_soc:soc|phase8_bus:fabric|framebuffer:pixels|altsyncram:line0_rtl_0"
+Info (12133): Instantiated megafunction "phase8_soc:soc|phase8_bus:fabric|framebuffer:pixels|altsyncram:line0_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "7"
+    Info (12134): Parameter "NUMWORDS_A" = "80"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "7"
+    Info (12134): Parameter "NUMWORDS_B" = "80"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_6og1.tdf
+    Info (12023): Found entity 1: altsyncram_6og1
+Info (12130): Elaborated megafunction instantiation "phase8_soc:soc|phase8_bus:fabric|onchip_memory:memory|altsyncram:rom_rtl_0"
+Info (12133): Instantiated megafunction "phase8_soc:soc|phase8_bus:fabric|onchip_memory:memory|altsyncram:rom_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "11"
+    Info (12134): Parameter "NUMWORDS_A" = "2048"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/phase8.ram0_onchip_memory_93db947.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ka71.tdf
+    Info (12023): Found entity 1: altsyncram_ka71
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "DRAM_CKE" is stuck at VCC
+    Warning (13410): Pin "DRAM_CS_N" is stuck at GND
+Info (17049): 14 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "phase8_soc:soc|phase8_sdram_arbiter:arbiter|addr[29]~54"
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
+Info (144001): Generated suppressed messages file <checkout>/phase8/quartus/output_files/phase8.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 15823 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 38 output pins
+    Info (21060): Implemented 16 bidirectional pins
+    Info (21061): Implemented 15557 logic cells
+    Info (21064): Implemented 203 RAM segments
+    Info (21065): Implemented 1 PLLs
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 424 megabytes
+    Info: Processing ended: Sat Nov 14 03:38:32 2026
+    Info: Elapsed time: 00:01:01
+    Info: Total CPU time (on all processors): 00:01:01

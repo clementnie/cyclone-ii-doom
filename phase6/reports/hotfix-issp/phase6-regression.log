@@ -1,0 +1,20 @@
+make: Entering directory '<checkout>/phase6'
+python3 build.py
+   text	   data	    bss	    dec	    hex	filename
+ 319723	  59736	 244068	 623527	  983a7	<checkout>/phase6/artifacts/doom-rv32i.elf
+
+ELF: <checkout>/phase6/artifacts/doom-rv32i.elf file bytes: 473972
+python3 verify_elf.py
+PASS executable ELF, zero undefined symbols, 55270 RV32I instruction words; no M/C/F/D/CSR
+llvm-nm -n artifacts/doom-rv32i.elf > build/symbols.txt
+mkdir -p build
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -s tb_mailbox -o build/tb_mailbox sim/tb_mailbox.sv rtl/jtag_mailbox.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_mailbox > reports/mailbox-test.log
+mkdir -p reports/hotfix-issp
+cd .. && tclsh phase6/tools/test_issp_discovery.tcl > phase6/reports/hotfix-issp/discovery-tests.log 2>&1
+cd .. && python3 phase6/tools/upload.py > phase6/reports/upload-manifest.json
+python3 tools/test_upload.py > reports/upload-tests.log 2>&1
+python3 tools/test_loader.py
+PASS 10 adversarial loader cases on actual CPU RTL/ROM firmware
+cd .. && tclsh phase6/tools/test_upload_tcl.tcl > phase6/reports/upload-tcl-test.log 2>&1
+make: Leaving directory '<checkout>/phase6'

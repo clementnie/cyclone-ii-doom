@@ -1,0 +1,30 @@
+framebuffer
+PASS loader status e6000003; framebuffer/stack guards intact
+cycles=0 pc=0 retired=0
+stack
+PASS loader status e6000003; framebuffer/stack guards intact
+cycles=0 pc=0 retired=0
+wrap
+PASS loader status e6000003; framebuffer/stack guards intact
+cycles=0 pc=0 retired=0
+truncated
+PASS loader status e6000002; framebuffer/stack guards intact
+cycles=0 pc=0 retired=0
+crc
+PASS loader status e6000007; framebuffer/stack guards intact
+cycles=0 pc=0 retired=0
+incomplete
+PASS loader status e6000009; framebuffer/stack guards intact
+cycles=0 pc=0 retired=0
+end_before_data
+PASS loader status e6000006; framebuffer/stack guards intact
+cycles=0 pc=0 retired=0
+overlap
+PASS loader status e6000004; framebuffer/stack guards intact
+cycles=0 pc=0 retired=0
+timeout
+PASS ROM inactivity timeout invalidates session/descriptor; simulated counter x256
+cycles=0 pc=0 retired=0
+reset_recovery
+PASS loader status d6000001; framebuffer/stack guards intact
+cycles=0 pc=0 retired=0

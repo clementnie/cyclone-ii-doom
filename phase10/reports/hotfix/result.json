@@ -1,0 +1,34 @@
+{
+  "candidate": "phase10/candidates/doom_chromatix_160x100_block32_crcfix_DA000001_20261114T212632Z.sof",
+  "sha256": "1eafc1a39f34c344912713b1fd0044b678f4a082069c6578385a67b3c0545178",
+  "source_snapshot_sha256": "a140135e183b878e4cebbc10f5a101341e6ebf82813edb1658f1885571af0901",
+  "controller_sha256": "ac87a1460e60cd9a1c6d94b9dcfca8f791eea56881937c4cc5360a978db2b949",
+  "original_error": "END 040020f5 E6000007; physical RESULT 873fb4a2",
+  "diagnosis": "Each 32-byte block reads h1..h15,h15 instead of h0..h15 in continuous read path.",
+  "fix": "Phase 9 isolated BL1 WAIT/CAPTURE cadence within existing blocks; refresh reservation 80 clocks.",
+  "integrated_upload": {
+    "pass": true,
+    "packets": 94868,
+    "crc32": [
+      "c5938c86",
+      "10c448be",
+      "162b696a"
+    ],
+    "cycles": 1123525122,
+    "exec_ack": true
+  },
+  "quartus": {
+    "synthesis": true,
+    "fitter": true,
+    "timing": true,
+    "assembler": true,
+    "logic_elements": 13529,
+    "m4ks": 52,
+    "worst_setup_ns": 2.069,
+    "worst_hold_ns": 0.215
+  },
+  "fpga_programmed_by_agent": false,
+  "corrected_physical_upload_verified": false,
+  "historical_engine_boot_repeated": false,
+  "preserved_release_artifact_hashes": 41
+}

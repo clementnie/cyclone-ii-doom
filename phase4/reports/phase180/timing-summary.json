@@ -1,0 +1,14 @@
+{
+  "slow_setup_ns": 0.069,
+  "slow_hold_ns": 0.445,
+  "fast_setup_ns": 1.559,
+  "fast_hold_ns": 0.215,
+  "slow_sdram_in_setup_ns": 0.069,
+  "slow_sdram_in_hold_ns": 14.296,
+  "slow_sdram_out_setup_ns": 3.595,
+  "slow_sdram_out_hold_ns": 10.284,
+  "fast_sdram_in_setup_ns": 1.559,
+  "fast_sdram_in_hold_ns": 12.909,
+  "fast_sdram_out_setup_ns": 4.983,
+  "fast_sdram_out_hold_ns": 9.81
+}

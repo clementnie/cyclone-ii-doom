@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "build_id": "D4B00001",
+  "state": "awaiting_physical_framebuffer_test",
+  "baseline": {
+    "source_checkpoint": "1757c49",
+    "phase4b_start_checkpoint": "2d5c07e",
+    "user_confirmed_sdram_hardware": true,
+    "last_address": "0x207FFFFC",
+    "errors": 0,
+    "heartbeat_continues": true,
+    "vga_stable": true
+  },
+  "framebuffer": {
+    "width": 320,
+    "height": 200,
+    "format": "INDEX8",
+    "bytes_per_slot": 64000,
+    "slots": [
+      "0x20000000",
+      "0x20010000"
+    ],
+    "output": "640x400 centered in 640x480",
+    "palette": "256 x RGB444",
+    "line_buffers": 2,
+    "hardware_verified": false
+  },
+  "implemented_and_tested": [
+    "CPU firmware -> SDRAM -> indexed line buffers -> palette -> registered RGB",
+    "three full VGA reference frames, 1260000 pixels",
+    "2100000 scanout unit reference pixels",
+    "vblank buffer selection and forced late/error DMA recovery",
+    "15 MMIO access/fault/served checks",
+    "weighted SDRAM arbitration and CPU/video contention",
+    "serialized PS/2 Up -> CPU -> moved cyan rectangle -> RGB",
+    "Escape diagnostic fallback/restore",
+    "original RTL regression and SDRAM tests",
+    "linked DG platform-test ELF -> CPU/SDRAM/VGA, 420000 reference pixels",
+    "native 32-bit integer helpers and bounded host image packer"
+  ],
+  "simulation_measurements": {
+    "cpu_image_frames": 3,
+    "pixels_compared_cpu_image": 1260000,
+    "pixels_compared_dg_platform": 420000,
+    "cpu_image_underflows": 0,
+    "dg_platform_underflows": 0,
+    "scanout_under_contention_MB_s": 3.809524,
+    "concurrent_CPU_word_store_MB_s": 2.855873,
+    "combined_useful_MB_s": 6.665397,
+    "actual_controller_display_request_max_cycles": 49,
+    "saturated_arbiter_model_CPU_display_max_cycles": [
+      136,
+      54
+    ],
+    "physical_bandwidth_measured": false
+  },
+  "compiled_not_physically_verified": {
+    "candidate": "candidates/cyclone_ii_framebuffer_D4B00001.sof",
+    "sha256": "a3f21f0e52cbaf7ce7cfb301ce109f7d57212470f3c37b7ae5521a43b02b7dfe",
+    "normal_quartus_full_flow": "pass",
+    "hardware_hook_preserved": true,
+    "pins_and_timing_constraints_preserved": true,
+    "logic_elements": 6360,
+    "m4k": 41,
+    "m4k_available": 52,
+    "pll": 1,
+    "timing_ns": {
+      "slow_setup_ns": 2.069,
+      "slow_hold_ns": 0.445,
+      "fast_setup_ns": 3.559,
+      "fast_hold_ns": 0.215,
+      "slow_sdram_in_setup_ns": 2.069,
+      "slow_sdram_in_hold_ns": 12.296,
+      "slow_sdram_out_setup_ns": 3.257,
+      "slow_sdram_out_hold_ns": 12.284,
+      "fast_sdram_in_setup_ns": 3.559,
+      "fast_sdram_in_hold_ns": 10.909,
+      "fast_sdram_out_setup_ns": 3.721,
+      "fast_sdram_out_hold_ns": 11.81
+    },
+    "unconstrained_data_paths": 0,
+    "clock_output_UCP_note": "DRAM_CLK is the generated reference, not a data endpoint; no false path added"
+  },
+  "doom": {
+    "selected_engine_platform_units_compiled": 81,
+    "abi": "RV32I ILP32 soft float",
+    "relocatable_object_bytes": {
+      "text": 325554,
+      "data": 60028,
+      "bss": 243709
+    },
+    "minimal_platform_elf_bytes": {
+      "text": 1583,
+      "data": 4,
+      "bss": 65040
+    },
+    "minimal_platform_cpu_simulation": "pass",
+    "full_engine_executable_linked": false,
+    "engine_launched": false,
+    "wad_imported": false,
+    "physical_playable": false,
+    "blockers": [
+      "libc allocation, strings, formatted IO and file API implementations",
+      "compiler-rt soft-float and 64-bit helpers",
+      "JTAG upload mailbox and host transport (protocol/packer only)",
+      "authorized WAD and measured heap/zone/stack fit",
+      "Enter key decoding for menus",
+      "palette-update deadline when code executes from uncached SDRAM"
+    ]
+  },
+  "next_action": "User manually configures candidate and reports photo, F/H progression, U count, arrow/Escape/reset behavior and VGA stability per HARDWARE_TEST.md."
+}

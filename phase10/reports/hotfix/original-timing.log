@@ -1,0 +1,123 @@
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Copyright (C) 1991-2013 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Sat Nov 14 16:01:09 2026
+Info: Command: quartus_sta -t timing.tcl
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (332164): Evaluating HDL-embedded SDC commands
+    Info (332165): Entity sld_jtag_hub
+        Info (332166): create_clock -name altera_reserved_tck [get_ports {altera_reserved_tck}] -period 10MHz   
+        Info (332166): set_clock_groups -asynchronous -group {altera_reserved_tck}
+Info (332104): Reading SDC File: 'phase10.sdc'
+Info (332110): Deriving PLL clocks
+    Info (332110): create_generated_clock -source {clocks|pll|pll|inclk[0]} -duty_cycle 50.00 -name {clocks|pll|pll|clk[0]} {clocks|pll|pll|clk[0]}
+    Info (332110): create_generated_clock -source {clocks|pll|pll|inclk[0]} -phase 144.00 -duty_cycle 50.00 -name {clocks|pll|pll|clk[1]} {clocks|pll|pll|clk[1]}
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info (332115): Report Timing: Found 16 setup paths (0 violated).  Worst case slack is 2.069
+    Info (332115): -from [get_ports {DRAM_DQ[*]}]
+    Info (332115): -setup
+    Info (332115): -npaths 16
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/slow-sdram-in-setup.txt}
+Info (332115): Report Timing: Found 32 setup paths (0 violated).  Worst case slack is 3.257
+    Info (332115): -to [get_ports {DRAM_DQ[*] DRAM_ADDR[*] DRAM_BA[*] DRAM_DQM[*] DRAM_RAS_N DRAM_CAS_N DRAM_WE_N}]
+    Info (332115): -setup
+    Info (332115): -npaths 32
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/slow-sdram-out-setup.txt}
+Info (332115): Report Timing: Found 16 hold paths (0 violated).  Worst case slack is 12.296
+    Info (332115): -from [get_ports {DRAM_DQ[*]}]
+    Info (332115): -hold
+    Info (332115): -npaths 16
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/slow-sdram-in-hold.txt}
+Info (332115): Report Timing: Found 32 hold paths (0 violated).  Worst case slack is 12.284
+    Info (332115): -to [get_ports {DRAM_DQ[*] DRAM_ADDR[*] DRAM_BA[*] DRAM_DQM[*] DRAM_RAS_N DRAM_CAS_N DRAM_WE_N}]
+    Info (332115): -hold
+    Info (332115): -npaths 32
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/slow-sdram-out-hold.txt}
+Info (332115): Report Timing: Found 20 setup paths (0 violated).  Worst case slack is 2.069
+    Info (332115): -setup
+    Info (332115): -npaths 20
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/slow-setup.txt}
+Info (332115): Report Timing: Found 20 hold paths (0 violated).  Worst case slack is 0.445
+    Info (332115): -hold
+    Info (332115): -npaths 20
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/slow-hold.txt}
+Info (332115): Report Timing: Found 20 recovery paths (0 violated).  Worst case slack is 47.774
+    Info (332115): -recovery
+    Info (332115): -npaths 20
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/slow-recovery.txt}
+Info (332115): Report Timing: Found 20 removal paths (0 violated).  Worst case slack is 1.406
+    Info (332115): -removal
+    Info (332115): -npaths 20
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/slow-removal.txt}
+Info (332115): Report Timing: Found 16 setup paths (0 violated).  Worst case slack is 3.559
+    Info (332115): -from [get_ports {DRAM_DQ[*]}]
+    Info (332115): -setup
+    Info (332115): -npaths 16
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/fast-sdram-in-setup.txt}
+Info (332115): Report Timing: Found 32 setup paths (0 violated).  Worst case slack is 3.721
+    Info (332115): -to [get_ports {DRAM_DQ[*] DRAM_ADDR[*] DRAM_BA[*] DRAM_DQM[*] DRAM_RAS_N DRAM_CAS_N DRAM_WE_N}]
+    Info (332115): -setup
+    Info (332115): -npaths 32
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/fast-sdram-out-setup.txt}
+Info (332115): Report Timing: Found 16 hold paths (0 violated).  Worst case slack is 10.909
+    Info (332115): -from [get_ports {DRAM_DQ[*]}]
+    Info (332115): -hold
+    Info (332115): -npaths 16
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/fast-sdram-in-hold.txt}
+Info (332115): Report Timing: Found 32 hold paths (0 violated).  Worst case slack is 11.810
+    Info (332115): -to [get_ports {DRAM_DQ[*] DRAM_ADDR[*] DRAM_BA[*] DRAM_DQM[*] DRAM_RAS_N DRAM_CAS_N DRAM_WE_N}]
+    Info (332115): -hold
+    Info (332115): -npaths 32
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/fast-sdram-out-hold.txt}
+Info (332115): Report Timing: Found 20 setup paths (0 violated).  Worst case slack is 3.559
+    Info (332115): -setup
+    Info (332115): -npaths 20
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/fast-setup.txt}
+Info (332115): Report Timing: Found 20 hold paths (0 violated).  Worst case slack is 0.215
+    Info (332115): -hold
+    Info (332115): -npaths 20
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/fast-hold.txt}
+Info (332115): Report Timing: Found 20 recovery paths (0 violated).  Worst case slack is 48.869
+    Info (332115): -recovery
+    Info (332115): -npaths 20
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/fast-recovery.txt}
+Info (332115): Report Timing: Found 20 removal paths (0 violated).  Worst case slack is 0.666
+    Info (332115): -removal
+    Info (332115): -npaths 20
+    Info (332115): -detail full_path
+    Info (332115): -file {../reports/fast-removal.txt}
+Info (23030): Evaluation of Tcl script timing.tcl was successful
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 425 megabytes
+    Info: Processing ended: Sat Nov 14 16:01:11 2026
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03

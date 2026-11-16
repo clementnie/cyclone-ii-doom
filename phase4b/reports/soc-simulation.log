@@ -1,0 +1,6 @@
+make: Entering directory '<checkout>/phase4b'
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_framebuffer_soc -o build/tb_soc sim/tb_framebuffer_soc.sv ../phase4/sim/sdram_model.sv rtl/phase4b_soc.v rtl/phase4b_bus.v rtl/framebuffer.v rtl/sdram_arbiter.v rtl/diagnostic_text.v ../phase4/rtl/sdram_controller.v ../phase4/rtl/rv32i_cpu.v ../phase2/rtl/onchip_memory.v ../phase2/rtl/vga_tiles.v ../phase2/rtl/diagnostic_font.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_soc
+PASS CPU -> SDRAM -> palette -> VGA: 3 complete frames, 1260000 pixels; underflows=0; CPU grants=35984 VGA=48000 max wait=49 cycles
+sim/tb_framebuffer_soc.sv:61: $finish called at 168000131000 (1ps)
+make: Leaving directory '<checkout>/phase4b'

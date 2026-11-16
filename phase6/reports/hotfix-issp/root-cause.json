@@ -1,0 +1,16 @@
+{
+  "vendor_file": "<local-path>",
+  "vendor_sha256": "0b56148e61cc59fccaceb9330afba69d7fd63c654216620c4076e1930f906c8f",
+  "identity_length_definition_line": 621,
+  "serializer_lines": [
+    812,
+    828
+  ],
+  "logical_identity": "DOOM6",
+  "serialized_identity": "OOM6",
+  "physical_raw_result": "{0 480 96 OOM6}",
+  "quartus": "13.0.1 SP1, 32-bit",
+  "tcl": "8.5.5",
+  "no_source_probe_session_opened": true,
+  "no_source_data_written": true
+}

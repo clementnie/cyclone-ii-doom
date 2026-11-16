@@ -1,0 +1,1 @@
+PASS: D1060001 SHA256, immutable baseline, 57 unique reference-board pins

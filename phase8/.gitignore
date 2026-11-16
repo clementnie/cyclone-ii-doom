@@ -1,0 +1,8 @@
+/build/
+/quartus/db/
+/quartus/incremental_db/
+/quartus/output_files/
+/quartus/*.qws
+/artifacts/*.ppm
+/artifacts/*.png
+__pycache__/

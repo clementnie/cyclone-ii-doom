@@ -1,0 +1,2 @@
+PASS CPU: 507 retirement states, all 32 registers and PC, random bus stalls
+<checkout>/phase2/sim/tb_cpu.sv:52: $finish called at 97911000 (1ps)

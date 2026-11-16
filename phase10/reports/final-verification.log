@@ -1,0 +1,36 @@
+PASS optimized memcpy/memset: all source/destination alignments, 0..129 byte lengths and surrounding guards
+
+PASS renderer: 1080 actual/oracle column, translated sprite and span comparisons at 100/120/200 rows, shifted view windows and nearest-row fuzz; FixedDiv 1000000 edge/random pairs
+
+PASS UI patches: 90 patch/flipped/translucent cases against original, odd origins, HUD/menu positions; auxiliary buffers complete
+
+PASS CPU: 507 retirement states, all 32 registers and PC, random bus stalls
+<checkout>/phase2/sim/tb_cpu.sv:52: $finish called at 97911000 (1ps)
+PASS traps: 16 cases
+<checkout>/phase10/sim/tb_traps.sv:48: $finish called at 3920000 (1ps)
+PASS cache: hits/misses, conflicts, coherent stores, reset, data/MMIO bypass, errors not cached, backpressure
+<checkout>/phase10/sim/tb_cache.sv:59: $finish called at 25200000 (1ps)
+PASS RV32M: 1024 directed/random MUL/MULH/MULHSU/MULHU/DIV/DIVU/REM/REMU, zero divisors and signed overflow
+<checkout>/phase10/sim/tb_m.sv:28: $finish called at 829440000 (1ps)
+BENCH OPEN_PAGE=          1 mixed_cycles=     246818 accesses=      16109 sequential_cycles=       9924 sequential_requests=       2048
+Normal request max latency: 36 cycles
+PASS SDRAM randomized lanes, banks, rows, bounds, refresh, reset; max latency incl init=10067
+<checkout>/phase10/sim/tb_sdram.sv:58: $finish called at 6271411000 (1ps)
+PASS VGA mode           0, 420000 pixel periods, packed stride and 31-cycle DMA backpressure
+PASS VGA mode           1, 420000 pixel periods, packed stride and 31-cycle DMA backpressure
+PASS VGA mode           2, 420000 pixel periods, packed stride and 31-cycle DMA backpressure
+PASS VGA mode           3, 420000 pixel periods, packed stride and 31-cycle DMA backpressure
+- <checkout>/phase10/sim/tb_video_modes.sv:42: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01
+- Verilator: $finish at 134ms; walltime 2.733 s; speed 49.185 ms/s
+- Verilator: cpu 2.723 s on 1 threads; allocated 4 MB
+
+PASS CPU -> SDRAM -> palette -> VGA: 3 complete frames, 1260000 pixels; underflows=0; CPU grants=30939 VGA=48000 max wait=31 cycles
+- <checkout>/phase10/build/tb_framebuffer_soc-final.sv:61: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01
+- Verilator: $finish at 252ms; walltime 12.088 s; speed 20.848 ms/s
+- Verilator: cpu 12.045 s on 1 threads; allocated 12 MB
+
+<checkout>/phase10/build/keyboard.bin: 1752 load bytes; ROM padded to 8192 bytes
+PASS timed keyboard
+PASS tb_mmio

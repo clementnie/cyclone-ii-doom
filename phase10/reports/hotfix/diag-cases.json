@@ -1,0 +1,254 @@
+[
+  {
+    "end": 4,
+    "base": "0x20020000",
+    "length": 4,
+    "crc": "928C776A"
+  },
+  {
+    "end": 8,
+    "base": "0x20020000",
+    "length": 8,
+    "crc": "C81E5556"
+  },
+  {
+    "end": 12,
+    "base": "0x20020000",
+    "length": 12,
+    "crc": "C2834298"
+  },
+  {
+    "end": 16,
+    "base": "0x20020000",
+    "length": 16,
+    "crc": "B800C4B6"
+  },
+  {
+    "end": 20,
+    "base": "0x20020000",
+    "length": 28,
+    "crc": "C35FE263"
+  },
+  {
+    "end": 24,
+    "base": "0x20020000",
+    "length": 32,
+    "crc": "13D6E8C3"
+  },
+  {
+    "end": 28,
+    "base": "0x20020000",
+    "length": 36,
+    "crc": "D4D9FA7C"
+  },
+  {
+    "end": 32,
+    "base": "0x20020000",
+    "length": 52,
+    "crc": "0995CE2F"
+  },
+  {
+    "end": 37,
+    "base": "0x20020000",
+    "length": 64,
+    "crc": "D5CDA253"
+  },
+  {
+    "end": 43,
+    "base": "0x20020000",
+    "length": 128,
+    "crc": "F5EED1D4"
+  },
+  {
+    "end": 56,
+    "base": "0x20020000",
+    "length": 512,
+    "crc": "B8CE8D07"
+  },
+  {
+    "end": 60,
+    "base": "0x20020020",
+    "length": 4,
+    "crc": "928C776A"
+  },
+  {
+    "end": 64,
+    "base": "0x20020020",
+    "length": 8,
+    "crc": "C81E5556"
+  },
+  {
+    "end": 68,
+    "base": "0x20020020",
+    "length": 12,
+    "crc": "C2834298"
+  },
+  {
+    "end": 72,
+    "base": "0x20020020",
+    "length": 16,
+    "crc": "B800C4B6"
+  },
+  {
+    "end": 76,
+    "base": "0x20020020",
+    "length": 28,
+    "crc": "C35FE263"
+  },
+  {
+    "end": 80,
+    "base": "0x20020020",
+    "length": 32,
+    "crc": "13D6E8C3"
+  },
+  {
+    "end": 84,
+    "base": "0x20020020",
+    "length": 36,
+    "crc": "D4D9FA7C"
+  },
+  {
+    "end": 88,
+    "base": "0x20020020",
+    "length": 52,
+    "crc": "0995CE2F"
+  },
+  {
+    "end": 93,
+    "base": "0x20020020",
+    "length": 64,
+    "crc": "D5CDA253"
+  },
+  {
+    "end": 99,
+    "base": "0x20020020",
+    "length": 128,
+    "crc": "F5EED1D4"
+  },
+  {
+    "end": 112,
+    "base": "0x20020020",
+    "length": 512,
+    "crc": "B8CE8D07"
+  },
+  {
+    "end": 116,
+    "base": "0x2008b100",
+    "length": 4,
+    "crc": "928C776A"
+  },
+  {
+    "end": 120,
+    "base": "0x2008b100",
+    "length": 8,
+    "crc": "C81E5556"
+  },
+  {
+    "end": 124,
+    "base": "0x2008b100",
+    "length": 12,
+    "crc": "C2834298"
+  },
+  {
+    "end": 128,
+    "base": "0x2008b100",
+    "length": 16,
+    "crc": "B800C4B6"
+  },
+  {
+    "end": 132,
+    "base": "0x2008b100",
+    "length": 28,
+    "crc": "C35FE263"
+  },
+  {
+    "end": 136,
+    "base": "0x2008b100",
+    "length": 32,
+    "crc": "13D6E8C3"
+  },
+  {
+    "end": 140,
+    "base": "0x2008b100",
+    "length": 36,
+    "crc": "D4D9FA7C"
+  },
+  {
+    "end": 144,
+    "base": "0x2008b100",
+    "length": 52,
+    "crc": "0995CE2F"
+  },
+  {
+    "end": 149,
+    "base": "0x2008b100",
+    "length": 64,
+    "crc": "D5CDA253"
+  },
+  {
+    "end": 155,
+    "base": "0x2008b100",
+    "length": 128,
+    "crc": "F5EED1D4"
+  },
+  {
+    "end": 168,
+    "base": "0x2008b100",
+    "length": 512,
+    "crc": "B8CE8D07"
+  },
+  {
+    "end": 172,
+    "base": "0x20380000",
+    "length": 12,
+    "crc": "C2834298"
+  },
+  {
+    "end": 176,
+    "base": "0x20380000",
+    "length": 16,
+    "crc": "B800C4B6"
+  },
+  {
+    "end": 180,
+    "base": "0x20380000",
+    "length": 28,
+    "crc": "C35FE263"
+  },
+  {
+    "end": 184,
+    "base": "0x20380000",
+    "length": 32,
+    "crc": "13D6E8C3"
+  },
+  {
+    "end": 188,
+    "base": "0x20380000",
+    "length": 36,
+    "crc": "D4D9FA7C"
+  },
+  {
+    "end": 192,
+    "base": "0x20380000",
+    "length": 52,
+    "crc": "0995CE2F"
+  },
+  {
+    "end": 197,
+    "base": "0x20380000",
+    "length": 64,
+    "crc": "D5CDA253"
+  },
+  {
+    "end": 203,
+    "base": "0x20380000",
+    "length": 128,
+    "crc": "F5EED1D4"
+  },
+  {
+    "end": 216,
+    "base": "0x20380000",
+    "length": 512,
+    "crc": "B8CE8D07"
+  }
+]

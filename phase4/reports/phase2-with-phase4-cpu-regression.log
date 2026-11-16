@@ -1,0 +1,39 @@
+make: Entering directory '<checkout>/phase2'
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2005 -Wall -tnull -s de2_phase2 rtl/de2_phase2.v rtl/onchip_memory.v rtl/phase2_soc.v ../phase4/rtl/rv32i_cpu.v rtl/soc_bus.v rtl/vga_tiles.v rtl/diagnostic_text.v rtl/diagnostic_font.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_memory -o build/tb_memory sim/tb_memory.sv rtl/de2_phase2.v rtl/onchip_memory.v rtl/phase2_soc.v ../phase4/rtl/rv32i_cpu.v rtl/soc_bus.v rtl/vga_tiles.v rtl/diagnostic_text.v rtl/diagnostic_font.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_memory
+PASS memory/MMIO: 61 transactions, lane masks, boundaries, decode faults, no duplicate effects
+sim/tb_memory.sv:78: $finish called at 8940000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_vga -o build/tb_vga sim/tb_vga.sv rtl/vga_tiles.v rtl/diagnostic_text.v rtl/diagnostic_font.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_vga
+PASS VGA: 3 complete frames, 1260000 pixel checks, pattern/solid/tiles and 25 MHz clock
+sim/tb_vga.sv:50: $finish called at 50424011000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_soc -o build/tb_soc sim/tb_soc.sv rtl/de2_phase2.v rtl/onchip_memory.v rtl/phase2_soc.v ../phase4/rtl/rv32i_cpu.v rtl/soc_bus.v rtl/vga_tiles.v rtl/diagnostic_text.v rtl/diagnostic_font.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_soc
+SoC: key make observed at          26297610000
+SoC: key break observed at          28217610000
+SoC: overflow observed at          28219210000
+SoC: parity observed at          29099210000
+PASS SoC: real firmware RAM test, CPU-only heartbeat/stall/resume, PS/2 make/break/parity, independent VGA refresh
+sim/tb_soc.sv:60: $finish called at 50400730000 (1ps)
+python3 tools/check_project.py
+PASS preserved input hashes: original Quartus files and PS/2 modules unchanged
+PASS project consistency: exact device, 40/40 top-level pins and LVTTL assignments, no duplicates, source/ROM paths
+Quartus package legality, fitter pin report and timing have NOT been checked by this script.
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_top -o build/tb_top sim/tb_top.sv rtl/de2_phase2.v rtl/onchip_memory.v rtl/phase2_soc.v ../phase4/rtl/rv32i_cpu.v rtl/soc_bus.v rtl/vga_tiles.v rtl/diagnostic_text.v rtl/diagnostic_font.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+cd quartus && /tmp/de2-iverilog/usr/bin/vvp ../build/tb_top
+PASS board top: power-on hold, synchronized button reset/reboot, ROM path and DAC clock
+sim/tb_top.sv:28: $finish called at 4438790000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_dashboard -o build/tb_dashboard sim/tb_dashboard.sv rtl/vga_tiles.v rtl/diagnostic_text.v rtl/diagnostic_font.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_dashboard
+PASS dashboard: 1260000 golden pixels, glyph/cell/line alignment, sync/blank, RGB blocks, coherent hex, NOT TESTED/PASS/FAIL, marker, watchdog and trap
+sim/tb_dashboard.sv:154: $finish called at 50402891000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_ram_diagnostic -o build/tb_ram_diagnostic sim/tb_ram_diagnostic.sv rtl/de2_phase2.v rtl/onchip_memory.v rtl/phase2_soc.v ../phase4/rtl/rv32i_cpu.v rtl/soc_bus.v rtl/vga_tiles.v rtl/diagnostic_text.v rtl/diagnostic_font.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_ram_diagnostic
+PASS RAM diagnostics: startup corruption NOT TESTED/E001; stuck-zero scratch FAIL/E002; heartbeat survives failure
+sim/tb_ram_diagnostic.sv:26: $finish called at 12651990000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_starter -o build/tb_starter quartus_ep2c20/tb_starter.sv quartus_ep2c20/starter_phase2.v rtl/de2_phase2.v rtl/onchip_memory.v rtl/phase2_soc.v ../phase4/rtl/rv32i_cpu.v rtl/soc_bus.v rtl/vga_tiles.v rtl/diagnostic_text.v rtl/diagnostic_font.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+cd quartus_ep2c20 && /tmp/de2-iverilog/usr/bin/vvp ../build/tb_starter
+PASS Starter Board: boot/reset/reboot, 256 RGB332 colors on 4-bit resistor DAC, black blanking
+quartus_ep2c20/tb_starter.sv:44: $finish called at 4468410000 (1ps)
+make: Leaving directory '<checkout>/phase2'

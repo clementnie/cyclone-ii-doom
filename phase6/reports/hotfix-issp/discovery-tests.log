@@ -1,0 +1,6 @@
+ISSP instance info raw: <>
+ISSP instance info raw: <{0 480 96 TEST}>
+ISSP instance info raw: <{0 96 480 OOM6}>
+ISSP instance info raw: <{0 480 95 OOM6}>
+ISSP instance info raw: <{0 480 96 OOM6} {7 480 96 OOM6}>
+PASS ISSP discovery: 29 cases; exact physical/literal identities, widths, field order, index discovery, ambiguity, malformed data, FPGA ID

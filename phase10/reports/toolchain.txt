@@ -1,0 +1,5 @@
+clang version 23.1.5
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+LLD 23.1.5 (compatible with GNU linkers)

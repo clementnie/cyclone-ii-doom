@@ -1,0 +1,2 @@
+PASS mailbox: asynchronous stable bundle, 13 words, ACK/CRC/status, held request, reset, access errors
+sim/tb_mailbox.sv:30: $finish called at 1680000 (1ps)

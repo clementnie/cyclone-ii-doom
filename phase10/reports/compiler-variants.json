@@ -1,0 +1,62 @@
+[
+  {
+    "label": "160x100-O3",
+    "optimization": "-O3",
+    "lto": true,
+    "text": 458617,
+    "data": 57628,
+    "bss": 240440,
+    "sha256": "06069bb7ddb174322ed3fee26e6911ba752f5bf53b1791c76c9135bd3b1db376",
+    "hardware_fps": null
+  },
+  {
+    "label": "160x100-Os",
+    "optimization": "-Os",
+    "lto": true,
+    "text": 289343,
+    "data": 57628,
+    "bss": 240444,
+    "sha256": "237e10e0df616f815d3cf004cbf614228f7432ca116e5d8c102f9a8e079c43ca",
+    "hardware_fps": null
+  },
+  {
+    "label": "160x120",
+    "optimization": "-O2",
+    "lto": true,
+    "text": 438572,
+    "data": 57628,
+    "bss": 240480,
+    "sha256": "3f2f1ad0f4b9edc3fa95762b8edacef0370b3f08da5a0eae01f74d2fd189bf8e",
+    "hardware_fps": null
+  },
+  {
+    "label": "160x200",
+    "optimization": "-O2",
+    "lto": true,
+    "text": 438564,
+    "data": 57628,
+    "bss": 240640,
+    "sha256": "bd6fbdc22d8b890c650aaf7ab1a82c85c6f0c82c3255bfc8a6dfe3e622823d99",
+    "hardware_fps": null
+  },
+  {
+    "label": "320x200",
+    "optimization": "-O2",
+    "lto": true,
+    "text": 437528,
+    "data": 57628,
+    "bss": 240440,
+    "sha256": "206940953b7289b4cac6ce90aea9e783b1eced320de439e26eee7fa3a13bc31b",
+    "hardware_fps": null
+  },
+  {
+    "label": "160x100",
+    "optimization": "-O2",
+    "lto": true,
+    "text": 438548,
+    "data": 57628,
+    "bss": 240440,
+    "sha256": "e199eb44d3e6dcf700d751feb6baeee8b3f48b2c3adfc4b286b0d1bb5172c045",
+    "hardware_fps": null
+  }
+]

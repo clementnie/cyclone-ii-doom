@@ -1,0 +1,382 @@
+make: Entering directory '<checkout>/phase4b/doom'
+python3 compile_engine.py
+Compiled: 81 Failed: []
+llvm-size build/doom-engine.rv32i.o
+   text	   data	    bss	    dec	    hex	filename
+ 325554	  60028	 243709	 629291	  99a2b	build/doom-engine.rv32i.o
+llvm-nm -u build/doom-engine.rv32i.o > unresolved.txt
+clang --target=riscv32-unknown-elf -march=rv32i -mabi=ilp32 -mno-relax -msmall-data-limit=0 -Os -ffreestanding -fno-builtin -nostdlib -DCMAP256 -DDOOMGENERIC_RESX=320 -DDOOMGENERIC_RESY=200 -Iinclude -Iupstream/doomgeneric -c ../firmware/start.S -o build/start.o
+clang --target=riscv32-unknown-elf -march=rv32i -mabi=ilp32 -mno-relax -msmall-data-limit=0 -Os -ffreestanding -fno-builtin -nostdlib -DCMAP256 -DDOOMGENERIC_RESX=320 -DDOOMGENERIC_RESY=200 -Iinclude -Iupstream/doomgeneric -c engine_main.c -o build/engine_main.o
+clang --target=riscv32-unknown-elf -march=rv32i -mabi=ilp32 -mno-relax -msmall-data-limit=0 -Os -ffreestanding -fno-builtin -nostdlib -DCMAP256 -DDOOMGENERIC_RESX=320 -DDOOMGENERIC_RESY=200 -Iinclude -Iupstream/doomgeneric -c integer_runtime.c -o build/integer_runtime.o
+ld.lld -m elf32lriscv -T engine.ld --error-limit=0 -Map=build/engine.map -o build/doom.elf build/start.o build/engine_main.o build/integer_runtime.o build/doom-engine.rv32i.o
+ld.lld: error: undefined symbol: snprintf
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(AM_loadPics)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(AM_unloadPics)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_DoomMain)
+>>> referenced 43 more times
+
+ld.lld: error: undefined symbol: memset
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(AM_clearFB)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(AM_Drawer)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(BuildNewTic)
+>>> referenced 39 more times
+
+ld.lld: error: undefined symbol: stderr
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(AM_drawFline)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(AM_drawFline)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_Error)
+>>> referenced 23 more times
+
+ld.lld: error: undefined symbol: fprintf
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(AM_drawFline)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_Error)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_Error)
+>>> referenced 15 more times
+
+ld.lld: error: undefined symbol: memcpy
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_PostEvent)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(TryRunTics)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_DoomMain)
+>>> referenced 41 more times
+
+ld.lld: error: undefined symbol: free
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_FindWADByName)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_FindIWAD)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_Error)
+>>> referenced 2 more times
+
+ld.lld: error: undefined symbol: strdup
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_FindWADByName)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_FindIWAD)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_FindIWAD)
+>>> referenced 3 more times
+
+ld.lld: error: undefined symbol: strlen
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(DirIsFile)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(DirIsFile)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(F_Ticker)
+>>> referenced 40 more times
+
+ld.lld: error: undefined symbol: strcasecmp
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(DirIsFile)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_FindIWAD)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_DoAdvanceDemo)
+>>> referenced 6 more times
+
+ld.lld: error: undefined symbol: strrchr
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_FindIWAD)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_GetExecutableName)
+
+ld.lld: error: undefined symbol: printf
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_FindIWAD)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_FindIWAD)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_ReceiveTic)
+>>> referenced 80 more times
+
+ld.lld: error: undefined symbol: strcmp
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_FindIWAD)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_DoomMain)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_SetConfigDir)
+>>> referenced 5 more times
+
+ld.lld: error: undefined symbol: malloc
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_FindAllIWADs)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_AtExit)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_ZoneBase)
+>>> referenced 7 more times
+
+ld.lld: error: undefined symbol: strncasecmp
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_IdentifyVersion)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_IdentifyVersion)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_StrCaseStr)
+>>> referenced 4 more times
+
+ld.lld: error: undefined symbol: atoi
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_DoomMain)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_DoomMain)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_DoomMain)
+>>> referenced 4 more times
+
+ld.lld: error: undefined symbol: exit
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(D_Endoom)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_Error)
+
+ld.lld: error: undefined symbol: toupper
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(F_TextWrite)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(F_CastPrint)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(F_CastPrint)
+>>> referenced 8 more times
+
+ld.lld: error: undefined symbol: abs
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(G_Responder)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(FixedDiv)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(FixedDiv)
+>>> referenced 24 more times
+
+ld.lld: error: undefined symbol: fopen
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(G_DoLoadGame)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(G_DoSaveGame)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(G_DoSaveGame)
+>>> referenced 5 more times
+
+ld.lld: error: undefined symbol: fclose
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(G_DoLoadGame)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(G_DoLoadGame)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(G_DoSaveGame)
+>>> referenced 5 more times
+
+ld.lld: error: undefined symbol: ftell
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(G_DoSaveGame)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_FileLength)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_FileLength)
+>>> referenced 2 more times
+
+ld.lld: error: undefined symbol: remove
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(G_DoSaveGame)
+
+ld.lld: error: undefined symbol: rename
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(G_DoSaveGame)
+
+ld.lld: error: undefined symbol: __floatsisf
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(G_CheckDemoStatus)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(G_CheckDemoStatus)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(V_DrawMouseSpeedBox)
+
+ld.lld: error: undefined symbol: __mulsf3
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(G_CheckDemoStatus)
+
+ld.lld: error: undefined symbol: __divsf3
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(G_CheckDemoStatus)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(V_DrawMouseSpeedBox)
+
+ld.lld: error: undefined symbol: __extendsfdf2
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(G_CheckDemoStatus)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(V_DrawMouseSpeedBox)
+
+ld.lld: error: undefined symbol: stdout
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_InitStretchTables)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_InitStretchTables)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_InitStretchTables)
+>>> referenced 2 more times
+
+ld.lld: error: undefined symbol: fflush
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_InitStretchTables)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_InitStretchTables)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_InitSquashTable)
+>>> referenced 1 more times
+
+ld.lld: error: undefined symbol: puts
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_InitStretchTables)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_InitSquashTable)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_PrintBanner)
+
+ld.lld: error: undefined symbol: putchar
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_PrintBanner)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_PrintDivider)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_PrintDivider)
+
+ld.lld: error: undefined symbol: vfprintf
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_Error)
+
+ld.lld: error: undefined symbol: system
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_Error)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_Error)
+
+ld.lld: error: undefined symbol: strchr
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(I_Error)
+
+ld.lld: error: undefined symbol: atof
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_SetVariable)
+
+ld.lld: error: undefined symbol: __truncdfsf2
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_SetVariable)
+
+ld.lld: error: undefined symbol: sscanf
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(ParseIntParameter)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_StrToInt)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_StrToInt)
+>>> referenced 2 more times
+
+ld.lld: error: undefined symbol: __muldi3
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(FixedMul)
+
+ld.lld: error: undefined symbol: __divdi3
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(FixedDiv)
+
+ld.lld: error: undefined symbol: fread
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_ReadSaveStrings)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_ReadFile)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(saveg_read8)
+>>> referenced 1 more times
+
+ld.lld: error: undefined symbol: mkdir
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_MakeDirectory)
+
+ld.lld: error: undefined symbol: errno
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_FileExists)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_FileExists)
+
+ld.lld: error: undefined symbol: fseek
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_FileLength)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_FileLength)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(W_StdC_Read)
+
+ld.lld: error: undefined symbol: fwrite
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_WriteFile)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(saveg_write8)
+
+ld.lld: error: undefined symbol: strstr
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_StringReplace)
+
+ld.lld: error: undefined symbol: strncmp
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_StringReplace)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_StringStartsWith)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(W_AddFile)
+>>> referenced 1 more times
+
+ld.lld: error: undefined symbol: strncpy
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_StringCopy)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(W_AddFile)
+
+ld.lld: error: undefined symbol: vsnprintf
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_vsnprintf)
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(M_snprintf)
+
+ld.lld: error: undefined symbol: __addsf3
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(V_DrawMouseSpeedBox)
+
+ld.lld: error: undefined symbol: fabs
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(V_DrawMouseSpeedBox)
+
+ld.lld: error: undefined symbol: __ltdf2
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(V_DrawMouseSpeedBox)
+
+ld.lld: error: undefined symbol: __fixsfsi
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(V_DrawMouseSpeedBox)
+
+ld.lld: error: undefined symbol: realloc
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(W_Checksum)
+
+ld.lld: error: undefined symbol: calloc
+>>> referenced by platform.c
+>>>               build/doom-engine.rv32i.o:(W_AddFile)
+make: *** [Makefile:19: engine-link] Error 1
+make: Leaving directory '<checkout>/phase4b/doom'

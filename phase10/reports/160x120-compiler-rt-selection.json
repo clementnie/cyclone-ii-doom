@@ -1,0 +1,20 @@
+[
+  "adddf3",
+  "addsf3",
+  "divsf3",
+  "extendsfdf2",
+  "fixsfsi",
+  "fixunsdfdi",
+  "floatsisf",
+  "floatundidf",
+  "floatunsidf",
+  "comparedf2",
+  "muldf3",
+  "mulsf3",
+  "subdf3",
+  "truncdfsf2",
+  "udivdi3",
+  "fp_mode",
+  "fixunsdfsi",
+  "udivmoddi4"
+]

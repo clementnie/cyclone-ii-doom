@@ -1,0 +1,42 @@
+{
+  "baseline": "46b63ce",
+  "changed_baseline_source_paths": [
+    "phase6/Makefile",
+    "phase6/tools/list_jtag.tcl",
+    "phase6/tools/test_upload_tcl.tcl",
+    "phase6/tools/upload.py",
+    "phase6/tools/upload.tcl"
+  ],
+  "unchanged_baseline_sources": 427,
+  "sof": "phase6/candidates/cyclone_ii_doom_D6000001_20261114T073201Z_d51a123a8b48.sof",
+  "sof_sha256": "728fd5d9070495260707caf72a3b218c496c6293a7c7beedf6a5646cf9b03af4",
+  "timing_slack_ns": {
+    "slow-setup": 2.069,
+    "slow-hold": 0.445,
+    "slow-sdram-in-setup": 2.069,
+    "slow-sdram-in-hold": 12.296,
+    "slow-sdram-out-setup": 3.257,
+    "slow-sdram-out-hold": 12.284,
+    "fast-setup": 3.559,
+    "fast-hold": 0.215,
+    "fast-sdram-in-setup": 3.559,
+    "fast-sdram-in-hold": 10.909,
+    "fast-sdram-out-setup": 3.721,
+    "fast-sdram-out-hold": 11.81
+  },
+  "physical_discovery": "{0 480 96 OOM6}",
+  "rtl_firmware_elf_constraints_unchanged": true,
+  "physical_upload_performed": false,
+  "loader_simulation": {
+    "pass": true,
+    "cycles": 1396020244,
+    "retired": 417171938,
+    "frames": 50,
+    "pc": 537205408,
+    "stack_bytes": 1568,
+    "heap_high_address": 540014448,
+    "heap_span": 2388928,
+    "wall_seconds": 127.648,
+    "bus_model": "functional, no SDRAM timing"
+  }
+}

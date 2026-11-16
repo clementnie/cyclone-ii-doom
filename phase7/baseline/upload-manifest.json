@@ -1,0 +1,21 @@
+{
+  "entry": "0x20020000",
+  "segments": [
+    {
+      "address": "0x20020000",
+      "runtime_bytes": 319723,
+      "crc32": "dde33c49"
+    },
+    {
+      "address": "0x2006e0ec",
+      "runtime_bytes": 303804,
+      "crc32": "274b386d"
+    }
+  ],
+  "wad": {
+    "size": 4196020,
+    "lumps": 1264,
+    "sha256": "1d7d43be501e67d927e415e0b8f3e29c3bf33075e859721816f652a526cac771",
+    "crc32": "162b696a"
+  }
+}

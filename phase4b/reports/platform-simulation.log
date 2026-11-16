@@ -1,0 +1,16 @@
+make: Entering directory '<checkout>/phase4b'
+make -C doom platform-test
+make[1]: Entering directory '<checkout>/phase4b/doom'
+clang --target=riscv32-unknown-elf -march=rv32i -mabi=ilp32 -mno-relax -msmall-data-limit=0 -Os -ffreestanding -fno-builtin -nostdlib -DCMAP256 -DDOOMGENERIC_RESX=320 -DDOOMGENERIC_RESY=200 -Iinclude -Iupstream/doomgeneric -fuse-ld=lld -Wl,-T,platform_test.ld,-Map,build/platform-test.map -o build/platform-test.elf ../firmware/start.S platform.c platform_test.c integer_runtime.c
+llvm-size build/platform-test.elf
+   text	   data	    bss	    dec	    hex	filename
+   1583	      4	  65040	  66627	  10443	build/platform-test.elf
+make[1]: Leaving directory '<checkout>/phase4b/doom'
+llvm-objcopy -O binary doom/build/platform-test.elf build/platform.bin
+python3 ../phase2/tools/bin_to_hex.py build/platform.bin build/platform.hex
+build/platform.bin: 1588 load bytes; ROM padded to 8192 bytes
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_framebuffer_soc -Ptb_framebuffer_soc.PLATFORM=1 -o build/tb_platform sim/tb_framebuffer_soc.sv ../phase4/sim/sdram_model.sv rtl/phase4b_soc.v rtl/phase4b_bus.v rtl/framebuffer.v rtl/sdram_arbiter.v rtl/diagnostic_text.v ../phase4/rtl/sdram_controller.v ../phase4/rtl/rv32i_cpu.v ../phase2/rtl/onchip_memory.v ../phase2/rtl/vga_tiles.v ../phase2/rtl/diagnostic_font.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_platform
+PASS CPU -> SDRAM -> palette -> VGA: 1 complete frames, 420000 pixels; underflows=0; CPU grants=1628 VGA=16000 max wait=48 cycles
+sim/tb_framebuffer_soc.sv:61: $finish called at 218400131000 (1ps)
+make: Leaving directory '<checkout>/phase4b'

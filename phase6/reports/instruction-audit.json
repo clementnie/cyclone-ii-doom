@@ -1,0 +1,18 @@
+{
+  "instruction_words_checked": 55270,
+  "invalid_instructions": [],
+  "opcode_counts": {
+    "0x13": 16684,
+    "0x23": 6374,
+    "0x17": 3414,
+    "0x67": 4152,
+    "0x63": 4226,
+    "0x33": 5539,
+    "0x3": 10174,
+    "0x6f": 1224,
+    "0x37": 3482,
+    "0x73": 1
+  },
+  "excludes_noncode_rodata": true,
+  "abi": "RV32I ILP32 soft float"
+}

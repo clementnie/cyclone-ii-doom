@@ -1,0 +1,6 @@
+make: Entering directory '<checkout>/phase4b'
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_keyboard -o build/tb_keyboard sim/tb_keyboard.sv ../phase4/sim/sdram_model.sv rtl/phase4b_soc.v rtl/phase4b_bus.v rtl/framebuffer.v rtl/sdram_arbiter.v rtl/diagnostic_text.v ../phase4/rtl/sdram_controller.v ../phase4/rtl/rv32i_cpu.v ../phase2/rtl/onchip_memory.v ../phase2/rtl/vga_tiles.v ../phase2/rtl/diagnostic_font.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_keyboard
+PASS serialized PS/2 -> CPU firmware -> moved SDRAM rectangle -> RGB; Escape fallback/restore; heartbeat=4
+sim/tb_keyboard.sv:29: $finish called at 554240130000 (1ps)
+make: Leaving directory '<checkout>/phase4b'

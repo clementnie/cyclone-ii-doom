@@ -1,0 +1,14 @@
+build/
+quartus/db/
+quartus/incremental_db/
+quartus/output_files/
+quartus/*.qws
+quartus/*.smsg
+quartus/*.summary
+quartus/*.done
+quartus/*.rpt
+quartus/*.jdi
+quartus/*.pin
+quartus/core*
+core*
+**/__pycache__/

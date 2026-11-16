@@ -1,0 +1,23 @@
+make: Entering directory '<checkout>/phase4'
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_soc -o build/tb_soc sim/tb_soc.sv sim/sdram_model.sv rtl/phase4_soc.v rtl/phase4_bus.v rtl/sdram_controller.v rtl/diagnostic_text.v rtl/rv32i_cpu.v ../phase2/rtl/onchip_memory.v ../phase2/rtl/vga_tiles.v ../phase2/rtl/diagnostic_font.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_soc
+PASS CPU SDRAM diagnostic (32-word full-sweep simulation, all bank/alias/walking tests), cycles=53816 retired=5377
+sim/tb_soc.sv:27: $finish called at 1096410000 (1ps)
+make -C ../phase2 build/cpu_meta.vh
+make[1]: Entering directory '<checkout>/phase2'
+make[1]: 'build/cpu_meta.vh' is up to date.
+make[1]: Leaving directory '<checkout>/phase2'
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -I../phase2/build -s tb_cpu -o build/tb_cpu ../phase2/sim/tb_cpu.sv rtl/rv32i_cpu.v
+cd ../phase2 && /tmp/de2-iverilog/usr/bin/vvp ../phase4/build/tb_cpu
+PASS CPU: 507 retirement states, all 32 registers and PC, random bus stalls
+../phase2/sim/tb_cpu.sv:52: $finish called at 91991000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_traps -o build/tb_traps ../phase2/sim/tb_traps.sv rtl/rv32i_cpu.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_traps
+PASS traps: 16 cases
+../phase2/sim/tb_traps.sv:48: $finish called at 3200000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_sdram -o build/tb_sdram sim/tb_sdram.sv sim/sdram_model.sv rtl/sdram_controller.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_sdram
+Normal request max latency: 27 cycles
+PASS SDRAM randomized lanes, banks, rows, bounds, refresh, reset; max latency incl init=10075
+sim/tb_sdram.sv:56: $finish called at 8252751000 (1ps)
+make: Leaving directory '<checkout>/phase4'

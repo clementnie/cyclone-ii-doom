@@ -1,0 +1,3 @@
+phase4/Makefile:25:	$(CLANG) $(CFLAGS) -DTEST_WORDS=32 -DSIMULATION_TEST_EXECUTE -fuse-ld=lld -Wl,-T,firmware/link.ld -o $@ firmware/start.S firmware/main.c
+phase4/firmware/main.c:46:#ifdef SIMULATION_TEST_EXECUTE
+phase4/firmware/main.c:48: mem[0]=0x00700513u; // addi a0,zero,7

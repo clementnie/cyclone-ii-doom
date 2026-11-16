@@ -1,0 +1,16 @@
+make: Entering directory '<checkout>/phase6'
+python3 build.py
+   text	   data	    bss	    dec	    hex	filename
+ 319723	  59736	 244068	 623527	  983a7	<checkout>/phase6/artifacts/doom-rv32i.elf
+
+ELF: <checkout>/phase6/artifacts/doom-rv32i.elf file bytes: 473972
+llvm-nm -n artifacts/doom-rv32i.elf > build/symbols.txt
+mkdir -p build
+clang --target=riscv32-unknown-elf -march=rv32i -mabi=ilp32 -mno-relax -msmall-data-limit=0 -Os -ffreestanding -fno-builtin -nostdlib -Wall -Wextra -Werror -fuse-ld=lld -Wl,-T,firmware/link.ld,-Map,build/loader.map firmware/start.S firmware/loader.c -o build/loader.elf
+llvm-size build/loader.elf
+   text	   data	    bss	    dec	    hex	filename
+   1284	      0	     64	   1348	    544	build/loader.elf
+llvm-objcopy -O binary build/loader.elf build/loader.bin
+python3 ../phase2/tools/bin_to_hex.py build/loader.bin firmware/boot.hex
+build/loader.bin: 1284 load bytes; ROM padded to 8192 bytes
+make: Leaving directory '<checkout>/phase6'

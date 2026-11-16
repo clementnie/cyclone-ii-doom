@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/enjoy-digital/chromatix",
+  "branch": "doom",
+  "commit": "7c9ce97515799fe8d7676f726adf227e653ddb28",
+  "files": {
+    "firmware/doom/doomgeneric/r_draw.c": "29cd01434c089c72892ea04f85c03aab1a8768eb64ab66cf1a69ccd9771e1ee7",
+    "firmware/doom/doomgeneric/r_plane.c": "97b96bc153a73e87fd207d3fde47d842a7cf65b5d0157b3e1b5391dc18723756",
+    "firmware/doom/doomgeneric/f_wipe.c": "b2020ca7adbe5aa7d5df7d2243da21c4e4b30ad941a7d5b8a924b2eed10c6c7f",
+    "firmware/doom/doomgeneric/m_fixed.c": "47ed4ce58ecb0a411a55dccebbc02190d25639217f6db79d01632136d0b80f22",
+    "firmware/doom/doomgeneric/doomgeneric.h": "843774c5fcaf7a1cc7624948b597f91577f239e0bcc3abb27640cdfcff1eac3f",
+    "firmware/doom/chromatix_dg.c": "e4e2f96428100b3c5e5313e039f1b3bbac7ee82d8dcad5a338c8480fe6865481",
+    "firmware/doom/Makefile": "6e67624c6d1913a6a5d86fd8b1103ea81fa0697400d6e3995ff99d6f8a5416ca",
+    "firmware/doom/sources.mak": "df98cd56530b4f8a5cbcf025cf7cf1ac44e06cc51595bb71c6659e02e7cb2dfb",
+    "chromatix/gateware/memory.py": "f9bb74ca21432112ac4b37014e9430782a000d2eae22b934652484e305af6780",
+    "chromatix/gateware/framebuffer.py": "76390e8d5a7f17f8a43c108243b0ae39ae42d33844cd2600931846f86410e5a6"
+  }
+}

@@ -1,0 +1,13 @@
+Keyboard stimulus starts
+Keyboard test cycles=10000000 hb=0 pc=00000474 enabled=0 slot=0 keys=0000001
+Keyboard test cycles=20000000 hb=1 pc=000002e0 enabled=1 slot=0 keys=0000001
+Second image active: hb=2
+Keyboard test cycles=30000000 hb=2 pc=000004c8 enabled=1 slot=1 keys=1000001
+Keyboard test cycles=40000000 hb=3 pc=00000360 enabled=1 slot=0 keys=1000001
+Diagnostic fallback active: hb=3
+Keyboard test cycles=50000000 hb=3 pc=000002ec enabled=0 slot=0 keys=1000000
+PASS serialized PS/2 -> CPU firmware -> moved SDRAM rectangle -> RGB; Escape fallback/restore; heartbeat=4
+- <checkout>/phase8/build/tb_keyboard.sv:29: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01
+- Verilator: $finish at 1s; walltime 59.374 s; speed 17.823 ms/s
+- Verilator: cpu 59.049 s on 1 threads; allocated 12 MB

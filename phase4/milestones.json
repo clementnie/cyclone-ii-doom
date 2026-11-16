@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "project": "PROJECT DOOM Phase 4",
+  "build_id": "D4000001",
+  "baseline_checkpoint": "1347b03",
+  "state": "awaiting_physical_sdram_test",
+  "hardware_verified": false,
+  "fpga_programmed": false,
+  "device": "EP2C20F484C7",
+  "reported_sdram_marking": "PSC A2V64S0C7P 712AFA0N TAIWAN -G7",
+  "datasheet_part": "PSC A2V64S40CTP-G7",
+  "marking_transcription_check_required": true,
+  "milestones": {
+    "audit": {
+      "state": "complete",
+      "reference": "README.md"
+    },
+    "sdram_rtl_and_cpu_integration": {
+      "state": "simulation_and_quartus_passed",
+      "base": "0x20000000",
+      "bytes": 8388608
+    },
+    "sdram_hardware_diagnostic": {
+      "state": "candidate_assembled_awaiting_hardware",
+      "test_instructions": "HARDWARE_TEST.md"
+    },
+    "sdram_physical_validation": {
+      "state": "awaiting_user_results",
+      "evidence": []
+    },
+    "framebuffer": {
+      "state": "pending_sdram_hardware_gate"
+    },
+    "doom_port_and_loader": {
+      "state": "pending",
+      "engine_imported": false,
+      "wad_imported": false,
+      "memory_requirements_measured": false
+    },
+    "doom_playable": {
+      "state": "not_demonstrated"
+    }
+  },
+  "verification": {
+    "controller_randomized_simulation": "pass",
+    "cpu_sdram_diagnostic_shortened_sweeps": "pass",
+    "cpu_instruction_fetch_from_sdram": "pass_simulation",
+    "cpu_warm_reset_during_sdram_transaction": "pass_simulation",
+    "full_8mib_hardware_sweeps": "not_run",
+    "full_8mib_cpu_simulation": "not_run",
+    "cpu_trace_states": 507,
+    "cpu_trap_cases": 16,
+    "baseline_regression": "pass",
+    "baseline_soc_with_phase4_cpu_regression": "pass",
+    "ps2_25_and_50mhz_regression": "pass",
+    "pin_and_baseline_checksum_audit": "pass",
+    "normal_full_quartus_flow": "pass",
+    "timing": {
+      "slow_setup_ns": 2.069,
+      "slow_hold_ns": 0.445,
+      "fast_setup_ns": 3.559,
+      "fast_hold_ns": 0.215,
+      "slow_sdram_in_setup_ns": 2.069,
+      "slow_sdram_in_hold_ns": 12.296,
+      "slow_sdram_out_setup_ns": 3.257,
+      "slow_sdram_out_hold_ns": 12.284,
+      "fast_sdram_in_setup_ns": 3.559,
+      "fast_sdram_in_hold_ns": 10.909,
+      "fast_sdram_out_setup_ns": 3.721,
+      "fast_sdram_out_hold_ns": 11.81
+    }
+  },
+  "measurements": {
+    "logic_elements": 5757,
+    "m4k_blocks": 38,
+    "m4k_available": 52,
+    "pll_count": 1,
+    "clock_hz": 50000000,
+    "sdram_clock_phase_ns": 8,
+    "sdram_initial_refreshes": 8,
+    "observed_max_request_latency_cycles_after_init": 27,
+    "diagnostic_simulation_cycles": 53816,
+    "diagnostic_simulation_retired": 5377,
+    "diagnostic_simulation_cpi_including_startup_wait": 10.0086,
+    "cpu_register_operand_stage_added": true,
+    "doom_fps": null,
+    "physical_sdram_bandwidth": null
+  },
+  "candidate": {
+    "path": "candidates/reference_sdram_D4000001.sof",
+    "sha256": "4643741e08faac4df3fc98d6747bb7241cc18929a33c035f0a12f3bae4090af4"
+  },
+  "next_action": "User reconciles chip marking/board and manually programs candidate, then reports full sweep/reset/cold start results."
+}

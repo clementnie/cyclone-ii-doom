@@ -1,0 +1,223 @@
+{
+  "pass": true,
+  "cycles": 4541040002,
+  "retired": 228268982,
+  "frames": 3,
+  "vga_frames_captured": 2,
+  "underflows": 0,
+  "stack_bytes": 1568,
+  "framebuffer_a_crc32": 1355006063,
+  "heap_span": 2388928,
+  "wall_seconds": 933.766,
+  "frame_cycle_checkpoints": [
+    [
+      1,
+      4059713734
+    ],
+    [
+      2,
+      4340274293
+    ],
+    [
+      3,
+      4539359709
+    ]
+  ],
+  "vga_rgb_crc32": "aafe7c69",
+  "vga_ppm_sha256": "9e5e1ade928220138821897b1e4282465eec2354856876790b0ced8d80f9a883",
+  "framebuffer_a_crc32_hex": "50c3c06f",
+  "estimated_reset_to_first_frame_seconds_at_50mhz": 81.19427468,
+  "estimated_frame2_to_frame3_fps_at_50mhz": 0.251148481915923,
+  "physical_hardware_verified": false,
+  "pc_checkpoints": [
+    {
+      "cycles": 0,
+      "pc": "0x0"
+    },
+    {
+      "cycles": 100000000,
+      "pc": "0x2e4"
+    },
+    {
+      "cycles": 200000000,
+      "pc": "0x270"
+    },
+    {
+      "cycles": 300000000,
+      "pc": "0x308"
+    },
+    {
+      "cycles": 400000000,
+      "pc": "0x348"
+    },
+    {
+      "cycles": 500000000,
+      "pc": "0x338"
+    },
+    {
+      "cycles": 600000000,
+      "pc": "0x330"
+    },
+    {
+      "cycles": 700000000,
+      "pc": "0x320"
+    },
+    {
+      "cycles": 800000000,
+      "pc": "0x20051780"
+    },
+    {
+      "cycles": 900000000,
+      "pc": "0x20051790"
+    },
+    {
+      "cycles": 1000000000,
+      "pc": "0x2005179c"
+    },
+    {
+      "cycles": 1100000000,
+      "pc": "0x200517ac"
+    },
+    {
+      "cycles": 1200000000,
+      "pc": "0x200517b8"
+    },
+    {
+      "cycles": 1300000000,
+      "pc": "0x20051780"
+    },
+    {
+      "cycles": 1400000000,
+      "pc": "0x20051790"
+    },
+    {
+      "cycles": 1500000000,
+      "pc": "0x2005179c"
+    },
+    {
+      "cycles": 1600000000,
+      "pc": "0x200517ac"
+    },
+    {
+      "cycles": 1700000000,
+      "pc": "0x200517b8"
+    },
+    {
+      "cycles": 1800000000,
+      "pc": "0x20051780"
+    },
+    {
+      "cycles": 1900000000,
+      "pc": "0x20051790"
+    },
+    {
+      "cycles": 2000000000,
+      "pc": "0x2005179c"
+    },
+    {
+      "cycles": 2100000000,
+      "pc": "0x200517ac"
+    },
+    {
+      "cycles": 2200000000,
+      "pc": "0x200517b4"
+    },
+    {
+      "cycles": 2300000000,
+      "pc": "0x20051780"
+    },
+    {
+      "cycles": 2400000000,
+      "pc": "0x20051790"
+    },
+    {
+      "cycles": 2500000000,
+      "pc": "0x2005179c"
+    },
+    {
+      "cycles": 2600000000,
+      "pc": "0x200517ac"
+    },
+    {
+      "cycles": 2700000000,
+      "pc": "0x200517b8"
+    },
+    {
+      "cycles": 2800000000,
+      "pc": "0x20051780"
+    },
+    {
+      "cycles": 2900000000,
+      "pc": "0x2005053c"
+    },
+    {
+      "cycles": 3000000000,
+      "pc": "0x20053228"
+    },
+    {
+      "cycles": 3100000000,
+      "pc": "0x20053218"
+    },
+    {
+      "cycles": 3200000000,
+      "pc": "0x20053214"
+    },
+    {
+      "cycles": 3300000000,
+      "pc": "0x20053214"
+    },
+    {
+      "cycles": 3400000000,
+      "pc": "0x20051d68"
+    },
+    {
+      "cycles": 3500000000,
+      "pc": "0x20053768"
+    },
+    {
+      "cycles": 3600000000,
+      "pc": "0x200536e8"
+    },
+    {
+      "cycles": 3700000000,
+      "pc": "0x20044370"
+    },
+    {
+      "cycles": 3800000000,
+      "pc": "0x20055f14"
+    },
+    {
+      "cycles": 3900000000,
+      "pc": "0x20042d18"
+    },
+    {
+      "cycles": 4000000000,
+      "pc": "0x20051b30"
+    },
+    {
+      "cycles": 4100000000,
+      "pc": "0x20026084"
+    },
+    {
+      "cycles": 4200000000,
+      "pc": "0x200536dc"
+    },
+    {
+      "cycles": 4300000000,
+      "pc": "0x200536ec"
+    },
+    {
+      "cycles": 4400000000,
+      "pc": "0x200536e4"
+    },
+    {
+      "cycles": 4500000000,
+      "pc": "0x200536e4"
+    }
+  ],
+  "candidate": "cyclone_ii_doom_D6000001_20261114T073201Z_d51a123a8b48.sof",
+  "candidate_bytes": 478409,
+  "candidate_sha256": "728fd5d9070495260707caf72a3b218c496c6293a7c7beedf6a5646cf9b03af4",
+  "elf_sha256": "d51a123a8b48ac2b7e8f5836bec5b88f45467ff7458c8d73ac11c6a8fc0e87cf",
+  "physical_programming_performed": false
+}

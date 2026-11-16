@@ -1,0 +1,2 @@
+PASS CPU -> SDRAM -> palette -> VGA: 3 complete frames, 1260000 pixels; underflows=0; CPU grants=36261 VGA=48000 max wait=48 cycles
+<checkout>/phase8/build/tb_framebuffer_soc.sv:61: $finish called at 235200131000 (1ps)

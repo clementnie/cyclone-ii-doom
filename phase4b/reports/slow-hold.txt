@@ -1,0 +1,1824 @@
+----------------
+; Command Info ;
+----------------
+Report Timing: Found 20 hold paths (0 violated).  Worst case slack is 0.445 
+
+Tcl Command:
+    report_timing -hold -file ../reports/slow-hold.txt -npaths 20 -detail full_path
+
+Options:
+    -hold 
+    -npaths 20 
+    -detail full_path 
+    -file {../reports/slow-hold.txt} 
+
+Delay Model:
+    Slow Model
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Summary of Paths                                                                                                                                                                                                                         ;
++-------+--------------------------------------------------------------------+--------------------------------------------------------------------+-----------------------+-----------------------+--------------+------------+------------+
+; Slack ; From Node                                                          ; To Node                                                            ; Launch Clock          ; Latch Clock           ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------------+--------------------------------------------------------------------+-----------------------+-----------------------+--------------+------------+------------+
+; 0.445 ; power_on[0]                                                        ; power_on[0]                                                        ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|served            ; phase4b_soc:soc|sdram_controller:external_memory|served            ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|state.BOOT        ; phase4b_soc:soc|sdram_controller:external_memory|state.BOOT        ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|state.WAIT        ; phase4b_soc:soc|sdram_controller:external_memory|state.WAIT        ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[0]    ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[0]    ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IPRE   ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IPRE   ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|state.IPRE        ; phase4b_soc:soc|sdram_controller:external_memory|state.IPRE        ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IREF1  ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IREF1  ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|state.IREF1       ; phase4b_soc:soc|sdram_controller:external_memory|state.IREF1       ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[0] ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[0] ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[1] ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[1] ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[2] ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[2] ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[3] ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[3] ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|next_state.MODE   ; phase4b_soc:soc|sdram_controller:external_memory|next_state.MODE   ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|state.MODE        ; phase4b_soc:soc|sdram_controller:external_memory|state.MODE        ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|next_state.COLUMN ; phase4b_soc:soc|sdram_controller:external_memory|next_state.COLUMN ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|initialized       ; phase4b_soc:soc|sdram_controller:external_memory|initialized       ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[3]    ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[3]    ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[4]    ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[4]    ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[5]    ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[5]    ; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
++-------+--------------------------------------------------------------------+--------------------------------------------------------------------+-----------------------+-----------------------+--------------+------------+------------+
+
+Path #1: Hold slack is 0.445 
+===============================================================================
++--------------------------------------------+
+; Path Summary                               ;
++--------------------+-----------------------+
+; Property           ; Value                 ;
++--------------------+-----------------------+
+; From Node          ; power_on[0]           ;
+; To Node            ; power_on[0]           ;
+; Launch Clock       ; clocks|pll|pll|clk[0] ;
+; Latch Clock        ; clocks|pll|pll|clk[0] ;
+; Data Arrival Time  ; 0.845                 ;
+; Data Required Time ; 0.400                 ;
+; Slack              ; 0.445                 ;
++--------------------+-----------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.423       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.423       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                               ;
++----------+----------+----+------+--------+------------------+-----------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location         ; Element                           ;
++----------+----------+----+------+--------+------------------+-----------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                  ; launch edge time                  ;
+; 0.114    ; 0.114    ;    ;      ;        ;                  ; clock path                        ;
+;   0.000  ;   0.000  ;    ;      ;        ;                  ; source latency                    ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1           ; CLOCK_50                          ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0    ; CLOCK_50|combout                  ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1            ; clocks|pll|pll|inclk[0]           ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1            ; clocks|pll|pll|clk[0]             ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|inclk[0] ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|outclk   ;
+;   -0.488 ;   1.002  ; RR ; IC   ; 1      ; LCFF_X6_Y1_N17   ; power_on[0]|clk                   ;
+;   0.114  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X6_Y1_N17   ; power_on[0]                       ;
+; 0.845    ; 0.731    ;    ;      ;        ;                  ; data path                         ;
+;   0.391  ;   0.277  ;    ; uTco ; 1      ; LCFF_X6_Y1_N17   ; power_on[0]                       ;
+;   0.391  ;   0.000  ; FF ; CELL ; 3      ; LCFF_X6_Y1_N17   ; power_on[0]|regout                ;
+;   0.391  ;   0.000  ; FF ; IC   ; 1      ; LCCOMB_X6_Y1_N16 ; power_on[0]~15|datac              ;
+;   0.749  ;   0.358  ; FR ; CELL ; 1      ; LCCOMB_X6_Y1_N16 ; power_on[0]~15|combout            ;
+;   0.749  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X6_Y1_N17   ; power_on[0]|datain                ;
+;   0.845  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X6_Y1_N17   ; power_on[0]                       ;
++----------+----------+----+------+--------+------------------+-----------------------------------+
+
++-----------------------------------------------------------------------------------------------+
+; Data Required Path                                                                            ;
++----------+----------+----+------+--------+----------------+-----------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location       ; Element                           ;
++----------+----------+----+------+--------+----------------+-----------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                ; latch edge time                   ;
+; 0.114    ; 0.114    ;    ;      ;        ;                ; clock path                        ;
+;   0.000  ;   0.000  ;    ;      ;        ;                ; source latency                    ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1         ; CLOCK_50                          ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0  ; CLOCK_50|combout                  ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1          ; clocks|pll|pll|inclk[0]           ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1          ; clocks|pll|pll|clk[0]             ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3     ; clocks|pll|_clk0~clkctrl|inclk[0] ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3     ; clocks|pll|_clk0~clkctrl|outclk   ;
+;   -0.488 ;   1.002  ; RR ; IC   ; 1      ; LCFF_X6_Y1_N17 ; power_on[0]|clk                   ;
+;   0.114  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X6_Y1_N17 ; power_on[0]                       ;
+; 0.114    ; 0.000    ;    ;      ;        ;                ; clock uncertainty                 ;
+; 0.400    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X6_Y1_N17 ; power_on[0]                       ;
++----------+----------+----+------+--------+----------------+-----------------------------------+
+
+
+Path #2: Hold slack is 0.445 
+===============================================================================
++------------------------------------------------------------------------------+
+; Path Summary                                                                 ;
++--------------------+---------------------------------------------------------+
+; Property           ; Value                                                   ;
++--------------------+---------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|served ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|served ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                   ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                   ;
+; Data Arrival Time  ; 0.846                                                   ;
+; Data Required Time ; 0.401                                                   ;
+; Slack              ; 0.445                                                   ;
++--------------------+---------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.424       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.424       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                     ;
++----------+----------+----+------+--------+------------------+---------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location         ; Element                                                 ;
++----------+----------+----+------+--------+------------------+---------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                  ; launch edge time                                        ;
+; 0.115    ; 0.115    ;    ;      ;        ;                  ; clock path                                              ;
+;   0.000  ;   0.000  ;    ;      ;        ;                  ; source latency                                          ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1           ; CLOCK_50                                                ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0    ; CLOCK_50|combout                                        ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1            ; clocks|pll|pll|inclk[0]                                 ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1            ; clocks|pll|pll|clk[0]                                   ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|inclk[0]                       ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|outclk                         ;
+;   -0.487 ;   1.003  ; RR ; IC   ; 1      ; LCFF_X8_Y13_N3   ; soc|external_memory|served|clk                          ;
+;   0.115  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X8_Y13_N3   ; phase4b_soc:soc|sdram_controller:external_memory|served ;
+; 0.846    ; 0.731    ;    ;      ;        ;                  ; data path                                               ;
+;   0.392  ;   0.277  ;    ; uTco ; 1      ; LCFF_X8_Y13_N3   ; phase4b_soc:soc|sdram_controller:external_memory|served ;
+;   0.392  ;   0.000  ; RR ; CELL ; 5      ; LCFF_X8_Y13_N3   ; soc|external_memory|served|regout                       ;
+;   0.392  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X8_Y13_N2 ; soc|external_memory|served~0|datac                      ;
+;   0.750  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X8_Y13_N2 ; soc|external_memory|served~0|combout                    ;
+;   0.750  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X8_Y13_N3   ; soc|external_memory|served|datain                       ;
+;   0.846  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X8_Y13_N3   ; phase4b_soc:soc|sdram_controller:external_memory|served ;
++----------+----------+----+------+--------+------------------+---------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                  ;
++----------+----------+----+------+--------+----------------+---------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location       ; Element                                                 ;
++----------+----------+----+------+--------+----------------+---------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                ; latch edge time                                         ;
+; 0.115    ; 0.115    ;    ;      ;        ;                ; clock path                                              ;
+;   0.000  ;   0.000  ;    ;      ;        ;                ; source latency                                          ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1         ; CLOCK_50                                                ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0  ; CLOCK_50|combout                                        ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1          ; clocks|pll|pll|inclk[0]                                 ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1          ; clocks|pll|pll|clk[0]                                   ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3     ; clocks|pll|_clk0~clkctrl|inclk[0]                       ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3     ; clocks|pll|_clk0~clkctrl|outclk                         ;
+;   -0.487 ;   1.003  ; RR ; IC   ; 1      ; LCFF_X8_Y13_N3 ; soc|external_memory|served|clk                          ;
+;   0.115  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X8_Y13_N3 ; phase4b_soc:soc|sdram_controller:external_memory|served ;
+; 0.115    ; 0.000    ;    ;      ;        ;                ; clock uncertainty                                       ;
+; 0.401    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X8_Y13_N3 ; phase4b_soc:soc|sdram_controller:external_memory|served ;
++----------+----------+----+------+--------+----------------+---------------------------------------------------------+
+
+
+Path #3: Hold slack is 0.445 
+===============================================================================
++----------------------------------------------------------------------------------+
+; Path Summary                                                                     ;
++--------------------+-------------------------------------------------------------+
+; Property           ; Value                                                       ;
++--------------------+-------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|state.BOOT ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|state.BOOT ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                       ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                       ;
+; Data Arrival Time  ; 0.841                                                       ;
+; Data Required Time ; 0.396                                                       ;
+; Slack              ; 0.445                                                       ;
++--------------------+-------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.419       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.419       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                          ;
++----------+----------+----+------+--------+-------------------+-------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location          ; Element                                                     ;
++----------+----------+----+------+--------+-------------------+-------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                   ; launch edge time                                            ;
+; 0.110    ; 0.110    ;    ;      ;        ;                   ; clock path                                                  ;
+;   0.000  ;   0.000  ;    ;      ;        ;                   ; source latency                                              ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1            ; CLOCK_50                                                    ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0     ; CLOCK_50|combout                                            ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1             ; clocks|pll|pll|inclk[0]                                     ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1             ; clocks|pll|pll|clk[0]                                       ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|inclk[0]                           ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|outclk                             ;
+;   -0.492 ;   0.998  ; RR ; IC   ; 1      ; LCFF_X5_Y12_N17   ; soc|external_memory|state.BOOT|clk                          ;
+;   0.110  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X5_Y12_N17   ; phase4b_soc:soc|sdram_controller:external_memory|state.BOOT ;
+; 0.841    ; 0.731    ;    ;      ;        ;                   ; data path                                                   ;
+;   0.387  ;   0.277  ;    ; uTco ; 1      ; LCFF_X5_Y12_N17   ; phase4b_soc:soc|sdram_controller:external_memory|state.BOOT ;
+;   0.387  ;   0.000  ; RR ; CELL ; 5      ; LCFF_X5_Y12_N17   ; soc|external_memory|state.BOOT|regout                       ;
+;   0.387  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X5_Y12_N16 ; soc|external_memory|state~39|datac                          ;
+;   0.745  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X5_Y12_N16 ; soc|external_memory|state~39|combout                        ;
+;   0.745  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X5_Y12_N17   ; soc|external_memory|state.BOOT|datain                       ;
+;   0.841  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X5_Y12_N17   ; phase4b_soc:soc|sdram_controller:external_memory|state.BOOT ;
++----------+----------+----+------+--------+-------------------+-------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                       ;
++----------+----------+----+------+--------+-----------------+-------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location        ; Element                                                     ;
++----------+----------+----+------+--------+-----------------+-------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                 ; latch edge time                                             ;
+; 0.110    ; 0.110    ;    ;      ;        ;                 ; clock path                                                  ;
+;   0.000  ;   0.000  ;    ;      ;        ;                 ; source latency                                              ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1          ; CLOCK_50                                                    ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0   ; CLOCK_50|combout                                            ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1           ; clocks|pll|pll|inclk[0]                                     ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1           ; clocks|pll|pll|clk[0]                                       ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|inclk[0]                           ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|outclk                             ;
+;   -0.492 ;   0.998  ; RR ; IC   ; 1      ; LCFF_X5_Y12_N17 ; soc|external_memory|state.BOOT|clk                          ;
+;   0.110  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X5_Y12_N17 ; phase4b_soc:soc|sdram_controller:external_memory|state.BOOT ;
+; 0.110    ; 0.000    ;    ;      ;        ;                 ; clock uncertainty                                           ;
+; 0.396    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X5_Y12_N17 ; phase4b_soc:soc|sdram_controller:external_memory|state.BOOT ;
++----------+----------+----+------+--------+-----------------+-------------------------------------------------------------+
+
+
+Path #4: Hold slack is 0.445 
+===============================================================================
++----------------------------------------------------------------------------------+
+; Path Summary                                                                     ;
++--------------------+-------------------------------------------------------------+
+; Property           ; Value                                                       ;
++--------------------+-------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|state.WAIT ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|state.WAIT ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                       ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                       ;
+; Data Arrival Time  ; 0.841                                                       ;
+; Data Required Time ; 0.396                                                       ;
+; Slack              ; 0.445                                                       ;
++--------------------+-------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.419       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.419       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                          ;
++----------+----------+----+------+--------+-------------------+-------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location          ; Element                                                     ;
++----------+----------+----+------+--------+-------------------+-------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                   ; launch edge time                                            ;
+; 0.110    ; 0.110    ;    ;      ;        ;                   ; clock path                                                  ;
+;   0.000  ;   0.000  ;    ;      ;        ;                   ; source latency                                              ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1            ; CLOCK_50                                                    ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0     ; CLOCK_50|combout                                            ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1             ; clocks|pll|pll|inclk[0]                                     ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1             ; clocks|pll|pll|clk[0]                                       ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|inclk[0]                           ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|outclk                             ;
+;   -0.492 ;   0.998  ; RR ; IC   ; 1      ; LCFF_X5_Y12_N25   ; soc|external_memory|state.WAIT|clk                          ;
+;   0.110  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X5_Y12_N25   ; phase4b_soc:soc|sdram_controller:external_memory|state.WAIT ;
+; 0.841    ; 0.731    ;    ;      ;        ;                   ; data path                                                   ;
+;   0.387  ;   0.277  ;    ; uTco ; 1      ; LCFF_X5_Y12_N25   ; phase4b_soc:soc|sdram_controller:external_memory|state.WAIT ;
+;   0.387  ;   0.000  ; RR ; CELL ; 5      ; LCFF_X5_Y12_N25   ; soc|external_memory|state.WAIT|regout                       ;
+;   0.387  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X5_Y12_N24 ; soc|external_memory|Selector27~0|datac                      ;
+;   0.745  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X5_Y12_N24 ; soc|external_memory|Selector27~0|combout                    ;
+;   0.745  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X5_Y12_N25   ; soc|external_memory|state.WAIT|datain                       ;
+;   0.841  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X5_Y12_N25   ; phase4b_soc:soc|sdram_controller:external_memory|state.WAIT ;
++----------+----------+----+------+--------+-------------------+-------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                       ;
++----------+----------+----+------+--------+-----------------+-------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location        ; Element                                                     ;
++----------+----------+----+------+--------+-----------------+-------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                 ; latch edge time                                             ;
+; 0.110    ; 0.110    ;    ;      ;        ;                 ; clock path                                                  ;
+;   0.000  ;   0.000  ;    ;      ;        ;                 ; source latency                                              ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1          ; CLOCK_50                                                    ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0   ; CLOCK_50|combout                                            ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1           ; clocks|pll|pll|inclk[0]                                     ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1           ; clocks|pll|pll|clk[0]                                       ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|inclk[0]                           ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|outclk                             ;
+;   -0.492 ;   0.998  ; RR ; IC   ; 1      ; LCFF_X5_Y12_N25 ; soc|external_memory|state.WAIT|clk                          ;
+;   0.110  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X5_Y12_N25 ; phase4b_soc:soc|sdram_controller:external_memory|state.WAIT ;
+; 0.110    ; 0.000    ;    ;      ;        ;                 ; clock uncertainty                                           ;
+; 0.396    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X5_Y12_N25 ; phase4b_soc:soc|sdram_controller:external_memory|state.WAIT ;
++----------+----------+----+------+--------+-----------------+-------------------------------------------------------------+
+
+
+Path #5: Hold slack is 0.445 
+===============================================================================
++--------------------------------------------------------------------------------------+
+; Path Summary                                                                         ;
++--------------------+-----------------------------------------------------------------+
+; Property           ; Value                                                           ;
++--------------------+-----------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[0] ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[0] ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                           ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                           ;
+; Data Arrival Time  ; 0.839                                                           ;
+; Data Required Time ; 0.394                                                           ;
+; Slack              ; 0.445                                                           ;
++--------------------+-----------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.417       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.417       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                             ;
++----------+----------+----+------+--------+------------------+-----------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location         ; Element                                                         ;
++----------+----------+----+------+--------+------------------+-----------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                  ; launch edge time                                                ;
+; 0.108    ; 0.108    ;    ;      ;        ;                  ; clock path                                                      ;
+;   0.000  ;   0.000  ;    ;      ;        ;                  ; source latency                                                  ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1           ; CLOCK_50                                                        ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0    ; CLOCK_50|combout                                                ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1            ; clocks|pll|pll|inclk[0]                                         ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1            ; clocks|pll|pll|clk[0]                                           ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|inclk[0]                               ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|outclk                                 ;
+;   -0.494 ;   0.996  ; RR ; IC   ; 1      ; LCFF_X3_Y12_N1   ; soc|external_memory|delay_count[0]|clk                          ;
+;   0.108  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X3_Y12_N1   ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[0] ;
+; 0.839    ; 0.731    ;    ;      ;        ;                  ; data path                                                       ;
+;   0.385  ;   0.277  ;    ; uTco ; 1      ; LCFF_X3_Y12_N1   ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[0] ;
+;   0.385  ;   0.000  ; RR ; CELL ; 3      ; LCFF_X3_Y12_N1   ; soc|external_memory|delay_count[0]|regout                       ;
+;   0.385  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X3_Y12_N0 ; soc|external_memory|Selector14~0|datac                          ;
+;   0.743  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X3_Y12_N0 ; soc|external_memory|Selector14~0|combout                        ;
+;   0.743  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X3_Y12_N1   ; soc|external_memory|delay_count[0]|datain                       ;
+;   0.839  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X3_Y12_N1   ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[0] ;
++----------+----------+----+------+--------+------------------+-----------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                          ;
++----------+----------+----+------+--------+----------------+-----------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location       ; Element                                                         ;
++----------+----------+----+------+--------+----------------+-----------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                ; latch edge time                                                 ;
+; 0.108    ; 0.108    ;    ;      ;        ;                ; clock path                                                      ;
+;   0.000  ;   0.000  ;    ;      ;        ;                ; source latency                                                  ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1         ; CLOCK_50                                                        ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0  ; CLOCK_50|combout                                                ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1          ; clocks|pll|pll|inclk[0]                                         ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1          ; clocks|pll|pll|clk[0]                                           ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3     ; clocks|pll|_clk0~clkctrl|inclk[0]                               ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3     ; clocks|pll|_clk0~clkctrl|outclk                                 ;
+;   -0.494 ;   0.996  ; RR ; IC   ; 1      ; LCFF_X3_Y12_N1 ; soc|external_memory|delay_count[0]|clk                          ;
+;   0.108  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X3_Y12_N1 ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[0] ;
+; 0.108    ; 0.000    ;    ;      ;        ;                ; clock uncertainty                                               ;
+; 0.394    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X3_Y12_N1 ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[0] ;
++----------+----------+----+------+--------+----------------+-----------------------------------------------------------------+
+
+
+Path #6: Hold slack is 0.445 
+===============================================================================
++---------------------------------------------------------------------------------------+
+; Path Summary                                                                          ;
++--------------------+------------------------------------------------------------------+
+; Property           ; Value                                                            ;
++--------------------+------------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IPRE ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IPRE ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                            ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                            ;
+; Data Arrival Time  ; 0.842                                                            ;
+; Data Required Time ; 0.397                                                            ;
+; Slack              ; 0.445                                                            ;
++--------------------+------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.420       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.420       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                              ;
++----------+----------+----+------+--------+------------------+------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location         ; Element                                                          ;
++----------+----------+----+------+--------+------------------+------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                  ; launch edge time                                                 ;
+; 0.111    ; 0.111    ;    ;      ;        ;                  ; clock path                                                       ;
+;   0.000  ;   0.000  ;    ;      ;        ;                  ; source latency                                                   ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1           ; CLOCK_50                                                         ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0    ; CLOCK_50|combout                                                 ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1            ; clocks|pll|pll|inclk[0]                                          ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1            ; clocks|pll|pll|clk[0]                                            ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|inclk[0]                                ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|outclk                                  ;
+;   -0.491 ;   0.999  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N5   ; soc|external_memory|next_state.IPRE|clk                          ;
+;   0.111  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N5   ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IPRE ;
+; 0.842    ; 0.731    ;    ;      ;        ;                  ; data path                                                        ;
+;   0.388  ;   0.277  ;    ; uTco ; 1      ; LCFF_X4_Y13_N5   ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IPRE ;
+;   0.388  ;   0.000  ; RR ; CELL ; 2      ; LCFF_X4_Y13_N5   ; soc|external_memory|next_state.IPRE|regout                       ;
+;   0.388  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X4_Y13_N4 ; soc|external_memory|next_state~13|datac                          ;
+;   0.746  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X4_Y13_N4 ; soc|external_memory|next_state~13|combout                        ;
+;   0.746  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N5   ; soc|external_memory|next_state.IPRE|datain                       ;
+;   0.842  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N5   ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IPRE ;
++----------+----------+----+------+--------+------------------+------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                           ;
++----------+----------+----+------+--------+----------------+------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location       ; Element                                                          ;
++----------+----------+----+------+--------+----------------+------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                ; latch edge time                                                  ;
+; 0.111    ; 0.111    ;    ;      ;        ;                ; clock path                                                       ;
+;   0.000  ;   0.000  ;    ;      ;        ;                ; source latency                                                   ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1         ; CLOCK_50                                                         ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0  ; CLOCK_50|combout                                                 ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1          ; clocks|pll|pll|inclk[0]                                          ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1          ; clocks|pll|pll|clk[0]                                            ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3     ; clocks|pll|_clk0~clkctrl|inclk[0]                                ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3     ; clocks|pll|_clk0~clkctrl|outclk                                  ;
+;   -0.491 ;   0.999  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N5 ; soc|external_memory|next_state.IPRE|clk                          ;
+;   0.111  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N5 ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IPRE ;
+; 0.111    ; 0.000    ;    ;      ;        ;                ; clock uncertainty                                                ;
+; 0.397    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X4_Y13_N5 ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IPRE ;
++----------+----------+----+------+--------+----------------+------------------------------------------------------------------+
+
+
+Path #7: Hold slack is 0.445 
+===============================================================================
++----------------------------------------------------------------------------------+
+; Path Summary                                                                     ;
++--------------------+-------------------------------------------------------------+
+; Property           ; Value                                                       ;
++--------------------+-------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|state.IPRE ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|state.IPRE ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                       ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                       ;
+; Data Arrival Time  ; 0.842                                                       ;
+; Data Required Time ; 0.397                                                       ;
+; Slack              ; 0.445                                                       ;
++--------------------+-------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.420       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.420       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                          ;
++----------+----------+----+------+--------+-------------------+-------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location          ; Element                                                     ;
++----------+----------+----+------+--------+-------------------+-------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                   ; launch edge time                                            ;
+; 0.111    ; 0.111    ;    ;      ;        ;                   ; clock path                                                  ;
+;   0.000  ;   0.000  ;    ;      ;        ;                   ; source latency                                              ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1            ; CLOCK_50                                                    ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0     ; CLOCK_50|combout                                            ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1             ; clocks|pll|pll|inclk[0]                                     ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1             ; clocks|pll|pll|clk[0]                                       ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|inclk[0]                           ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|outclk                             ;
+;   -0.491 ;   0.999  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N23   ; soc|external_memory|state.IPRE|clk                          ;
+;   0.111  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N23   ; phase4b_soc:soc|sdram_controller:external_memory|state.IPRE ;
+; 0.842    ; 0.731    ;    ;      ;        ;                   ; data path                                                   ;
+;   0.388  ;   0.277  ;    ; uTco ; 1      ; LCFF_X4_Y13_N23   ; phase4b_soc:soc|sdram_controller:external_memory|state.IPRE ;
+;   0.388  ;   0.000  ; RR ; CELL ; 4      ; LCFF_X4_Y13_N23   ; soc|external_memory|state.IPRE|regout                       ;
+;   0.388  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X4_Y13_N22 ; soc|external_memory|state~46|datac                          ;
+;   0.746  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X4_Y13_N22 ; soc|external_memory|state~46|combout                        ;
+;   0.746  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N23   ; soc|external_memory|state.IPRE|datain                       ;
+;   0.842  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N23   ; phase4b_soc:soc|sdram_controller:external_memory|state.IPRE ;
++----------+----------+----+------+--------+-------------------+-------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                       ;
++----------+----------+----+------+--------+-----------------+-------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location        ; Element                                                     ;
++----------+----------+----+------+--------+-----------------+-------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                 ; latch edge time                                             ;
+; 0.111    ; 0.111    ;    ;      ;        ;                 ; clock path                                                  ;
+;   0.000  ;   0.000  ;    ;      ;        ;                 ; source latency                                              ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1          ; CLOCK_50                                                    ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0   ; CLOCK_50|combout                                            ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1           ; clocks|pll|pll|inclk[0]                                     ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1           ; clocks|pll|pll|clk[0]                                       ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|inclk[0]                           ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|outclk                             ;
+;   -0.491 ;   0.999  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N23 ; soc|external_memory|state.IPRE|clk                          ;
+;   0.111  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N23 ; phase4b_soc:soc|sdram_controller:external_memory|state.IPRE ;
+; 0.111    ; 0.000    ;    ;      ;        ;                 ; clock uncertainty                                           ;
+; 0.397    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X4_Y13_N23 ; phase4b_soc:soc|sdram_controller:external_memory|state.IPRE ;
++----------+----------+----+------+--------+-----------------+-------------------------------------------------------------+
+
+
+Path #8: Hold slack is 0.445 
+===============================================================================
++----------------------------------------------------------------------------------------+
+; Path Summary                                                                           ;
++--------------------+-------------------------------------------------------------------+
+; Property           ; Value                                                             ;
++--------------------+-------------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IREF1 ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IREF1 ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                             ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                             ;
+; Data Arrival Time  ; 0.842                                                             ;
+; Data Required Time ; 0.397                                                             ;
+; Slack              ; 0.445                                                             ;
++--------------------+-------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.420       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.420       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                ;
++----------+----------+----+------+--------+-------------------+-------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location          ; Element                                                           ;
++----------+----------+----+------+--------+-------------------+-------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                   ; launch edge time                                                  ;
+; 0.111    ; 0.111    ;    ;      ;        ;                   ; clock path                                                        ;
+;   0.000  ;   0.000  ;    ;      ;        ;                   ; source latency                                                    ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1            ; CLOCK_50                                                          ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0     ; CLOCK_50|combout                                                  ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1             ; clocks|pll|pll|inclk[0]                                           ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1             ; clocks|pll|pll|clk[0]                                             ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|inclk[0]                                 ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|outclk                                   ;
+;   -0.491 ;   0.999  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N15   ; soc|external_memory|next_state.IREF1|clk                          ;
+;   0.111  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N15   ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IREF1 ;
+; 0.842    ; 0.731    ;    ;      ;        ;                   ; data path                                                         ;
+;   0.388  ;   0.277  ;    ; uTco ; 1      ; LCFF_X4_Y13_N15   ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IREF1 ;
+;   0.388  ;   0.000  ; RR ; CELL ; 2      ; LCFF_X4_Y13_N15   ; soc|external_memory|next_state.IREF1|regout                       ;
+;   0.388  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X4_Y13_N14 ; soc|external_memory|Selector41~1|datac                            ;
+;   0.746  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X4_Y13_N14 ; soc|external_memory|Selector41~1|combout                          ;
+;   0.746  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N15   ; soc|external_memory|next_state.IREF1|datain                       ;
+;   0.842  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N15   ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IREF1 ;
++----------+----------+----+------+--------+-------------------+-------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                             ;
++----------+----------+----+------+--------+-----------------+-------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location        ; Element                                                           ;
++----------+----------+----+------+--------+-----------------+-------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                 ; latch edge time                                                   ;
+; 0.111    ; 0.111    ;    ;      ;        ;                 ; clock path                                                        ;
+;   0.000  ;   0.000  ;    ;      ;        ;                 ; source latency                                                    ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1          ; CLOCK_50                                                          ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0   ; CLOCK_50|combout                                                  ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1           ; clocks|pll|pll|inclk[0]                                           ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1           ; clocks|pll|pll|clk[0]                                             ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|inclk[0]                                 ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|outclk                                   ;
+;   -0.491 ;   0.999  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N15 ; soc|external_memory|next_state.IREF1|clk                          ;
+;   0.111  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N15 ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IREF1 ;
+; 0.111    ; 0.000    ;    ;      ;        ;                 ; clock uncertainty                                                 ;
+; 0.397    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X4_Y13_N15 ; phase4b_soc:soc|sdram_controller:external_memory|next_state.IREF1 ;
++----------+----------+----+------+--------+-----------------+-------------------------------------------------------------------+
+
+
+Path #9: Hold slack is 0.445 
+===============================================================================
++-----------------------------------------------------------------------------------+
+; Path Summary                                                                      ;
++--------------------+--------------------------------------------------------------+
+; Property           ; Value                                                        ;
++--------------------+--------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|state.IREF1 ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|state.IREF1 ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                        ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                        ;
+; Data Arrival Time  ; 0.842                                                        ;
+; Data Required Time ; 0.397                                                        ;
+; Slack              ; 0.445                                                        ;
++--------------------+--------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.420       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.420       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                           ;
++----------+----------+----+------+--------+-------------------+--------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location          ; Element                                                      ;
++----------+----------+----+------+--------+-------------------+--------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                   ; launch edge time                                             ;
+; 0.111    ; 0.111    ;    ;      ;        ;                   ; clock path                                                   ;
+;   0.000  ;   0.000  ;    ;      ;        ;                   ; source latency                                               ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1            ; CLOCK_50                                                     ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0     ; CLOCK_50|combout                                             ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1             ; clocks|pll|pll|inclk[0]                                      ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1             ; clocks|pll|pll|clk[0]                                        ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|inclk[0]                            ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|outclk                              ;
+;   -0.491 ;   0.999  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N17   ; soc|external_memory|state.IREF1|clk                          ;
+;   0.111  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N17   ; phase4b_soc:soc|sdram_controller:external_memory|state.IREF1 ;
+; 0.842    ; 0.731    ;    ;      ;        ;                   ; data path                                                    ;
+;   0.388  ;   0.277  ;    ; uTco ; 1      ; LCFF_X4_Y13_N17   ; phase4b_soc:soc|sdram_controller:external_memory|state.IREF1 ;
+;   0.388  ;   0.000  ; RR ; CELL ; 6      ; LCFF_X4_Y13_N17   ; soc|external_memory|state.IREF1|regout                       ;
+;   0.388  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X4_Y13_N16 ; soc|external_memory|state~43|datac                           ;
+;   0.746  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X4_Y13_N16 ; soc|external_memory|state~43|combout                         ;
+;   0.746  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N17   ; soc|external_memory|state.IREF1|datain                       ;
+;   0.842  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N17   ; phase4b_soc:soc|sdram_controller:external_memory|state.IREF1 ;
++----------+----------+----+------+--------+-------------------+--------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                        ;
++----------+----------+----+------+--------+-----------------+--------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location        ; Element                                                      ;
++----------+----------+----+------+--------+-----------------+--------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                 ; latch edge time                                              ;
+; 0.111    ; 0.111    ;    ;      ;        ;                 ; clock path                                                   ;
+;   0.000  ;   0.000  ;    ;      ;        ;                 ; source latency                                               ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1          ; CLOCK_50                                                     ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0   ; CLOCK_50|combout                                             ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1           ; clocks|pll|pll|inclk[0]                                      ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1           ; clocks|pll|pll|clk[0]                                        ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|inclk[0]                            ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|outclk                              ;
+;   -0.491 ;   0.999  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N17 ; soc|external_memory|state.IREF1|clk                          ;
+;   0.111  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N17 ; phase4b_soc:soc|sdram_controller:external_memory|state.IREF1 ;
+; 0.111    ; 0.000    ;    ;      ;        ;                 ; clock uncertainty                                            ;
+; 0.397    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X4_Y13_N17 ; phase4b_soc:soc|sdram_controller:external_memory|state.IREF1 ;
++----------+----------+----+------+--------+-----------------+--------------------------------------------------------------+
+
+
+Path #10: Hold slack is 0.445 
+===============================================================================
++-----------------------------------------------------------------------------------------+
+; Path Summary                                                                            ;
++--------------------+--------------------------------------------------------------------+
+; Property           ; Value                                                              ;
++--------------------+--------------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[0] ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[0] ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                              ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                              ;
+; Data Arrival Time  ; 0.818                                                              ;
+; Data Required Time ; 0.373                                                              ;
+; Slack              ; 0.445                                                              ;
++--------------------+--------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.396       ; 72         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 27         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.396       ; 72         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 27         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                  ;
++----------+----------+----+------+--------+--------------------+--------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location           ; Element                                                            ;
++----------+----------+----+------+--------+--------------------+--------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                    ; launch edge time                                                   ;
+; 0.087    ; 0.087    ;    ;      ;        ;                    ; clock path                                                         ;
+;   0.000  ;   0.000  ;    ;      ;        ;                    ; source latency                                                     ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1             ; CLOCK_50                                                           ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0      ; CLOCK_50|combout                                                   ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1              ; clocks|pll|pll|inclk[0]                                            ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1              ; clocks|pll|pll|clk[0]                                              ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3         ; clocks|pll|_clk0~clkctrl|inclk[0]                                  ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3         ; clocks|pll|_clk0~clkctrl|outclk                                    ;
+;   -0.515 ;   0.975  ; RR ; IC   ; 1      ; LCFF_X27_Y19_N13   ; soc|external_memory|init_refreshes[0]|clk                          ;
+;   0.087  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X27_Y19_N13   ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[0] ;
+; 0.818    ; 0.731    ;    ;      ;        ;                    ; data path                                                          ;
+;   0.364  ;   0.277  ;    ; uTco ; 1      ; LCFF_X27_Y19_N13   ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[0] ;
+;   0.364  ;   0.000  ; FF ; CELL ; 5      ; LCFF_X27_Y19_N13   ; soc|external_memory|init_refreshes[0]|regout                       ;
+;   0.364  ;   0.000  ; FF ; IC   ; 1      ; LCCOMB_X27_Y19_N12 ; soc|external_memory|init_refreshes~1|datac                         ;
+;   0.722  ;   0.358  ; FR ; CELL ; 1      ; LCCOMB_X27_Y19_N12 ; soc|external_memory|init_refreshes~1|combout                       ;
+;   0.722  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X27_Y19_N13   ; soc|external_memory|init_refreshes[0]|datain                       ;
+;   0.818  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X27_Y19_N13   ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[0] ;
++----------+----------+----+------+--------+--------------------+--------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                               ;
++----------+----------+----+------+--------+------------------+--------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location         ; Element                                                            ;
++----------+----------+----+------+--------+------------------+--------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                  ; latch edge time                                                    ;
+; 0.087    ; 0.087    ;    ;      ;        ;                  ; clock path                                                         ;
+;   0.000  ;   0.000  ;    ;      ;        ;                  ; source latency                                                     ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1           ; CLOCK_50                                                           ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0    ; CLOCK_50|combout                                                   ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1            ; clocks|pll|pll|inclk[0]                                            ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1            ; clocks|pll|pll|clk[0]                                              ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|inclk[0]                                  ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|outclk                                    ;
+;   -0.515 ;   0.975  ; RR ; IC   ; 1      ; LCFF_X27_Y19_N13 ; soc|external_memory|init_refreshes[0]|clk                          ;
+;   0.087  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X27_Y19_N13 ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[0] ;
+; 0.087    ; 0.000    ;    ;      ;        ;                  ; clock uncertainty                                                  ;
+; 0.373    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X27_Y19_N13 ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[0] ;
++----------+----------+----+------+--------+------------------+--------------------------------------------------------------------+
+
+
+Path #11: Hold slack is 0.445 
+===============================================================================
++-----------------------------------------------------------------------------------------+
+; Path Summary                                                                            ;
++--------------------+--------------------------------------------------------------------+
+; Property           ; Value                                                              ;
++--------------------+--------------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[1] ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[1] ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                              ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                              ;
+; Data Arrival Time  ; 0.818                                                              ;
+; Data Required Time ; 0.373                                                              ;
+; Slack              ; 0.445                                                              ;
++--------------------+--------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.396       ; 72         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 27         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.396       ; 72         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 27         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                 ;
++----------+----------+----+------+--------+-------------------+--------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location          ; Element                                                            ;
++----------+----------+----+------+--------+-------------------+--------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                   ; launch edge time                                                   ;
+; 0.087    ; 0.087    ;    ;      ;        ;                   ; clock path                                                         ;
+;   0.000  ;   0.000  ;    ;      ;        ;                   ; source latency                                                     ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1            ; CLOCK_50                                                           ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0     ; CLOCK_50|combout                                                   ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1             ; clocks|pll|pll|inclk[0]                                            ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1             ; clocks|pll|pll|clk[0]                                              ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|inclk[0]                                  ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|outclk                                    ;
+;   -0.515 ;   0.975  ; RR ; IC   ; 1      ; LCFF_X27_Y19_N3   ; soc|external_memory|init_refreshes[1]|clk                          ;
+;   0.087  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X27_Y19_N3   ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[1] ;
+; 0.818    ; 0.731    ;    ;      ;        ;                   ; data path                                                          ;
+;   0.364  ;   0.277  ;    ; uTco ; 1      ; LCFF_X27_Y19_N3   ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[1] ;
+;   0.364  ;   0.000  ; RR ; CELL ; 4      ; LCFF_X27_Y19_N3   ; soc|external_memory|init_refreshes[1]|regout                       ;
+;   0.364  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X27_Y19_N2 ; soc|external_memory|Add2~1|datac                                   ;
+;   0.722  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X27_Y19_N2 ; soc|external_memory|Add2~1|combout                                 ;
+;   0.722  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X27_Y19_N3   ; soc|external_memory|init_refreshes[1]|datain                       ;
+;   0.818  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X27_Y19_N3   ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[1] ;
++----------+----------+----+------+--------+-------------------+--------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                              ;
++----------+----------+----+------+--------+-----------------+--------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location        ; Element                                                            ;
++----------+----------+----+------+--------+-----------------+--------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                 ; latch edge time                                                    ;
+; 0.087    ; 0.087    ;    ;      ;        ;                 ; clock path                                                         ;
+;   0.000  ;   0.000  ;    ;      ;        ;                 ; source latency                                                     ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1          ; CLOCK_50                                                           ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0   ; CLOCK_50|combout                                                   ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1           ; clocks|pll|pll|inclk[0]                                            ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1           ; clocks|pll|pll|clk[0]                                              ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|inclk[0]                                  ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|outclk                                    ;
+;   -0.515 ;   0.975  ; RR ; IC   ; 1      ; LCFF_X27_Y19_N3 ; soc|external_memory|init_refreshes[1]|clk                          ;
+;   0.087  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X27_Y19_N3 ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[1] ;
+; 0.087    ; 0.000    ;    ;      ;        ;                 ; clock uncertainty                                                  ;
+; 0.373    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X27_Y19_N3 ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[1] ;
++----------+----------+----+------+--------+-----------------+--------------------------------------------------------------------+
+
+
+Path #12: Hold slack is 0.445 
+===============================================================================
++-----------------------------------------------------------------------------------------+
+; Path Summary                                                                            ;
++--------------------+--------------------------------------------------------------------+
+; Property           ; Value                                                              ;
++--------------------+--------------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[2] ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[2] ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                              ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                              ;
+; Data Arrival Time  ; 0.818                                                              ;
+; Data Required Time ; 0.373                                                              ;
+; Slack              ; 0.445                                                              ;
++--------------------+--------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.396       ; 72         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 27         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.396       ; 72         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 27         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                 ;
++----------+----------+----+------+--------+-------------------+--------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location          ; Element                                                            ;
++----------+----------+----+------+--------+-------------------+--------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                   ; launch edge time                                                   ;
+; 0.087    ; 0.087    ;    ;      ;        ;                   ; clock path                                                         ;
+;   0.000  ;   0.000  ;    ;      ;        ;                   ; source latency                                                     ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1            ; CLOCK_50                                                           ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0     ; CLOCK_50|combout                                                   ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1             ; clocks|pll|pll|inclk[0]                                            ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1             ; clocks|pll|pll|clk[0]                                              ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|inclk[0]                                  ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|outclk                                    ;
+;   -0.515 ;   0.975  ; RR ; IC   ; 1      ; LCFF_X27_Y19_N9   ; soc|external_memory|init_refreshes[2]|clk                          ;
+;   0.087  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X27_Y19_N9   ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[2] ;
+; 0.818    ; 0.731    ;    ;      ;        ;                   ; data path                                                          ;
+;   0.364  ;   0.277  ;    ; uTco ; 1      ; LCFF_X27_Y19_N9   ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[2] ;
+;   0.364  ;   0.000  ; RR ; CELL ; 3      ; LCFF_X27_Y19_N9   ; soc|external_memory|init_refreshes[2]|regout                       ;
+;   0.364  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X27_Y19_N8 ; soc|external_memory|Add2~0|datac                                   ;
+;   0.722  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X27_Y19_N8 ; soc|external_memory|Add2~0|combout                                 ;
+;   0.722  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X27_Y19_N9   ; soc|external_memory|init_refreshes[2]|datain                       ;
+;   0.818  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X27_Y19_N9   ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[2] ;
++----------+----------+----+------+--------+-------------------+--------------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                              ;
++----------+----------+----+------+--------+-----------------+--------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location        ; Element                                                            ;
++----------+----------+----+------+--------+-----------------+--------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                 ; latch edge time                                                    ;
+; 0.087    ; 0.087    ;    ;      ;        ;                 ; clock path                                                         ;
+;   0.000  ;   0.000  ;    ;      ;        ;                 ; source latency                                                     ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1          ; CLOCK_50                                                           ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0   ; CLOCK_50|combout                                                   ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1           ; clocks|pll|pll|inclk[0]                                            ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1           ; clocks|pll|pll|clk[0]                                              ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|inclk[0]                                  ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|outclk                                    ;
+;   -0.515 ;   0.975  ; RR ; IC   ; 1      ; LCFF_X27_Y19_N9 ; soc|external_memory|init_refreshes[2]|clk                          ;
+;   0.087  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X27_Y19_N9 ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[2] ;
+; 0.087    ; 0.000    ;    ;      ;        ;                 ; clock uncertainty                                                  ;
+; 0.373    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X27_Y19_N9 ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[2] ;
++----------+----------+----+------+--------+-----------------+--------------------------------------------------------------------+
+
+
+Path #13: Hold slack is 0.445 
+===============================================================================
++-----------------------------------------------------------------------------------------+
+; Path Summary                                                                            ;
++--------------------+--------------------------------------------------------------------+
+; Property           ; Value                                                              ;
++--------------------+--------------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[3] ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[3] ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                              ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                              ;
+; Data Arrival Time  ; 0.818                                                              ;
+; Data Required Time ; 0.373                                                              ;
+; Slack              ; 0.445                                                              ;
++--------------------+--------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.396       ; 72         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 27         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.396       ; 72         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 27         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                  ;
++----------+----------+----+------+--------+--------------------+--------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location           ; Element                                                            ;
++----------+----------+----+------+--------+--------------------+--------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                    ; launch edge time                                                   ;
+; 0.087    ; 0.087    ;    ;      ;        ;                    ; clock path                                                         ;
+;   0.000  ;   0.000  ;    ;      ;        ;                    ; source latency                                                     ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1             ; CLOCK_50                                                           ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0      ; CLOCK_50|combout                                                   ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1              ; clocks|pll|pll|inclk[0]                                            ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1              ; clocks|pll|pll|clk[0]                                              ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3         ; clocks|pll|_clk0~clkctrl|inclk[0]                                  ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3         ; clocks|pll|_clk0~clkctrl|outclk                                    ;
+;   -0.515 ;   0.975  ; RR ; IC   ; 1      ; LCFF_X27_Y19_N21   ; soc|external_memory|init_refreshes[3]|clk                          ;
+;   0.087  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X27_Y19_N21   ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[3] ;
+; 0.818    ; 0.731    ;    ;      ;        ;                    ; data path                                                          ;
+;   0.364  ;   0.277  ;    ; uTco ; 1      ; LCFF_X27_Y19_N21   ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[3] ;
+;   0.364  ;   0.000  ; RR ; CELL ; 2      ; LCFF_X27_Y19_N21   ; soc|external_memory|init_refreshes[3]|regout                       ;
+;   0.364  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X27_Y19_N20 ; soc|external_memory|Add2~2|datac                                   ;
+;   0.722  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X27_Y19_N20 ; soc|external_memory|Add2~2|combout                                 ;
+;   0.722  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X27_Y19_N21   ; soc|external_memory|init_refreshes[3]|datain                       ;
+;   0.818  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X27_Y19_N21   ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[3] ;
++----------+----------+----+------+--------+--------------------+--------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                               ;
++----------+----------+----+------+--------+------------------+--------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location         ; Element                                                            ;
++----------+----------+----+------+--------+------------------+--------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                  ; latch edge time                                                    ;
+; 0.087    ; 0.087    ;    ;      ;        ;                  ; clock path                                                         ;
+;   0.000  ;   0.000  ;    ;      ;        ;                  ; source latency                                                     ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1           ; CLOCK_50                                                           ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0    ; CLOCK_50|combout                                                   ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1            ; clocks|pll|pll|inclk[0]                                            ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1            ; clocks|pll|pll|clk[0]                                              ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|inclk[0]                                  ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|outclk                                    ;
+;   -0.515 ;   0.975  ; RR ; IC   ; 1      ; LCFF_X27_Y19_N21 ; soc|external_memory|init_refreshes[3]|clk                          ;
+;   0.087  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X27_Y19_N21 ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[3] ;
+; 0.087    ; 0.000    ;    ;      ;        ;                  ; clock uncertainty                                                  ;
+; 0.373    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X27_Y19_N21 ; phase4b_soc:soc|sdram_controller:external_memory|init_refreshes[3] ;
++----------+----------+----+------+--------+------------------+--------------------------------------------------------------------+
+
+
+Path #14: Hold slack is 0.445 
+===============================================================================
++---------------------------------------------------------------------------------------+
+; Path Summary                                                                          ;
++--------------------+------------------------------------------------------------------+
+; Property           ; Value                                                            ;
++--------------------+------------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|next_state.MODE ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|next_state.MODE ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                            ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                            ;
+; Data Arrival Time  ; 0.842                                                            ;
+; Data Required Time ; 0.397                                                            ;
+; Slack              ; 0.445                                                            ;
++--------------------+------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.420       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.420       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                              ;
++----------+----------+----+------+--------+------------------+------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location         ; Element                                                          ;
++----------+----------+----+------+--------+------------------+------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                  ; launch edge time                                                 ;
+; 0.111    ; 0.111    ;    ;      ;        ;                  ; clock path                                                       ;
+;   0.000  ;   0.000  ;    ;      ;        ;                  ; source latency                                                   ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1           ; CLOCK_50                                                         ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0    ; CLOCK_50|combout                                                 ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1            ; clocks|pll|pll|inclk[0]                                          ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1            ; clocks|pll|pll|clk[0]                                            ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|inclk[0]                                ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|outclk                                  ;
+;   -0.491 ;   0.999  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N9   ; soc|external_memory|next_state.MODE|clk                          ;
+;   0.111  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N9   ; phase4b_soc:soc|sdram_controller:external_memory|next_state.MODE ;
+; 0.842    ; 0.731    ;    ;      ;        ;                  ; data path                                                        ;
+;   0.388  ;   0.277  ;    ; uTco ; 1      ; LCFF_X4_Y13_N9   ; phase4b_soc:soc|sdram_controller:external_memory|next_state.MODE ;
+;   0.388  ;   0.000  ; RR ; CELL ; 2      ; LCFF_X4_Y13_N9   ; soc|external_memory|next_state.MODE|regout                       ;
+;   0.388  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X4_Y13_N8 ; soc|external_memory|Selector42~1|datac                           ;
+;   0.746  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X4_Y13_N8 ; soc|external_memory|Selector42~1|combout                         ;
+;   0.746  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N9   ; soc|external_memory|next_state.MODE|datain                       ;
+;   0.842  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N9   ; phase4b_soc:soc|sdram_controller:external_memory|next_state.MODE ;
++----------+----------+----+------+--------+------------------+------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                           ;
++----------+----------+----+------+--------+----------------+------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location       ; Element                                                          ;
++----------+----------+----+------+--------+----------------+------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                ; latch edge time                                                  ;
+; 0.111    ; 0.111    ;    ;      ;        ;                ; clock path                                                       ;
+;   0.000  ;   0.000  ;    ;      ;        ;                ; source latency                                                   ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1         ; CLOCK_50                                                         ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0  ; CLOCK_50|combout                                                 ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1          ; clocks|pll|pll|inclk[0]                                          ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1          ; clocks|pll|pll|clk[0]                                            ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3     ; clocks|pll|_clk0~clkctrl|inclk[0]                                ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3     ; clocks|pll|_clk0~clkctrl|outclk                                  ;
+;   -0.491 ;   0.999  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N9 ; soc|external_memory|next_state.MODE|clk                          ;
+;   0.111  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N9 ; phase4b_soc:soc|sdram_controller:external_memory|next_state.MODE ;
+; 0.111    ; 0.000    ;    ;      ;        ;                ; clock uncertainty                                                ;
+; 0.397    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X4_Y13_N9 ; phase4b_soc:soc|sdram_controller:external_memory|next_state.MODE ;
++----------+----------+----+------+--------+----------------+------------------------------------------------------------------+
+
+
+Path #15: Hold slack is 0.445 
+===============================================================================
++----------------------------------------------------------------------------------+
+; Path Summary                                                                     ;
++--------------------+-------------------------------------------------------------+
+; Property           ; Value                                                       ;
++--------------------+-------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|state.MODE ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|state.MODE ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                       ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                       ;
+; Data Arrival Time  ; 0.842                                                       ;
+; Data Required Time ; 0.397                                                       ;
+; Slack              ; 0.445                                                       ;
++--------------------+-------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.420       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.420       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                          ;
++----------+----------+----+------+--------+-------------------+-------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location          ; Element                                                     ;
++----------+----------+----+------+--------+-------------------+-------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                   ; launch edge time                                            ;
+; 0.111    ; 0.111    ;    ;      ;        ;                   ; clock path                                                  ;
+;   0.000  ;   0.000  ;    ;      ;        ;                   ; source latency                                              ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1            ; CLOCK_50                                                    ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0     ; CLOCK_50|combout                                            ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1             ; clocks|pll|pll|inclk[0]                                     ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1             ; clocks|pll|pll|clk[0]                                       ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|inclk[0]                           ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|outclk                             ;
+;   -0.491 ;   0.999  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N19   ; soc|external_memory|state.MODE|clk                          ;
+;   0.111  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N19   ; phase4b_soc:soc|sdram_controller:external_memory|state.MODE ;
+; 0.842    ; 0.731    ;    ;      ;        ;                   ; data path                                                   ;
+;   0.388  ;   0.277  ;    ; uTco ; 1      ; LCFF_X4_Y13_N19   ; phase4b_soc:soc|sdram_controller:external_memory|state.MODE ;
+;   0.388  ;   0.000  ; RR ; CELL ; 9      ; LCFF_X4_Y13_N19   ; soc|external_memory|state.MODE|regout                       ;
+;   0.388  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X4_Y13_N18 ; soc|external_memory|state~45|datac                          ;
+;   0.746  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X4_Y13_N18 ; soc|external_memory|state~45|combout                        ;
+;   0.746  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N19   ; soc|external_memory|state.MODE|datain                       ;
+;   0.842  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N19   ; phase4b_soc:soc|sdram_controller:external_memory|state.MODE ;
++----------+----------+----+------+--------+-------------------+-------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                       ;
++----------+----------+----+------+--------+-----------------+-------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location        ; Element                                                     ;
++----------+----------+----+------+--------+-----------------+-------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                 ; latch edge time                                             ;
+; 0.111    ; 0.111    ;    ;      ;        ;                 ; clock path                                                  ;
+;   0.000  ;   0.000  ;    ;      ;        ;                 ; source latency                                              ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1          ; CLOCK_50                                                    ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0   ; CLOCK_50|combout                                            ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1           ; clocks|pll|pll|inclk[0]                                     ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1           ; clocks|pll|pll|clk[0]                                       ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|inclk[0]                           ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|outclk                             ;
+;   -0.491 ;   0.999  ; RR ; IC   ; 1      ; LCFF_X4_Y13_N19 ; soc|external_memory|state.MODE|clk                          ;
+;   0.111  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X4_Y13_N19 ; phase4b_soc:soc|sdram_controller:external_memory|state.MODE ;
+; 0.111    ; 0.000    ;    ;      ;        ;                 ; clock uncertainty                                           ;
+; 0.397    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X4_Y13_N19 ; phase4b_soc:soc|sdram_controller:external_memory|state.MODE ;
++----------+----------+----+------+--------+-----------------+-------------------------------------------------------------+
+
+
+Path #16: Hold slack is 0.445 
+===============================================================================
++-----------------------------------------------------------------------------------------+
+; Path Summary                                                                            ;
++--------------------+--------------------------------------------------------------------+
+; Property           ; Value                                                              ;
++--------------------+--------------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|next_state.COLUMN ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|next_state.COLUMN ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                              ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                              ;
+; Data Arrival Time  ; 0.844                                                              ;
+; Data Required Time ; 0.399                                                              ;
+; Slack              ; 0.445                                                              ;
++--------------------+--------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.422       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.422       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                ;
++----------+----------+----+------+--------+------------------+--------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location         ; Element                                                            ;
++----------+----------+----+------+--------+------------------+--------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                  ; launch edge time                                                   ;
+; 0.113    ; 0.113    ;    ;      ;        ;                  ; clock path                                                         ;
+;   0.000  ;   0.000  ;    ;      ;        ;                  ; source latency                                                     ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1           ; CLOCK_50                                                           ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0    ; CLOCK_50|combout                                                   ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1            ; clocks|pll|pll|inclk[0]                                            ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1            ; clocks|pll|pll|clk[0]                                              ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|inclk[0]                                  ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3       ; clocks|pll|_clk0~clkctrl|outclk                                    ;
+;   -0.489 ;   1.001  ; RR ; IC   ; 1      ; LCFF_X6_Y13_N7   ; soc|external_memory|next_state.COLUMN|clk                          ;
+;   0.113  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X6_Y13_N7   ; phase4b_soc:soc|sdram_controller:external_memory|next_state.COLUMN ;
+; 0.844    ; 0.731    ;    ;      ;        ;                  ; data path                                                          ;
+;   0.390  ;   0.277  ;    ; uTco ; 1      ; LCFF_X6_Y13_N7   ; phase4b_soc:soc|sdram_controller:external_memory|next_state.COLUMN ;
+;   0.390  ;   0.000  ; RR ; CELL ; 2      ; LCFF_X6_Y13_N7   ; soc|external_memory|next_state.COLUMN|regout                       ;
+;   0.390  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X6_Y13_N6 ; soc|external_memory|Selector44~0|datac                             ;
+;   0.748  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X6_Y13_N6 ; soc|external_memory|Selector44~0|combout                           ;
+;   0.748  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X6_Y13_N7   ; soc|external_memory|next_state.COLUMN|datain                       ;
+;   0.844  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X6_Y13_N7   ; phase4b_soc:soc|sdram_controller:external_memory|next_state.COLUMN ;
++----------+----------+----+------+--------+------------------+--------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                             ;
++----------+----------+----+------+--------+----------------+--------------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location       ; Element                                                            ;
++----------+----------+----+------+--------+----------------+--------------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                ; latch edge time                                                    ;
+; 0.113    ; 0.113    ;    ;      ;        ;                ; clock path                                                         ;
+;   0.000  ;   0.000  ;    ;      ;        ;                ; source latency                                                     ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1         ; CLOCK_50                                                           ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0  ; CLOCK_50|combout                                                   ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1          ; clocks|pll|pll|inclk[0]                                            ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1          ; clocks|pll|pll|clk[0]                                              ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3     ; clocks|pll|_clk0~clkctrl|inclk[0]                                  ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3     ; clocks|pll|_clk0~clkctrl|outclk                                    ;
+;   -0.489 ;   1.001  ; RR ; IC   ; 1      ; LCFF_X6_Y13_N7 ; soc|external_memory|next_state.COLUMN|clk                          ;
+;   0.113  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X6_Y13_N7 ; phase4b_soc:soc|sdram_controller:external_memory|next_state.COLUMN ;
+; 0.113    ; 0.000    ;    ;      ;        ;                ; clock uncertainty                                                  ;
+; 0.399    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X6_Y13_N7 ; phase4b_soc:soc|sdram_controller:external_memory|next_state.COLUMN ;
++----------+----------+----+------+--------+----------------+--------------------------------------------------------------------+
+
+
+Path #17: Hold slack is 0.445 
+===============================================================================
++-----------------------------------------------------------------------------------+
+; Path Summary                                                                      ;
++--------------------+--------------------------------------------------------------+
+; Property           ; Value                                                        ;
++--------------------+--------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|initialized ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|initialized ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                        ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                        ;
+; Data Arrival Time  ; 0.843                                                        ;
+; Data Required Time ; 0.398                                                        ;
+; Slack              ; 0.445                                                        ;
++--------------------+--------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.421       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.421       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                           ;
++----------+----------+----+------+--------+-------------------+--------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location          ; Element                                                      ;
++----------+----------+----+------+--------+-------------------+--------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                   ; launch edge time                                             ;
+; 0.112    ; 0.112    ;    ;      ;        ;                   ; clock path                                                   ;
+;   0.000  ;   0.000  ;    ;      ;        ;                   ; source latency                                               ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1            ; CLOCK_50                                                     ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0     ; CLOCK_50|combout                                             ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1             ; clocks|pll|pll|inclk[0]                                      ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1             ; clocks|pll|pll|clk[0]                                        ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|inclk[0]                            ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|outclk                              ;
+;   -0.490 ;   1.000  ; RR ; IC   ; 1      ; LCFF_X5_Y13_N21   ; soc|external_memory|initialized|clk                          ;
+;   0.112  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X5_Y13_N21   ; phase4b_soc:soc|sdram_controller:external_memory|initialized ;
+; 0.843    ; 0.731    ;    ;      ;        ;                   ; data path                                                    ;
+;   0.389  ;   0.277  ;    ; uTco ; 1      ; LCFF_X5_Y13_N21   ; phase4b_soc:soc|sdram_controller:external_memory|initialized ;
+;   0.389  ;   0.000  ; RR ; CELL ; 4      ; LCFF_X5_Y13_N21   ; soc|external_memory|initialized|regout                       ;
+;   0.389  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X5_Y13_N20 ; soc|external_memory|initialized~0|datac                      ;
+;   0.747  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X5_Y13_N20 ; soc|external_memory|initialized~0|combout                    ;
+;   0.747  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X5_Y13_N21   ; soc|external_memory|initialized|datain                       ;
+;   0.843  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X5_Y13_N21   ; phase4b_soc:soc|sdram_controller:external_memory|initialized ;
++----------+----------+----+------+--------+-------------------+--------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                        ;
++----------+----------+----+------+--------+-----------------+--------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location        ; Element                                                      ;
++----------+----------+----+------+--------+-----------------+--------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                 ; latch edge time                                              ;
+; 0.112    ; 0.112    ;    ;      ;        ;                 ; clock path                                                   ;
+;   0.000  ;   0.000  ;    ;      ;        ;                 ; source latency                                               ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1          ; CLOCK_50                                                     ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0   ; CLOCK_50|combout                                             ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1           ; clocks|pll|pll|inclk[0]                                      ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1           ; clocks|pll|pll|clk[0]                                        ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|inclk[0]                            ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|outclk                              ;
+;   -0.490 ;   1.000  ; RR ; IC   ; 1      ; LCFF_X5_Y13_N21 ; soc|external_memory|initialized|clk                          ;
+;   0.112  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X5_Y13_N21 ; phase4b_soc:soc|sdram_controller:external_memory|initialized ;
+; 0.112    ; 0.000    ;    ;      ;        ;                 ; clock uncertainty                                            ;
+; 0.398    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X5_Y13_N21 ; phase4b_soc:soc|sdram_controller:external_memory|initialized ;
++----------+----------+----+------+--------+-----------------+--------------------------------------------------------------+
+
+
+Path #18: Hold slack is 0.445 
+===============================================================================
++--------------------------------------------------------------------------------------+
+; Path Summary                                                                         ;
++--------------------+-----------------------------------------------------------------+
+; Property           ; Value                                                           ;
++--------------------+-----------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[3] ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[3] ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                           ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                           ;
+; Data Arrival Time  ; 0.839                                                           ;
+; Data Required Time ; 0.394                                                           ;
+; Slack              ; 0.445                                                           ;
++--------------------+-----------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.417       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.417       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                              ;
++----------+----------+----+------+--------+-------------------+-----------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location          ; Element                                                         ;
++----------+----------+----+------+--------+-------------------+-----------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                   ; launch edge time                                                ;
+; 0.108    ; 0.108    ;    ;      ;        ;                   ; clock path                                                      ;
+;   0.000  ;   0.000  ;    ;      ;        ;                   ; source latency                                                  ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1            ; CLOCK_50                                                        ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0     ; CLOCK_50|combout                                                ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1             ; clocks|pll|pll|inclk[0]                                         ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1             ; clocks|pll|pll|clk[0]                                           ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|inclk[0]                               ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|outclk                                 ;
+;   -0.494 ;   0.996  ; RR ; IC   ; 1      ; LCFF_X3_Y12_N19   ; soc|external_memory|delay_count[3]|clk                          ;
+;   0.108  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X3_Y12_N19   ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[3] ;
+; 0.839    ; 0.731    ;    ;      ;        ;                   ; data path                                                       ;
+;   0.385  ;   0.277  ;    ; uTco ; 1      ; LCFF_X3_Y12_N19   ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[3] ;
+;   0.385  ;   0.000  ; RR ; CELL ; 3      ; LCFF_X3_Y12_N19   ; soc|external_memory|delay_count[3]|regout                       ;
+;   0.385  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X3_Y12_N18 ; soc|external_memory|Selector11~0|datac                          ;
+;   0.743  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X3_Y12_N18 ; soc|external_memory|Selector11~0|combout                        ;
+;   0.743  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X3_Y12_N19   ; soc|external_memory|delay_count[3]|datain                       ;
+;   0.839  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X3_Y12_N19   ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[3] ;
++----------+----------+----+------+--------+-------------------+-----------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                           ;
++----------+----------+----+------+--------+-----------------+-----------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location        ; Element                                                         ;
++----------+----------+----+------+--------+-----------------+-----------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                 ; latch edge time                                                 ;
+; 0.108    ; 0.108    ;    ;      ;        ;                 ; clock path                                                      ;
+;   0.000  ;   0.000  ;    ;      ;        ;                 ; source latency                                                  ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1          ; CLOCK_50                                                        ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0   ; CLOCK_50|combout                                                ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1           ; clocks|pll|pll|inclk[0]                                         ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1           ; clocks|pll|pll|clk[0]                                           ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|inclk[0]                               ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|outclk                                 ;
+;   -0.494 ;   0.996  ; RR ; IC   ; 1      ; LCFF_X3_Y12_N19 ; soc|external_memory|delay_count[3]|clk                          ;
+;   0.108  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X3_Y12_N19 ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[3] ;
+; 0.108    ; 0.000    ;    ;      ;        ;                 ; clock uncertainty                                               ;
+; 0.394    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X3_Y12_N19 ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[3] ;
++----------+----------+----+------+--------+-----------------+-----------------------------------------------------------------+
+
+
+Path #19: Hold slack is 0.445 
+===============================================================================
++--------------------------------------------------------------------------------------+
+; Path Summary                                                                         ;
++--------------------+-----------------------------------------------------------------+
+; Property           ; Value                                                           ;
++--------------------+-----------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[4] ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[4] ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                           ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                           ;
+; Data Arrival Time  ; 0.841                                                           ;
+; Data Required Time ; 0.396                                                           ;
+; Slack              ; 0.445                                                           ;
++--------------------+-----------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.419       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.419       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                              ;
++----------+----------+----+------+--------+-------------------+-----------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location          ; Element                                                         ;
++----------+----------+----+------+--------+-------------------+-----------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                   ; launch edge time                                                ;
+; 0.110    ; 0.110    ;    ;      ;        ;                   ; clock path                                                      ;
+;   0.000  ;   0.000  ;    ;      ;        ;                   ; source latency                                                  ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1            ; CLOCK_50                                                        ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0     ; CLOCK_50|combout                                                ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1             ; clocks|pll|pll|inclk[0]                                         ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1             ; clocks|pll|pll|clk[0]                                           ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|inclk[0]                               ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|outclk                                 ;
+;   -0.492 ;   0.998  ; RR ; IC   ; 1      ; LCFF_X5_Y12_N13   ; soc|external_memory|delay_count[4]|clk                          ;
+;   0.110  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X5_Y12_N13   ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[4] ;
+; 0.841    ; 0.731    ;    ;      ;        ;                   ; data path                                                       ;
+;   0.387  ;   0.277  ;    ; uTco ; 1      ; LCFF_X5_Y12_N13   ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[4] ;
+;   0.387  ;   0.000  ; RR ; CELL ; 3      ; LCFF_X5_Y12_N13   ; soc|external_memory|delay_count[4]|regout                       ;
+;   0.387  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X5_Y12_N12 ; soc|external_memory|Selector10~0|datac                          ;
+;   0.745  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X5_Y12_N12 ; soc|external_memory|Selector10~0|combout                        ;
+;   0.745  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X5_Y12_N13   ; soc|external_memory|delay_count[4]|datain                       ;
+;   0.841  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X5_Y12_N13   ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[4] ;
++----------+----------+----+------+--------+-------------------+-----------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                           ;
++----------+----------+----+------+--------+-----------------+-----------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location        ; Element                                                         ;
++----------+----------+----+------+--------+-----------------+-----------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                 ; latch edge time                                                 ;
+; 0.110    ; 0.110    ;    ;      ;        ;                 ; clock path                                                      ;
+;   0.000  ;   0.000  ;    ;      ;        ;                 ; source latency                                                  ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1          ; CLOCK_50                                                        ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0   ; CLOCK_50|combout                                                ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1           ; clocks|pll|pll|inclk[0]                                         ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1           ; clocks|pll|pll|clk[0]                                           ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|inclk[0]                               ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|outclk                                 ;
+;   -0.492 ;   0.998  ; RR ; IC   ; 1      ; LCFF_X5_Y12_N13 ; soc|external_memory|delay_count[4]|clk                          ;
+;   0.110  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X5_Y12_N13 ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[4] ;
+; 0.110    ; 0.000    ;    ;      ;        ;                 ; clock uncertainty                                               ;
+; 0.396    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X5_Y12_N13 ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[4] ;
++----------+----------+----+------+--------+-----------------+-----------------------------------------------------------------+
+
+
+Path #20: Hold slack is 0.445 
+===============================================================================
++--------------------------------------------------------------------------------------+
+; Path Summary                                                                         ;
++--------------------+-----------------------------------------------------------------+
+; Property           ; Value                                                           ;
++--------------------+-----------------------------------------------------------------+
+; From Node          ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[5] ;
+; To Node            ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[5] ;
+; Launch Clock       ; clocks|pll|pll|clk[0]                                           ;
+; Latch Clock        ; clocks|pll|pll|clk[0]                                           ;
+; Data Arrival Time  ; 0.841                                                           ;
+; Data Required Time ; 0.396                                                           ;
+; Slack              ; 0.445                                                           ;
++--------------------+-----------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------+
+; Statistics                                                                          ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min    ; Max    ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+; Hold Relationship      ; 0.000 ;       ;             ;            ;        ;        ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;        ;        ;
+; Data Delay             ; 0.731 ;       ;             ;            ;        ;        ;
+; Number of Logic Levels ;       ; 1     ;             ;            ;        ;        ;
+; Physical Delays        ;       ;       ;             ;            ;        ;        ;
+;  Arrival Path          ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.419       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
+;   Data                 ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 2     ; 0.000       ; 0          ; 0.000  ; 0.000  ;
+;    Cell                ;       ; 3     ; 0.454       ; 62         ; 0.000  ; 0.358  ;
+;    uTco                ;       ; 1     ; 0.277       ; 37         ; 0.277  ; 0.277  ;
+;  Required Path         ;       ;       ;             ;            ;        ;        ;
+;   Clock                ;       ;       ;             ;            ;        ;        ;
+;    IC                  ;       ; 3     ; 4.419       ; 73         ; 0.929  ; 2.492  ;
+;    Cell                ;       ; 3     ; 1.628       ; 26         ; 0.000  ; 1.026  ;
+;    PLL Compensation    ;       ; 1     ; -5.937      ; 0          ; -5.937 ; -5.937 ;
++------------------------+-------+-------+-------------+------------+--------+--------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                              ;
++----------+----------+----+------+--------+-------------------+-----------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location          ; Element                                                         ;
++----------+----------+----+------+--------+-------------------+-----------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                   ; launch edge time                                                ;
+; 0.110    ; 0.110    ;    ;      ;        ;                   ; clock path                                                      ;
+;   0.000  ;   0.000  ;    ;      ;        ;                   ; source latency                                                  ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1            ; CLOCK_50                                                        ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0     ; CLOCK_50|combout                                                ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1             ; clocks|pll|pll|inclk[0]                                         ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1             ; clocks|pll|pll|clk[0]                                           ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|inclk[0]                               ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3        ; clocks|pll|_clk0~clkctrl|outclk                                 ;
+;   -0.492 ;   0.998  ; RR ; IC   ; 1      ; LCFF_X5_Y12_N31   ; soc|external_memory|delay_count[5]|clk                          ;
+;   0.110  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X5_Y12_N31   ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[5] ;
+; 0.841    ; 0.731    ;    ;      ;        ;                   ; data path                                                       ;
+;   0.387  ;   0.277  ;    ; uTco ; 1      ; LCFF_X5_Y12_N31   ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[5] ;
+;   0.387  ;   0.000  ; RR ; CELL ; 3      ; LCFF_X5_Y12_N31   ; soc|external_memory|delay_count[5]|regout                       ;
+;   0.387  ;   0.000  ; RR ; IC   ; 1      ; LCCOMB_X5_Y12_N30 ; soc|external_memory|Selector9~0|datac                           ;
+;   0.745  ;   0.358  ; RR ; CELL ; 1      ; LCCOMB_X5_Y12_N30 ; soc|external_memory|Selector9~0|combout                         ;
+;   0.745  ;   0.000  ; RR ; IC   ; 1      ; LCFF_X5_Y12_N31   ; soc|external_memory|delay_count[5]|datain                       ;
+;   0.841  ;   0.096  ; RR ; CELL ; 1      ; LCFF_X5_Y12_N31   ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[5] ;
++----------+----------+----+------+--------+-------------------+-----------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                           ;
++----------+----------+----+------+--------+-----------------+-----------------------------------------------------------------+
+; Total    ; Incr     ; RF ; Type ; Fanout ; Location        ; Element                                                         ;
++----------+----------+----+------+--------+-----------------+-----------------------------------------------------------------+
+; 0.000    ; 0.000    ;    ;      ;        ;                 ; latch edge time                                                 ;
+; 0.110    ; 0.110    ;    ;      ;        ;                 ; clock path                                                      ;
+;   0.000  ;   0.000  ;    ;      ;        ;                 ; source latency                                                  ;
+;   0.000  ;   0.000  ;    ;      ; 1      ; PIN_L1          ; CLOCK_50                                                        ;
+;   1.026  ;   1.026  ; RR ; CELL ; 1      ; IOC_X0_Y13_N0   ; CLOCK_50|combout                                                ;
+;   3.518  ;   2.492  ; RR ; IC   ; 2      ; PLL_1           ; clocks|pll|pll|inclk[0]                                         ;
+;   -2.419 ;   -5.937 ; RR ; COMP ; 1      ; PLL_1           ; clocks|pll|pll|clk[0]                                           ;
+;   -1.490 ;   0.929  ; RR ; IC   ; 1      ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|inclk[0]                               ;
+;   -1.490 ;   0.000  ; RR ; CELL ; 2631   ; CLKCTRL_G3      ; clocks|pll|_clk0~clkctrl|outclk                                 ;
+;   -0.492 ;   0.998  ; RR ; IC   ; 1      ; LCFF_X5_Y12_N31 ; soc|external_memory|delay_count[5]|clk                          ;
+;   0.110  ;   0.602  ; RR ; CELL ; 1      ; LCFF_X5_Y12_N31 ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[5] ;
+; 0.110    ; 0.000    ;    ;      ;        ;                 ; clock uncertainty                                               ;
+; 0.396    ; 0.286    ;    ; uTh  ; 1      ; LCFF_X5_Y12_N31 ; phase4b_soc:soc|sdram_controller:external_memory|delay_count[5] ;
++----------+----------+----+------+--------+-----------------+-----------------------------------------------------------------+
+
+

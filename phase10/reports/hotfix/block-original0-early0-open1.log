@@ -1,0 +1,2 @@
+PASS loader block readback: four regions, 512-byte CRC b8ce8d07; observed_early=0 open_page=1
+<checkout>/phase10/sim/tb_upload_block.sv:35: $finish called at 493980000 (1ps)

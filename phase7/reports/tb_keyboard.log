@@ -1,0 +1,7 @@
+Keyboard stimulus starts
+Keyboard test cycles=10000000 hb=0 pc=000002e8 enabled=0 slot=0 keys=0000001
+Keyboard test cycles=20000000 hb=1 pc=0000048c enabled=1 slot=0 keys=0000001
+Second image active: hb=2
+Keyboard test cycles=30000000 hb=2 pc=0000037c enabled=1 slot=1 keys=1000001
+Keyboard test cycles=40000000 hb=3 pc=0000022c enabled=1 slot=1 keys=1000001
+Diagnostic fallback active: hb=3

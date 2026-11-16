@@ -1,0 +1,4 @@
+PASS Icarus CPU/SDRAM/VGA: three complete frames and 1260000 pixels, zero underflows
+PASS Verilator --timing serialized PS/2/CPU/SDRAM/VGA test: movement and Escape fallback/restore, all original assertions
+PASS Icarus framebuffer MMIO: 15 access/held-request/error checks
+NOTE Redundant slow Icarus keyboard run was stopped after the full identical test passed with Verilator timing; tb_keyboard.log is partial and is not a passing test certificate. See tb_keyboard-fast.log.

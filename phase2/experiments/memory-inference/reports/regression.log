@@ -1,0 +1,46 @@
+make: Entering directory '<checkout>/phase2'
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2005 -Wall -tnull -s de2_phase2 rtl/de2_phase2.v rtl/onchip_memory.v rtl/phase2_soc.v rtl/rv32i_cpu.v rtl/soc_bus.v rtl/vga_tiles.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -Ibuild -s tb_cpu -o build/tb_cpu sim/tb_cpu.sv rtl/rv32i_cpu.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_cpu
+PASS CPU: 507 retirement states, all 32 registers and PC, random bus stalls
+sim/tb_cpu.sv:52: $finish called at 78911000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_traps -o build/tb_traps sim/tb_traps.sv rtl/rv32i_cpu.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_traps
+PASS traps: 16 cases
+sim/tb_traps.sv:48: $finish called at 2900000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_memory -o build/tb_memory sim/tb_memory.sv rtl/de2_phase2.v rtl/onchip_memory.v rtl/phase2_soc.v rtl/rv32i_cpu.v rtl/soc_bus.v rtl/vga_tiles.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_memory
+PASS memory/MMIO: 37 transactions, lane masks, boundaries, decode faults, no duplicate effects
+sim/tb_memory.sv:68: $finish called at 5580000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_vga -o build/tb_vga sim/tb_vga.sv rtl/vga_tiles.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_vga
+PASS VGA: 3 complete frames, 1260000 pixel checks, pattern/solid/tiles and 25 MHz clock
+sim/tb_vga.sv:48: $finish called at 50424011000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_soc -o build/tb_soc sim/tb_soc.sv rtl/de2_phase2.v rtl/onchip_memory.v rtl/phase2_soc.v rtl/rv32i_cpu.v rtl/soc_bus.v rtl/vga_tiles.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+sim/tb_soc.sv:48: warning: @* is sensitive to all 2048 words in array 'tiles'.
+sim/tb_soc.sv:50: warning: @* is sensitive to all 2048 words in array 'tiles'.
+/tmp/de2-iverilog/usr/bin/vvp build/tb_soc
+PASS SoC: compiled RV32I firmware, initialized data/BSS, pattern -> red -> green -> animated tiles; PS/2 make/break consumed via MMIO; 11 VGA frames
+sim/tb_soc.sv:41: $finish called at 184800091000 (1ps)
+make -C ../sim test IVERILOG=/tmp/de2-iverilog/usr/bin/iverilog VVP=/tmp/de2-iverilog/usr/bin/vvp IVL_FLAGS='-B /tmp/de2-iverilog/usr/lib/ivl' BUILD_DIR=<checkout>/phase2/build/ps2
+make[1]: Entering directory '<checkout>/sim'
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2005 -Wall -tnull -s ps2_keyboard_mmio ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+mkdir -p <checkout>/phase2/build/ps2
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_ps2_keyboard -Ptb_ps2_keyboard.CLK_HZ=25000000 -o <checkout>/phase2/build/ps2/ps2-25 tb_ps2_keyboard.sv ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp <checkout>/phase2/build/ps2/ps2-25
+PASS: PS/2 integration CLK_HZ=25000000 checks=640
+tb_ps2_keyboard.sv:225: $finish called at 188734541000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_ps2_keyboard -Ptb_ps2_keyboard.CLK_HZ=50000000 -o <checkout>/phase2/build/ps2/ps2-50 tb_ps2_keyboard.sv ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp <checkout>/phase2/build/ps2/ps2-50
+PASS: PS/2 integration CLK_HZ=50000000 checks=640
+tb_ps2_keyboard.sv:225: $finish called at 188728271000 (1ps)
+make[1]: Leaving directory '<checkout>/sim'
+python3 tools/check_project.py
+PASS preserved input hashes: original Quartus files and PS/2 modules unchanged
+PASS project consistency: exact device, 40/40 top-level pins and LVTTL assignments, no duplicates, source/ROM paths
+Quartus package legality, fitter pin report and timing have NOT been checked by this script.
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_top -o build/tb_top sim/tb_top.sv rtl/de2_phase2.v rtl/onchip_memory.v rtl/phase2_soc.v rtl/rv32i_cpu.v rtl/soc_bus.v rtl/vga_tiles.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+cd quartus && /tmp/de2-iverilog/usr/bin/vvp ../build/tb_top
+PASS board top: power-on hold, synchronized button reset/reboot, ROM path and DAC clock
+sim/tb_top.sv:28: $finish called at 1321350000 (1ps)
+make: Leaving directory '<checkout>/phase2'

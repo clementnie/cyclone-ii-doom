@@ -1,0 +1,35 @@
+PASS tb_framebuffer_soc
+Traceback (most recent call last):
+  File "<checkout>/phase9/tools/keyboard_fast.py", line 13, in <module>
+    subprocess.run([str(P/'build/keyboardfast/Vtb_keyboard')],cwd=R/'phase4b',stdout=log,stderr=log,check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['<checkout>/phase9/build/keyboardfast/Vtb_keyboard']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "<checkout>/phase9/tools/regress.py", line 9, in <module>
+    subprocess.run([sys.executable,str(P/'tools/keyboard_fast.py')],check=True);print('PASS timed keyboard',flush=True);continue
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/usr/bin/python3', '<checkout>/phase9/tools/keyboard_fast.py']' returned non-zero exit status 1.
+
+Fixture correction: isolated demo skips slot ACK wait while video is disabled; no RTL/DOOM change.
+Keyboard stimulus starts
+Keyboard test cycles=10000000 hb=0 pc=000003e8 enabled=0 slot=0 keys=0000001
+Keyboard test cycles=20000000 hb=1 pc=0000047c enabled=1 slot=0 keys=0000001
+Keyboard test cycles=30000000 hb=2 pc=00000228 enabled=1 slot=0 keys=0000001
+Second image active: hb=2
+Keyboard test cycles=40000000 hb=2 pc=0000046c enabled=1 slot=1 keys=1000001
+Diagnostic fallback active: hb=3
+Keyboard test cycles=50000000 hb=3 pc=000004c8 enabled=0 slot=0 keys=1000000
+Keyboard test cycles=60000000 hb=4 pc=00000340 enabled=0 slot=0 keys=1000000
+PASS serialized PS/2 -> CPU firmware -> moved SDRAM rectangle -> RGB; Escape fallback/restore; heartbeat=4
+- <checkout>/phase9/build/tb_keyboard.sv:29: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01
+- Verilator: $finish at 1s; walltime 65.117 s; speed 18.573 ms/s
+- Verilator: cpu 64.877 s on 1 threads; allocated 12 MB
+PASS tb_mmio
+PASS final integrated suite after demo fixture correction: framebuffer/VGA, serialized keyboard, MMIO.

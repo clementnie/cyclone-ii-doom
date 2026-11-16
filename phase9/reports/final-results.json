@@ -1,0 +1,58 @@
+{
+  "checkpoint": "621cbac",
+  "rtl_regression": "PASS after isolated demo firmware fixture correction; original failure retained",
+  "physical_test": "NOT PERFORMED",
+  "actual_gameplay_fps": null,
+  "target_fps": [
+    15,
+    20
+  ],
+  "target_demonstrated": false,
+  "resources": {
+    "logic_elements": 14732,
+    "logic_limit": 18752,
+    "m4k": 52,
+    "m4k_limit": 52,
+    "multiplier_9bit_elements": 8,
+    "pll": 1
+  },
+  "worst_setup_ns": 2.069,
+  "worst_hold_ns": 0.215,
+  "boot": {
+    "pass": true,
+    "cycles": 1864800002,
+    "retired": 200041041,
+    "frames": 3,
+    "vga_frames_captured": 2,
+    "underflows": 0,
+    "stack_bytes": 1472,
+    "framebuffer_a_crc32": 2440793638,
+    "heap_span": 0,
+    "wall_seconds": 463.578
+  },
+  "early_opening_melt_intervals": [
+    {
+      "from_frame": 1,
+      "to_frame": 2,
+      "cycles": 26880127,
+      "retired": 1532344,
+      "cpi": 17.541835906297802,
+      "simulated_interval_hz": 1.8601102591516774
+    },
+    {
+      "from_frame": 2,
+      "to_frame": 3,
+      "cycles": 30239870,
+      "retired": 1759334,
+      "cpi": 17.188248507673926,
+      "simulated_interval_hz": 1.6534462615083994
+    }
+  ],
+  "limitations": [
+    "Three frames cover opening melt; no steady-state gameplay benchmark",
+    "Backend operand/execute stages are serialized with no full forwarding network",
+    "Blocking single-word cache interface and synchronous write-through stores remain",
+    "heap_span in boot report uses obsolete legacy symbol addresses; disregard",
+    "Legacy PC match counters 22/23 are not arithmetic function call counters for new ELF"
+  ]
+}

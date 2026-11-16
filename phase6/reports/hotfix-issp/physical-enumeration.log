@@ -1,0 +1,37 @@
+Info: *******************************************************************
+Info: Running Quartus II 32-bit SignalTap II
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Copyright (C) 1991-2013 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Sat Nov 14 02:44:34 2026
+Info: Command: quartus_stp -t phase6/tools/enumerate_issp_raw.tcl
+TCL=8.5.5
+CABLE=<USB-Blaster [1-1]>
+DEVICES_RAW=<{@1: EP2C(15|20) (0x020B30DD)}>
+DEVICE=<@1: EP2C(15|20) (0x020B30DD)>
+INSTANCE_INFO_RAW_BEGIN
+{0 480 96 OOM6}
+INSTANCE_INFO_RAW_END
+INSTANCE_INFO_LIST_LENGTH=1
+ITEM=<0 480 96 OOM6> FIELDS=4
+FIELD_0=<0>
+FIELD_1=<480>
+FIELD_2=<96>
+FIELD_3=<OOM6>
+Info (23030): Evaluation of Tcl script phase6/tools/enumerate_issp_raw.tcl was successful
+Info: Quartus II 32-bit SignalTap II was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 139 megabytes
+    Info: Processing ended: Sat Nov 14 02:44:34 2026
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00

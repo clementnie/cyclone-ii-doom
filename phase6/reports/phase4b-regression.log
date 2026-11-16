@@ -1,0 +1,54 @@
+make: Entering directory '<checkout>/phase4b'
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_framebuffer_soc -o build/tb_soc sim/tb_framebuffer_soc.sv ../phase4/sim/sdram_model.sv rtl/phase4b_soc.v rtl/phase4b_bus.v rtl/framebuffer.v rtl/sdram_arbiter.v rtl/diagnostic_text.v ../phase4/rtl/sdram_controller.v ../phase4/rtl/rv32i_cpu.v ../phase2/rtl/onchip_memory.v ../phase2/rtl/vga_tiles.v ../phase2/rtl/diagnostic_font.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_soc
+PASS CPU -> SDRAM -> palette -> VGA: 3 complete frames, 1260000 pixels; underflows=0; CPU grants=35984 VGA=48000 max wait=49 cycles
+sim/tb_framebuffer_soc.sv:61: $finish called at 168000131000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_scanout -o build/tb_scanout sim/tb_scanout.sv rtl/framebuffer.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_scanout
+PASS scanout: 2100000 reference pixels, palette, swap, forced late DMA/error, reset; grants=124561
+sim/tb_scanout.sv:59: $finish called at 169216440000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_arbiter -o build/tb_arbiter sim/tb_arbiter.sv rtl/sdram_arbiter.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_arbiter
+PASS weighted arbiter: CPU grants=       152 video=       610 max CPU/display wait=        136/         54 cycles
+sim/tb_arbiter.sv:35: $finish called at 400100000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_keyboard -o build/tb_keyboard sim/tb_keyboard.sv ../phase4/sim/sdram_model.sv rtl/phase4b_soc.v rtl/phase4b_bus.v rtl/framebuffer.v rtl/sdram_arbiter.v rtl/diagnostic_text.v ../phase4/rtl/sdram_controller.v ../phase4/rtl/rv32i_cpu.v ../phase2/rtl/onchip_memory.v ../phase2/rtl/vga_tiles.v ../phase2/rtl/diagnostic_font.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_keyboard
+Keyboard stimulus starts
+Keyboard test cycles=10000000 hb=1 pc=0000043c enabled=1 slot=0 keys=0000001
+Second image active: hb=2
+Keyboard test cycles=20000000 hb=2 pc=000004b0 enabled=1 slot=1 keys=1000001
+Diagnostic fallback active: hb=3
+Keyboard test cycles=30000000 hb=3 pc=000004c4 enabled=0 slot=0 keys=1000000
+PASS serialized PS/2 -> CPU firmware -> moved SDRAM rectangle -> RGB; Escape fallback/restore; heartbeat=4
+sim/tb_keyboard.sv:29: $finish called at 688640130000 (1ps)
+make -C doom platform-test
+make[1]: Entering directory '<checkout>/phase4b/doom'
+clang --target=riscv32-unknown-elf -march=rv32i -mabi=ilp32 -mno-relax -msmall-data-limit=0 -Os -ffreestanding -fno-builtin -nostdlib -DCMAP256 -DDOOMGENERIC_RESX=320 -DDOOMGENERIC_RESY=200 -Iinclude -Iupstream/doomgeneric -fuse-ld=lld -Wl,-T,platform_test.ld,-Map,build/platform-test.map -o build/platform-test.elf ../firmware/start.S platform.c platform_test.c integer_runtime.c
+llvm-size build/platform-test.elf
+   text	   data	    bss	    dec	    hex	filename
+   1583	      4	  65040	  66627	  10443	build/platform-test.elf
+make[1]: Leaving directory '<checkout>/phase4b/doom'
+llvm-objcopy -O binary doom/build/platform-test.elf build/platform.bin
+python3 ../phase2/tools/bin_to_hex.py build/platform.bin build/platform.hex
+build/platform.bin: 1588 load bytes; ROM padded to 8192 bytes
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_framebuffer_soc -Ptb_framebuffer_soc.PLATFORM=1 -o build/tb_platform sim/tb_framebuffer_soc.sv ../phase4/sim/sdram_model.sv rtl/phase4b_soc.v rtl/phase4b_bus.v rtl/framebuffer.v rtl/sdram_arbiter.v rtl/diagnostic_text.v ../phase4/rtl/sdram_controller.v ../phase4/rtl/rv32i_cpu.v ../phase2/rtl/onchip_memory.v ../phase2/rtl/vga_tiles.v ../phase2/rtl/diagnostic_font.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_platform
+PASS CPU -> SDRAM -> palette -> VGA: 1 complete frames, 420000 pixels; underflows=0; CPU grants=1628 VGA=16000 max wait=48 cycles
+sim/tb_framebuffer_soc.sv:61: $finish called at 218400131000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_mmio -o build/tb_mmio sim/tb_mmio.sv rtl/phase4b_soc.v rtl/phase4b_bus.v rtl/framebuffer.v rtl/sdram_arbiter.v rtl/diagnostic_text.v ../phase4/rtl/sdram_controller.v ../phase4/rtl/rv32i_cpu.v ../phase2/rtl/onchip_memory.v ../phase2/rtl/vga_tiles.v ../phase2/rtl/diagnostic_font.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_mmio
+PASS framebuffer MMIO: 15 request/held-valid, palette, status and access-fault checks
+sim/tb_mmio.sv:29: $finish called at 1610000 (1ps)
+make -C doom native-tests
+make[1]: Entering directory '<checkout>/phase4b/doom'
+clang -O2 integer_runtime.c test_integer_runtime.c -o build/test_integer_runtime
+build/test_integer_runtime > ../reports/integer-runtime-test.log
+python3 test_packer.py > ../reports/packer-test.log
+cat ../reports/integer-runtime-test.log ../reports/packer-test.log
+PASS RV32I software integer runtime: 100000 signed/unsigned cases
+PASS host packer: valid ELF segment/CRC; framebuffer, WAD and stack overlap rejected
+make[1]: Leaving directory '<checkout>/phase4b/doom'
+python3 tools/test_manifest.py snapshot
+PASS focused framebuffer, CPU/DG video paths, serialized keyboard, arbitration, baseline regression and DOOM object compilation
+PASS functional test input manifest
+make: Leaving directory '<checkout>/phase4b'

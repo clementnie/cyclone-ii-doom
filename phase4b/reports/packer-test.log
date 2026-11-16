@@ -1,0 +1,1 @@
+PASS host packer: valid ELF segment/CRC; framebuffer, WAD and stack overlap rejected

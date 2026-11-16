@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Nov 13 18:10:29 2026
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : memory
+Top-level Entity Name : onchip_memory
+Family : Cyclone II
+Total logic elements : 117,513
+    Total combinational functions : 51,977
+    Dedicated logic registers : 65,572
+Total registers : 65572
+Total pins : 106
+Total virtual pins : 0
+Total memory bits : 65,536
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

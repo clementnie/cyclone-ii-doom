@@ -1,0 +1,4 @@
+BENCH OPEN_PAGE=          0 mixed_cycles=     719166 accesses=      16109 sequential_cycles=      26840 sequential_requests=       2048
+Normal request max latency: 93 cycles
+PASS SDRAM randomized lanes, banks, rows, bounds, refresh, reset; max latency incl init=10071
+<checkout>/phase10/sim/tb_sdram.sv:58: $finish called at 15721251000 (1ps)

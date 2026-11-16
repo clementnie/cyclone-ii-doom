@@ -1,0 +1,117 @@
+Info: *******************************************************************
+Info: Running Quartus II 32-bit SignalTap II
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Copyright (C) 1991-2013 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Sat Nov 14 02:22:37 2026
+Info: Command: quartus_stp -t phase6/tools/test_upload_tcl.tcl
+Uploader Tcl stub starting on Tcl 8.5.5
+ACKed 1024 packets, elapsed 0s
+ACKed 2048 packets, elapsed 0s
+ACKed 3072 packets, elapsed 0s
+ACKed 4096 packets, elapsed 0s
+ACKed 5120 packets, elapsed 0s
+ACKed 6144 packets, elapsed 0s
+ACKed 7168 packets, elapsed 0s
+ACKed 8192 packets, elapsed 0s
+ACKed 9216 packets, elapsed 0s
+ACKed 10240 packets, elapsed 0s
+ACKed 11264 packets, elapsed 0s
+ACKed 12288 packets, elapsed 0s
+ACKed 13312 packets, elapsed 0s
+ACKed 14336 packets, elapsed 0s
+ACKed 15360 packets, elapsed 0s
+ACKed 16384 packets, elapsed 0s
+ACKed 17408 packets, elapsed 0s
+ACKed 18432 packets, elapsed 0s
+ACKed 19456 packets, elapsed 0s
+ACKed 20480 packets, elapsed 0s
+ACKed 21504 packets, elapsed 0s
+ACKed 22528 packets, elapsed 0s
+ACKed 23552 packets, elapsed 0s
+ACKed 24576 packets, elapsed 0s
+ACKed 25600 packets, elapsed 0s
+ACKed 26624 packets, elapsed 0s
+ACKed 27648 packets, elapsed 0s
+ACKed 28672 packets, elapsed 0s
+ACKed 29696 packets, elapsed 0s
+ACKed 30720 packets, elapsed 0s
+ACKed 31744 packets, elapsed 0s
+ACKed 32768 packets, elapsed 0s
+ACKed 33792 packets, elapsed 0s
+ACKed 34816 packets, elapsed 0s
+ACKed 35840 packets, elapsed 0s
+ACKed 36864 packets, elapsed 0s
+ACKed 37888 packets, elapsed 0s
+ACKed 38912 packets, elapsed 1s
+ACKed 39936 packets, elapsed 1s
+ACKed 40960 packets, elapsed 1s
+ACKed 41984 packets, elapsed 1s
+ACKed 43008 packets, elapsed 1s
+ACKed 44032 packets, elapsed 1s
+ACKed 45056 packets, elapsed 1s
+ACKed 46080 packets, elapsed 1s
+ACKed 47104 packets, elapsed 1s
+ACKed 48128 packets, elapsed 1s
+ACKed 49152 packets, elapsed 1s
+ACKed 50176 packets, elapsed 1s
+ACKed 51200 packets, elapsed 1s
+ACKed 52224 packets, elapsed 1s
+ACKed 53248 packets, elapsed 1s
+ACKed 54272 packets, elapsed 1s
+ACKed 55296 packets, elapsed 1s
+ACKed 56320 packets, elapsed 1s
+ACKed 57344 packets, elapsed 1s
+ACKed 58368 packets, elapsed 1s
+ACKed 59392 packets, elapsed 1s
+ACKed 60416 packets, elapsed 1s
+ACKed 61440 packets, elapsed 1s
+ACKed 62464 packets, elapsed 1s
+ACKed 63488 packets, elapsed 1s
+ACKed 64512 packets, elapsed 1s
+ACKed 65536 packets, elapsed 1s
+ACKed 66560 packets, elapsed 1s
+ACKed 67584 packets, elapsed 1s
+ACKed 68608 packets, elapsed 1s
+ACKed 69632 packets, elapsed 1s
+ACKed 70656 packets, elapsed 1s
+ACKed 71680 packets, elapsed 1s
+ACKed 72704 packets, elapsed 1s
+ACKed 73728 packets, elapsed 1s
+ACKed 74752 packets, elapsed 1s
+ACKed 75776 packets, elapsed 1s
+ACKed 76800 packets, elapsed 2s
+ACKed 77824 packets, elapsed 2s
+ACKed 78848 packets, elapsed 2s
+ACKed 79872 packets, elapsed 2s
+ACKed 80896 packets, elapsed 2s
+ACKed 81920 packets, elapsed 2s
+ACKed 82944 packets, elapsed 2s
+ACKed 83968 packets, elapsed 2s
+ACKed 84992 packets, elapsed 2s
+ACKed 86016 packets, elapsed 2s
+ACKed 87040 packets, elapsed 2s
+ACKed 88064 packets, elapsed 2s
+ACKed 89088 packets, elapsed 2s
+ACKed 90112 packets, elapsed 2s
+ACKed 91136 packets, elapsed 2s
+ACKed 92160 packets, elapsed 2s
+Uploaded and verified 92693 packets; entry handoff acknowledged. Observe VGA.
+PASS host Tcl: all packets, ACK parsing, readback CRC field, stale-source recovery, cleanup
+Info (23030): Evaluation of Tcl script phase6/tools/test_upload_tcl.tcl was successful
+Info: Quartus II 32-bit SignalTap II was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 143 megabytes
+    Info: Processing ended: Sat Nov 14 02:22:41 2026
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03

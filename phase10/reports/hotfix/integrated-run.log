@@ -1,0 +1,49 @@
+{
+  "entry": "0x20020000",
+  "segments": [
+    {
+      "address": "0x20020000",
+      "runtime_bytes": 438548,
+      "crc32": "c5938c86"
+    },
+    {
+      "address": "0x2008b114",
+      "runtime_bytes": 298068,
+      "crc32": "10c448be"
+    }
+  ],
+  "wad": {
+    "size": 4196020,
+    "lumps": 1264,
+    "sha256": "1d7d43be501e67d927e415e0b8f3e29c3bf33075e859721816f652a526cac771",
+    "crc32": "162b696a"
+  }
+}
+CYCLES 0 PC 0 packets=0 frames=0 uf=0
+UPLOAD 8192/94868 cycles=23612375
+VERIFIED END cmd=40020f5 crc=c5938c86
+CYCLES 100000000 PC 2d4 packets=8472 frames=0 uf=0
+VERIFIED END cmd=400375c crc=10c448be
+UPLOAD 16384/94868 cycles=174164202
+UPLOAD 24576/94868 cycles=197772642
+CYCLES 200000000 PC 2dc packets=25348 frames=0 uf=0
+UPLOAD 32768/94868 cycles=221381082
+UPLOAD 40960/94868 cycles=244989522
+UPLOAD 49152/94868 cycles=268597962
+UPLOAD 57344/94868 cycles=292206402
+CYCLES 300000000 PC 274 packets=60048 frames=0 uf=0
+UPLOAD 65536/94868 cycles=315814842
+UPLOAD 73728/94868 cycles=339423282
+UPLOAD 81920/94868 cycles=363031722
+UPLOAD 90112/94868 cycles=386640162
+CYCLES 400000000 PC 29c packets=94747 frames=0 uf=0
+CYCLES 500000000 PC 348 packets=94866 frames=0 uf=0
+CYCLES 600000000 PC 314 packets=94866 frames=0 uf=0
+CYCLES 700000000 PC 330 packets=94866 frames=0 uf=0
+CYCLES 800000000 PC 308 packets=94866 frames=0 uf=0
+CYCLES 900000000 PC 31c packets=94866 frames=0 uf=0
+CYCLES 1000000000 PC 338 packets=94866 frames=0 uf=0
+CYCLES 1100000000 PC 314 packets=94866 frames=0 uf=0
+VERIFIED END cmd=4017293 crc=162b696a
+PASS complete ROM upload: 94868 packets, both ELF CRCs and IWAD CRC, EXEC ACK; cycles=1123525122
+

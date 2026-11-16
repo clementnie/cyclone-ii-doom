@@ -1,0 +1,180 @@
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C20F484C7
+set_global_assignment -name TOP_LEVEL_ENTITY starter_phase4
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name PRE_FLOW_SCRIPT_FILE "quartus_sh:hardware_gate.tcl"
+set_global_assignment -name SEED 3
+set_global_assignment -name SDC_FILE phase4.sdc
+set_global_assignment -name VERILOG_FILE ../rtl/sdram_controller.v
+set_global_assignment -name VERILOG_FILE ../rtl/phase4_bus.v
+set_global_assignment -name VERILOG_FILE ../rtl/phase4_soc.v
+set_global_assignment -name VERILOG_FILE ../rtl/starter_phase4.v
+set_global_assignment -name VERILOG_FILE ../rtl/diagnostic_text.v
+set_global_assignment -name VERILOG_FILE ../../phase2/rtl/onchip_memory.v
+set_global_assignment -name VERILOG_FILE ../rtl/rv32i_cpu.v
+set_global_assignment -name VERILOG_FILE ../../phase2/rtl/vga_tiles.v
+set_global_assignment -name VERILOG_FILE ../../phase2/rtl/diagnostic_font.v
+set_global_assignment -name VERILOG_FILE ../../rtl/ps2_keyboard_mmio.v
+set_global_assignment -name VERILOG_FILE ../../rtl/ps2_receiver.v
+set_global_assignment -name VERILOG_FILE ../../rtl/ps2_scancode_decoder.v
+set_location_assignment PIN_L1 -to CLOCK_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
+set_location_assignment PIN_R22 -to KEY[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0]
+set_location_assignment PIN_H15 -to PS2_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_CLK
+set_location_assignment PIN_J14 -to PS2_DAT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_DAT
+set_location_assignment PIN_R20 -to LEDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0]
+set_location_assignment PIN_A11 -to VGA_HS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_HS
+set_location_assignment PIN_B11 -to VGA_VS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS
+set_location_assignment PIN_D9 -to VGA_R[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[0]
+set_location_assignment PIN_C9 -to VGA_R[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[1]
+set_location_assignment PIN_A7 -to VGA_R[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[2]
+set_location_assignment PIN_B7 -to VGA_R[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[3]
+set_location_assignment PIN_B8 -to VGA_G[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[0]
+set_location_assignment PIN_C10 -to VGA_G[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[1]
+set_location_assignment PIN_B9 -to VGA_G[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[2]
+set_location_assignment PIN_A8 -to VGA_G[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[3]
+set_location_assignment PIN_A9 -to VGA_B[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[0]
+set_location_assignment PIN_D11 -to VGA_B[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[1]
+set_location_assignment PIN_A10 -to VGA_B[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[2]
+set_location_assignment PIN_B10 -to VGA_B[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[3]
+set_location_assignment PIN_W4 -to DRAM_ADDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[0]
+set_location_assignment PIN_W5 -to DRAM_ADDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[1]
+set_location_assignment PIN_Y3 -to DRAM_ADDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[2]
+set_location_assignment PIN_Y4 -to DRAM_ADDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[3]
+set_location_assignment PIN_R6 -to DRAM_ADDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[4]
+set_location_assignment PIN_R5 -to DRAM_ADDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[5]
+set_location_assignment PIN_P6 -to DRAM_ADDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[6]
+set_location_assignment PIN_P5 -to DRAM_ADDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[7]
+set_location_assignment PIN_P3 -to DRAM_ADDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[8]
+set_location_assignment PIN_N4 -to DRAM_ADDR[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[9]
+set_location_assignment PIN_W3 -to DRAM_ADDR[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[10]
+set_location_assignment PIN_N6 -to DRAM_ADDR[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[11]
+set_location_assignment PIN_U1 -to DRAM_DQ[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[0]
+set_location_assignment PIN_U2 -to DRAM_DQ[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[1]
+set_location_assignment PIN_V1 -to DRAM_DQ[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[2]
+set_location_assignment PIN_V2 -to DRAM_DQ[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[3]
+set_location_assignment PIN_W1 -to DRAM_DQ[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[4]
+set_location_assignment PIN_W2 -to DRAM_DQ[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[5]
+set_location_assignment PIN_Y1 -to DRAM_DQ[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[6]
+set_location_assignment PIN_Y2 -to DRAM_DQ[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[7]
+set_location_assignment PIN_N1 -to DRAM_DQ[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[8]
+set_location_assignment PIN_N2 -to DRAM_DQ[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[9]
+set_location_assignment PIN_P1 -to DRAM_DQ[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[10]
+set_location_assignment PIN_P2 -to DRAM_DQ[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[11]
+set_location_assignment PIN_R1 -to DRAM_DQ[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[12]
+set_location_assignment PIN_R2 -to DRAM_DQ[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[13]
+set_location_assignment PIN_T1 -to DRAM_DQ[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[14]
+set_location_assignment PIN_T2 -to DRAM_DQ[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[15]
+set_location_assignment PIN_U3 -to DRAM_BA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[0]
+set_location_assignment PIN_V4 -to DRAM_BA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[1]
+set_location_assignment PIN_R7 -to DRAM_DQM[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQM[0]
+set_location_assignment PIN_M5 -to DRAM_DQM[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQM[1]
+set_location_assignment PIN_U4 -to DRAM_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CLK
+set_location_assignment PIN_N3 -to DRAM_CKE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CKE
+set_location_assignment PIN_T6 -to DRAM_CS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CS_N
+set_location_assignment PIN_T5 -to DRAM_RAS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_RAS_N
+set_location_assignment PIN_T3 -to DRAM_CAS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CAS_N
+set_location_assignment PIN_R8 -to DRAM_WE_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_WE_N
+
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to DRAM_DQ[*]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to DRAM_ADDR[*]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to DRAM_BA[*]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to DRAM_DQM[*]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to DRAM_DQ[*]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_ADDR[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_ADDR[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_ADDR[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_ADDR[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_ADDR[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_ADDR[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_ADDR[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_ADDR[7]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_ADDR[8]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_ADDR[9]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_ADDR[10]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_ADDR[11]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_BA[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_BA[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQM[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQM[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[7]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[8]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[9]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[10]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[11]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[12]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[13]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[14]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_DQ[15]
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_CLK
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_CKE
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_CS_N
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_RAS_N
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_CAS_N
+set_instance_assignment -name OUTPUT_PIN_LOAD 7 -to DRAM_WE_N

@@ -1,0 +1,87 @@
+%Warning-WIDTHEXPAND: <checkout>/rtl/ps2_scancode_decoder.v:109:34: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'prefix_timer' generates 20 bits.
+                                                                                     : ... note: In instance 'tb_keyboard.dut.fabric.keyboard.decoder'
+  109 |                 if (prefix_timer == PREFIX_TIMEOUT_CYCLES-1) begin
+      |                                  ^~
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.054
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: <checkout>/rtl/ps2_receiver.v:53:51: Operator OR expects 8 bits on the RHS, but RHS's SEL generates 1 bits.
+                                                                            : ... note: In instance 'tb_keyboard.dut.fabric.keyboard.rx'
+   53 |             clock_history <= (clock_history << 1) | clock_sync[1];
+      |                                                   ^
+%Warning-WIDTHEXPAND: <checkout>/rtl/ps2_receiver.v:54:49: Operator OR expects 8 bits on the RHS, but RHS's SEL generates 1 bits.
+                                                                            : ... note: In instance 'tb_keyboard.dut.fabric.keyboard.rx'
+   54 |             data_history <= (data_history << 1) | data_sync[1];
+      |                                                 ^
+%Warning-WIDTHEXPAND: <checkout>/rtl/ps2_receiver.v:85:32: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'idle_count' generates 17 bits.
+                                                                            : ... note: In instance 'tb_keyboard.dut.fabric.keyboard.rx'
+   85 |                 if (idle_count == TIMEOUT_CYCLES-1) begin
+      |                                ^~
+%Warning-WIDTHTRUNC: <checkout>/phase4b/rtl/diagnostic_text.v:73:16: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's SHIFTR generates 320 bits.
+                                                                                      : ... note: In instance 'tb_keyboard.dut.fabric.video.dashboard'
+   73 |   if(col<40) ch=(line_text >> ((39-col)*8));
+      |                ^
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.054
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: <checkout>/phase4b/rtl/diagnostic_text.v:76:9: Operator ASSIGN expects 4 bits on the Assign RHS, but Assign RHS's SHIFTR generates 32 bits.
+                                                                                     : ... note: In instance 'tb_keyboard.dut.fabric.video.dashboard'
+   76 |    digit=number >> ((23-col)*4);
+      |         ^
+%Warning-WIDTHEXPAND: <checkout>/phase10/rtl/framebuffer.v:27:65: Operator COND expects 10 bits on the Conditional True, but Conditional True's REPLICATE generates 9 bits.
+                                                                                   : ... note: In instance 'tb_keyboard.dut.fabric.pixels'
+   27 |  wire [8:0] source_y=resolution==1 ? (rel_y>>2) : resolution==2 ? {1'b0,row120} : (rel_y>>1);
+      |                                                                 ^
+%Warning-WIDTHTRUNC: <checkout>/phase10/rtl/framebuffer.v:27:21: Operator ASSIGNW expects 9 bits on the Assign RHS, but Assign RHS's COND generates 10 bits.
+                                                                                  : ... note: In instance 'tb_keyboard.dut.fabric.pixels'
+   27 |  wire [8:0] source_y=resolution==1 ? (rel_y>>2) : resolution==2 ? {1'b0,row120} : (rel_y>>1);
+      |                     ^
+%Warning-WIDTHEXPAND: <checkout>/phase10/rtl/framebuffer.v:33:48: Operator LT expects 9 bits on the RHS, but RHS's VARREF 'last_row' generates 8 bits.
+                                                                                   : ... note: In instance 'tb_keyboard.dut.fabric.pixels'
+   33 |  wire start_fetch=(y==38)||(in_band && source_y<last_row && next_row==source_y+1'b1);
+      |                                                ^
+%Warning-WIDTHEXPAND: <checkout>/phase10/rtl/framebuffer.v:33:69: Operator EQ expects 9 bits on the LHS, but LHS's VARREF 'next_row' generates 8 bits.
+                                                                                   : ... note: In instance 'tb_keyboard.dut.fabric.pixels'
+   33 |  wire start_fetch=(y==38)||(in_band && source_y<last_row && next_row==source_y+1'b1);
+      |                                                                     ^~
+%Warning-WIDTHTRUNC: <checkout>/phase10/rtl/framebuffer.v:37:18: Operator ASSIGNW expects 8 bits on the Assign RHS, but Assign RHS's SHIFTR generates 32 bits.
+                                                                                  : ... note: In instance 'tb_keyboard.dut.fabric.pixels'
+   37 |  wire [7:0] index=line_q >> {byte1,3'b000};
+      |                  ^
+%Warning-WIDTHTRUNC: <checkout>/phase10/rtl/rv32i_cpu.v:92:28: Operator ASSIGNW expects 32 bits on the Assign RHS, but Assign RHS's COND generates 33 bits.
+                                                                                : ... note: In instance 'tb_keyboard.dut.cpu'
+   92 |  wire [31:0] remainder_step=subtract_ok?trial-{1'b0,divisor}:trial;
+      |                            ^
+%Warning-WIDTHEXPAND: <checkout>/phase10/sim/sdram_model.sv:32:39: Operator EQ expects 32 bits on the RHS, but RHS's VARREF 'ba' generates 2 bits.
+                                                                                    : ... note: In instance 'tb_keyboard.model'
+   32 |       for(b=0;b<4;b=b+1) if(a[10] || b==ba) begin
+      |                                       ^~
+%Warning-WIDTHTRUNC: <checkout>/phase10/sim/sdram_model.sv:47:10: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's VARREF 'mode' generates 32 bits.
+                                                                                   : ... note: In instance 'tb_keyboard.model'
+   47 |       if(!mode || active[ba] || tick-last_pre[ba]<2) $fatal(1,"ACT state/tRP");
+      |          ^
+%Warning-WIDTHEXPAND: <checkout>/phase10/sim/sdram_model.sv:52:33: Operator ASSIGNDLY expects 32 bits on the Assign RHS, but Assign RHS's REPLICATE generates 22 bits.
+                                                                                    : ... note: In instance 'tb_keyboard.model'
+   52 |       if(we_n) begin read_index0<={ba,row[ba],a[7:0]};read_valid[0]<=1; end
+      |                                 ^~
+%Warning-CASEINCOMPLETE: <checkout>/phase10/rtl/phase10_mailbox.v:23:8: Case values incompletely covered (example pattern 0x0)
+   23 |   else case(addr[7:0])8'h40:rdata=result;8'h44:rdata=ack;8'h48:rdata=status;endcase
+      |        ^~~~
+                         ... For warning description see https://verilator.org/warn/CASEINCOMPLETE?v=5.054
+                         ... Use "/* verilator lint_off CASEINCOMPLETE */" and lint_on around source to disable this message.
+%Warning-CASEINCOMPLETE: <checkout>/phase10/rtl/phase10_mailbox.v:31:33: Case values incompletely covered (example pattern 0x0)
+   31 |    if(accept&&!error&&wstrb==15)case(addr[7:0])8'h40:result<=wdata;8'h44:ack<=wdata;8'h48:status<=wdata;endcase
+      |                                 ^~~~
+%Warning-CASEINCOMPLETE: <checkout>/phase10/sim/sdram_model.sv:28:5: Case values incompletely covered (example pattern 0x6)
+   28 |     case({ras_n,cas_n,we_n})
+      |     ^~~~
+make: Entering directory '<checkout>/phase10/build/keyboardfast'
+g++ -Os  -I.  -MMD -I/tmp/phase9-tools/usr/share/verilator/include -I/tmp/phase9-tools/usr/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_keyboard.h>"   -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated.o /tmp/phase9-tools/usr/share/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -I/tmp/phase9-tools/usr/share/verilator/include -I/tmp/phase9-tools/usr/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_keyboard.h>"   -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_timing.o /tmp/phase9-tools/usr/share/verilator/include/verilated_timing.cpp
+g++ -Os  -I.  -MMD -I/tmp/phase9-tools/usr/share/verilator/include -I/tmp/phase9-tools/usr/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_keyboard.h>"   -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_threads.o /tmp/phase9-tools/usr/share/verilator/include/verilated_threads.cpp
+python3 /tmp/phase9-tools/usr/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vtb_keyboard.cpp Vtb_keyboard___024root__0.cpp Vtb_keyboard_std__03a__03aprocess__Vclpkg__0.cpp Vtb_keyboard_std__03a__03asemaphore__Vclpkg__0.cpp Vtb_keyboard__main.cpp Vtb_keyboard__ConstPool__0__Slow.cpp Vtb_keyboard___024root__Slow.cpp Vtb_keyboard___024root__0__Slow.cpp Vtb_keyboard_std__Slow.cpp Vtb_keyboard_std__03a__03aprocess__Vclpkg__Slow.cpp Vtb_keyboard_std__03a__03asemaphore__Vclpkg__Slow.cpp Vtb_keyboard__Syms__Slow.cpp > Vtb_keyboard__ALL.cpp
+g++ -Os  -I.  -MMD -I/tmp/phase9-tools/usr/share/verilator/include -I/tmp/phase9-tools/usr/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable  -DVM_PREFIX_INCLUDE="<Vtb_keyboard.h>"   -DVL_TIME_CONTEXT   -fcoroutines -c -o Vtb_keyboard__ALL.o Vtb_keyboard__ALL.cpp
+g++    verilated.o verilated_timing.o verilated_threads.o Vtb_keyboard__ALL.a    -pthread -lpthread -latomic   -o Vtb_keyboard
+rm Vtb_keyboard__ALL.verilator_deplist.tmp
+make: Leaving directory '<checkout>/phase10/build/keyboardfast'
+- V e r i l a t i o n   R e p o r t: Verilator 5.054 2026-11-01 rev v5.054
+- Verilator: Built from 0.906 MB sources in 24 modules, into 0.782 MB in 12 C++ files needing 0.000 MB
+- Verilator: Walltime 4.278 s (elab=0.014, cvt=0.071, bld=4.172); cpu 0.114 s on 4 threads; allocated 27.328 MB

@@ -1,0 +1,8 @@
+PASS VGA mode           0, 420000 pixel periods, packed stride and 31-cycle DMA backpressure
+PASS VGA mode           1, 420000 pixel periods, packed stride and 31-cycle DMA backpressure
+PASS VGA mode           2, 420000 pixel periods, packed stride and 31-cycle DMA backpressure
+PASS VGA mode           3, 420000 pixel periods, packed stride and 31-cycle DMA backpressure
+- <checkout>/phase10/sim/tb_video_modes.sv:42: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.054 2026-11-01
+- Verilator: $finish at 134ms; walltime 2.733 s; speed 49.185 ms/s
+- Verilator: cpu 2.723 s on 1 threads; allocated 4 MB

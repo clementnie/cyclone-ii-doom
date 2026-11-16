@@ -1,0 +1,1 @@
+PASS metadata-only synchronizer annotation update: every generated Verilator C++ translation unit has an identical SHA256. The running full-SoC model implements identical functional logic. Quartus 13 Cyclone II does not support the newer synchronizer-identification setting; preserve/dont-merge/disable-shift-inference annotations retain the explicit flip-flop stages.

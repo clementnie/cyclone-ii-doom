@@ -1,0 +1,65 @@
+{
+  "baseline_checkpoint": "c0533ec",
+  "baseline_branch": "phase10-prechange-c0533ec",
+  "signature": "DA000001",
+  "clock_hz": 50000000,
+  "device": "EP2C20F484C7",
+  "logic_elements": 13636,
+  "m4ks": 52,
+  "worst_setup_ns": 2.069,
+  "worst_hold_ns": 0.215,
+  "default_elf": "artifacts/doom-rv32im.elf",
+  "sof": "candidates/doom_chromatix_160x100_block32_DA000001_20261114T210244Z.sof",
+  "doom_boot": {
+    "pass": true,
+    "cycles": 1824480002,
+    "retired": 199336514,
+    "frames": 12,
+    "game_renders": 3,
+    "vga_frames_captured": 2,
+    "underflows": 0,
+    "stack_bytes": 1936,
+    "framebuffer_a_crc32": 2765696222,
+    "heap_span": 2132912,
+    "wall_seconds": 472.479
+  },
+  "boot_scope": {
+    "elf_sha256": "e199eb44d3e6dcf700d751feb6baeee8b3f48b2c3adfc4b286b0d1bb5172c045",
+    "resolution": "160x100",
+    "loader": "original ROM packet upload, both ELF segment CRCs, IWAD CRC, handoff",
+    "firmware_scope": "final default ELF; regenerated upload stream compares byte-for-byte identical",
+    "rtl_scope": "Boot simulator compiled before Verilog-2001 loop declaration cleanup, explicit VGA RAM inference, and replacement of optional 120-row scaler divider. The latter affects only resolution 120. Default 100-row output and DMA behavior are checked by pixel oracle; final RTL additionally passed all-mode video and integrated SoC pixel tests. Full DOOM was not rerun after these local RTL refinements.",
+    "performance_scope": "two adjacent startup gameplay presentation intervals; neither hardware measurement nor a long timedemo"
+  },
+  "performance": {
+    "scope": "Two adjacent startup gameplay presentation intervals in bounded RTL simulation; not a physical FPS result",
+    "mailbox_observations": [
+      [
+        10,
+        1805992213
+      ],
+      [
+        11,
+        1815232185
+      ],
+      [
+        12,
+        1824472181
+      ]
+    ],
+    "cycles_per_interval": [
+      9239972,
+      9239996
+    ],
+    "fps_per_interval": [
+      5.411271809048772,
+      5.411257753791236
+    ],
+    "mean_fps": 5.4112647814108765,
+    "steady_gameplay_verified": false,
+    "physical_fps": null,
+    "target_20fps_established": false
+  },
+  "physical_board_programmed": false,
+  "flash_written": false
+}

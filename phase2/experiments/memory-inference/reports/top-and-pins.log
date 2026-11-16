@@ -1,0 +1,10 @@
+make: Entering directory '<checkout>/phase2'
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_top -o build/tb_top sim/tb_top.sv rtl/de2_phase2.v rtl/onchip_memory.v rtl/phase2_soc.v rtl/rv32i_cpu.v rtl/soc_bus.v rtl/vga_tiles.v ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+cd quartus && /tmp/de2-iverilog/usr/bin/vvp ../build/tb_top
+PASS board top: power-on hold, synchronized button reset/reboot, ROM path and DAC clock
+sim/tb_top.sv:28: $finish called at 1321350000 (1ps)
+python3 tools/check_project.py
+PASS preserved input hashes: original Quartus files and PS/2 modules unchanged
+PASS project consistency: exact device, 40/40 top-level pins and LVTTL assignments, no duplicates, source/ROM paths
+Quartus package legality, fitter pin report and timing have NOT been checked by this script.
+make: Leaving directory '<checkout>/phase2'

@@ -1,0 +1,24 @@
+   text	   data	    bss	    dec	    hex	filename
+ 458617	  57628	 240440	 756685	  b8bcd	<checkout>/phase10/artifacts/doom-rv32im.elf
+
+ELF: <checkout>/phase10/artifacts/doom-rv32im.elf file bytes: 572856
+   text	   data	    bss	    dec	    hex	filename
+ 289343	  57628	 240444	 587415	  8f697	<checkout>/phase10/artifacts/doom-rv32im.elf
+
+ELF: <checkout>/phase10/artifacts/doom-rv32im.elf file bytes: 406624
+   text	   data	    bss	    dec	    hex	filename
+ 438572	  57628	 240480	 736680	  b3da8	<checkout>/phase10/artifacts/doom-rv32im.elf
+
+ELF: <checkout>/phase10/artifacts/doom-rv32im.elf file bytes: 552416
+   text	   data	    bss	    dec	    hex	filename
+ 438564	  57628	 240640	 736832	  b3e40	<checkout>/phase10/artifacts/doom-rv32im.elf
+
+ELF: <checkout>/phase10/artifacts/doom-rv32im.elf file bytes: 552408
+   text	   data	    bss	    dec	    hex	filename
+ 437528	  57628	 240440	 735596	  b396c	<checkout>/phase10/artifacts/doom-rv32im.elf
+
+ELF: <checkout>/phase10/artifacts/doom-rv32im.elf file bytes: 551344
+   text	   data	    bss	    dec	    hex	filename
+ 438548	  57628	 240440	 736616	  b3d68	<checkout>/phase10/artifacts/doom-rv32im.elf
+
+ELF: <checkout>/phase10/artifacts/doom-rv32im.elf file bytes: 552392

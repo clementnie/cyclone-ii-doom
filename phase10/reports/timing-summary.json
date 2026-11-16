@@ -1,0 +1,14 @@
+{
+  "slow-setup": 2.069,
+  "slow-hold": 0.445,
+  "slow-sdram-in-setup": 2.069,
+  "slow-sdram-in-hold": 12.296,
+  "slow-sdram-out-setup": 3.257,
+  "slow-sdram-out-hold": 12.284,
+  "fast-setup": 3.559,
+  "fast-hold": 0.215,
+  "fast-sdram-in-setup": 3.559,
+  "fast-sdram-in-hold": 10.909,
+  "fast-sdram-out-setup": 3.721,
+  "fast-sdram-out-hold": 11.81
+}

@@ -1,0 +1,2 @@
+PASS cache: hits/misses, conflicts, coherent stores, reset, data/MMIO bypass, errors not cached, backpressure
+<checkout>/phase10/sim/tb_cache.sv:59: $finish called at 25200000 (1ps)

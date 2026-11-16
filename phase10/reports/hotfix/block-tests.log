@@ -1,0 +1,19 @@
+PASS exact physical END 040020f5: expected c5938c86, observed shift predicts 873fb4a2
+PASS all 16 fully initialized physical CRC probes match the per-block shift
+PASS original RTL reproduces physical +1-halfword block shift
+PASS loader block readback: four regions, 512-byte CRC b8ce8d07; observed_early=0 open_page=1
+<checkout>/phase10/sim/tb_upload_block.sv:35: $finish called at 493980000 (1ps)
+PASS loader block readback: four regions, 512-byte CRC b8ce8d07; observed_early=1 open_page=1
+<checkout>/phase10/sim/tb_upload_block.sv:35: $finish called at 493980000 (1ps)
+PASS loader block readback: four regions, 512-byte CRC b8ce8d07; observed_early=0 open_page=0
+<checkout>/phase10/sim/tb_upload_block.sv:35: $finish called at 581940000 (1ps)
+PASS loader block readback: four regions, 512-byte CRC b8ce8d07; observed_early=1 open_page=0
+<checkout>/phase10/sim/tb_upload_block.sv:35: $finish called at 581940000 (1ps)
+BENCH OPEN_PAGE=          0 mixed_cycles=     719166 accesses=      16109 sequential_cycles=      26840 sequential_requests=       2048
+Normal request max latency: 93 cycles
+PASS SDRAM randomized lanes, banks, rows, bounds, refresh, reset; max latency incl init=10071
+<checkout>/phase10/sim/tb_sdram.sv:58: $finish called at 15721251000 (1ps)
+BENCH OPEN_PAGE=          1 mixed_cycles=     627419 accesses=      16109 sequential_cycles=      25801 sequential_requests=       2048
+Normal request max latency: 96 cycles
+PASS SDRAM randomized lanes, banks, rows, bounds, refresh, reset; max latency incl init=10067
+<checkout>/phase10/sim/tb_sdram.sv:58: $finish called at 13884511000 (1ps)

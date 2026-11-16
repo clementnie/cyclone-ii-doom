@@ -1,0 +1,12 @@
+PASS CPU: 507 retirement states, all 32 registers and PC, random bus stalls
+<checkout>/phase2/sim/tb_cpu.sv:52: $finish called at 97911000 (1ps)
+PASS traps: 16 cases
+<checkout>/phase10/sim/tb_traps.sv:48: $finish called at 3920000 (1ps)
+PASS cache: hits/misses, conflicts, coherent stores, reset, data/MMIO bypass, errors not cached, backpressure
+<checkout>/phase10/sim/tb_cache.sv:59: $finish called at 25200000 (1ps)
+PASS RV32M: 1024 directed/random MUL/MULH/MULHSU/MULHU/DIV/DIVU/REM/REMU, zero divisors and signed overflow
+<checkout>/phase10/sim/tb_m.sv:28: $finish called at 829440000 (1ps)
+BENCH OPEN_PAGE=          1 mixed_cycles=     627419 accesses=      16109 sequential_cycles=      25801 sequential_requests=       2048
+Normal request max latency: 96 cycles
+PASS SDRAM randomized lanes, banks, rows, bounds, refresh, reset; max latency incl init=10067
+<checkout>/phase10/sim/tb_sdram.sv:58: $finish called at 13884511000 (1ps)

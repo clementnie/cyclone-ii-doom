@@ -1,0 +1,59 @@
+Info: *******************************************************************
+Info: Running Quartus II 32-bit SignalTap II
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Copyright (C) 1991-2013 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Sat Nov 14 03:30:01 2026
+Info: Command: quartus_stp -t phase7/tools/profile.tcl "USB-Blaster [1-1]" "@1: EP2C(15|20) (0x020B30DD)"
+Info: Quartus(args): {USB-Blaster [1-1]} {@1: EP2C(15|20) (0x020B30DD)}
+ISSP instance info raw: <{0 480 96 OOM6}>
+Verified DOOM6 mailbox: device=@1: EP2C(15|20) (0x020B30DD) index=0 source=480 probe=96 reported_id=OOM6
+cycles 3000922439
+retired 991512472
+fetch_requests 991512473
+fetch_stalls 4257841140
+data_stalls 3776455514
+sdram_reads 139403704
+sdram_writes 19931780
+refresh_wait 78765418
+framebuffer_writes 1056000
+underflows 0
+engine_frames 66
+frame_cycles 58799549
+fetch_wait_sum 4257841140
+fetch_wait_max 124
+data_wait_sum 3776455510
+data_wait_max 124
+cache_hits 361261678
+cache_misses 9603942
+vga_contention 1417670157
+refreshes 16404580
+activates 159335483
+columns 318670966
+mul_entries 933108
+div_entries 72220
+data_requests 291011480
+frame_retired 3757531
+frame_fetch_stalls 12948839
+frame_data_stalls 33190641
+reserved28 0
+reserved29 0
+reserved30 0
+reserved31 0
+Info (23030): Evaluation of Tcl script phase7/tools/profile.tcl was successful
+Info: Quartus II 32-bit SignalTap II was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 144 megabytes
+    Info: Processing ended: Sat Nov 14 03:30:02 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00

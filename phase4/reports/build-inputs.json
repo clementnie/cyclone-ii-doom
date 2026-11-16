@@ -1,0 +1,20 @@
+{
+  "phase2/rtl/diagnostic_font.v": "2f36bef960ed33d23d3b2f89f5716c71915a43ba64b3d87f2659d36b2655be20",
+  "phase2/rtl/onchip_memory.v": "10b280e9f73f31937d60283d4ec2689b2403c4d5b0f36a5d0f7c4b180e690e39",
+  "phase2/rtl/rv32i_cpu.v": "3212a240a27ec02443ef919ad8221aff50958394b039e5a6c6f1aded04b99384",
+  "phase2/rtl/vga_tiles.v": "0d07ffe9fdf0b5cf9f1cada94574e2851c655c3a92a5cc8aba626d6ef7748cb3",
+  "phase4/firmware/boot.hex": "ef1968fc441753f453a2145ef3e7b8b8cbe80f0b4891140f193e84fcc3334b3a",
+  "phase4/quartus/hardware_gate.tcl": "0102984a41230bc64b7f7dc4b5d19654986981293decd9f7778a7cf4bb83e14d",
+  "phase4/quartus/phase4.qsf": "2bc52854547105943d09a784ab4bfc10fd10a9534d85536e07b9c9e8f3ce7702",
+  "phase4/quartus/phase4.sdc": "c196f8d4e56322df5121d7a46678fb332e302632b4036880567303b42c7debaa",
+  "phase4/quartus/timing.tcl": "5c0cb19574ae4c56fdd58ff4096c340bf0c29e03b59f5957706143bc8dfb2f7b",
+  "phase4/rtl/diagnostic_text.v": "6b1defcd78bdd1a52c87cdf379405dcdeb8a62a3ad36aca3268a15d2f625d3d6",
+  "phase4/rtl/phase4_bus.v": "41ba842ceb3281e0d92e8962356debe09ade2fd7526f27130074c0becf52d962",
+  "phase4/rtl/phase4_soc.v": "a1e50c70618cb7777099d0f5e99a6dc587777e8b93d019ffa29d46ea1fa88b6c",
+  "phase4/rtl/rv32i_cpu.v": "45d202c1619f4438e410c495acf8686095c8f0081cc50e84d77f3160aa1662a5",
+  "phase4/rtl/sdram_controller.v": "a6094211e8aeb0907c3ee44c1d29f189ce77f862af25717c9b8ddd693a4a7bce",
+  "phase4/rtl/starter_phase4.v": "70b90f5434dcae793fcceda031f1bf0178d697bc2e50df335e9013c973e4ae52",
+  "rtl/ps2_keyboard_mmio.v": "3280f9219eac63a6049babfd1e0cbb773548b1e282961d145f3d9399cca54110",
+  "rtl/ps2_receiver.v": "e898f97aba4b36438d4c871b5e01f90bfbcadfb52f860341695e7be7c2db6028",
+  "rtl/ps2_scancode_decoder.v": "ad5a6f31ae773eabbf6ad4cc92e58fea0e95c6dbeec6447ddf302b4d75f2d93f"
+}

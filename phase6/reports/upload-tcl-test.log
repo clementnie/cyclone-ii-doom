@@ -1,0 +1,5 @@
+Uploader Tcl stub starting on Tcl 8.6.16
+ISSP instance info raw: <{7 480 96 OOM6}>
+Verified DOOM6 mailbox: device=@1: EP2C(15|20) (0x020B30DD) index=7 source=480 probe=96 reported_id=OOM6
+Uploaded and verified 11 packets; entry handoff acknowledged. Observe VGA.
+PASS host Tcl: all packets, ACK parsing, readback CRC field, stale-source recovery, cleanup

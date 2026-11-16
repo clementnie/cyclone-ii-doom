@@ -1,0 +1,12 @@
+make: Entering directory '<checkout>/sim'
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2005 -Wall -tnull -s ps2_keyboard_mmio ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+mkdir -p /tmp/de2-ps2-sim
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_ps2_keyboard -Ptb_ps2_keyboard.CLK_HZ=25000000 -o /tmp/de2-ps2-sim/ps2-25 tb_ps2_keyboard.sv ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp /tmp/de2-ps2-sim/ps2-25
+PASS: PS/2 integration CLK_HZ=25000000 checks=640
+tb_ps2_keyboard.sv:225: $finish called at 188734541000 (1ps)
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_ps2_keyboard -Ptb_ps2_keyboard.CLK_HZ=50000000 -o /tmp/de2-ps2-sim/ps2-50 tb_ps2_keyboard.sv ../rtl/ps2_receiver.v ../rtl/ps2_scancode_decoder.v ../rtl/ps2_keyboard_mmio.v
+/tmp/de2-iverilog/usr/bin/vvp /tmp/de2-ps2-sim/ps2-50
+PASS: PS/2 integration CLK_HZ=50000000 checks=640
+tb_ps2_keyboard.sv:225: $finish called at 188728271000 (1ps)
+make: Leaving directory '<checkout>/sim'

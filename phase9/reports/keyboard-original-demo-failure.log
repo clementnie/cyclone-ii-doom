@@ -1,0 +1,12 @@
+Keyboard stimulus starts
+Keyboard test cycles=10000000 hb=0 pc=000003e4 enabled=0 slot=0 keys=0000001
+Keyboard test cycles=20000000 hb=1 pc=00000478 enabled=1 slot=0 keys=0000001
+Keyboard test cycles=30000000 hb=2 pc=00000224 enabled=1 slot=0 keys=0000001
+Second image active: hb=2
+Keyboard test cycles=40000000 hb=2 pc=00000468 enabled=1 slot=1 keys=1000001
+Diagnostic fallback active: hb=3
+Keyboard test cycles=50000000 hb=3 pc=000004c4 enabled=0 slot=0 keys=1000000
+Keyboard test cycles=60000000 hb=4 pc=0000022c enabled=0 slot=0 keys=1000000
+[1200000110000] %Fatal: tb_keyboard.sv:15: Assertion failed in tb_keyboard: keyboard timeout hb=00000004
+%Error: <checkout>/phase9/build/tb_keyboard.sv:15: Verilog $stop
+Aborting...

@@ -1,0 +1,2 @@
+PASS performance: retirement, request dedup, exact fetch stalls, atomic frozen snapshots, live counting, selector ACK
+phase7/sim/tb_performance.sv:19: $finish called at 660000 (1ps)

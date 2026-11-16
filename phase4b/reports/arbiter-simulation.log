@@ -1,0 +1,6 @@
+make: Entering directory '<checkout>/phase4b'
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_arbiter -o build/tb_arbiter sim/tb_arbiter.sv rtl/sdram_arbiter.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_arbiter
+PASS weighted arbiter: CPU grants=       152 video=       610 max CPU/display wait=        136/         54 cycles
+sim/tb_arbiter.sv:35: $finish called at 400100000 (1ps)
+make: Leaving directory '<checkout>/phase4b'

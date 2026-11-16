@@ -1,0 +1,1 @@
+PASS optimized memcpy/memset: all source/destination alignments, 0..129 byte lengths and surrounding guards

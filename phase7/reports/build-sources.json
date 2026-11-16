@@ -1,0 +1,21 @@
+{
+  "phase4/rtl/rv32i_cpu.v": "45d202c1619f4438e410c495acf8686095c8f0081cc50e84d77f3160aa1662a5",
+  "phase6/firmware/boot.hex": "b24d91401f53d05aefc0dc2d3cbccf9302bc9d6ee749d5bae8e2eca35b924b33",
+  "phase7/artifacts/doom-rv32i.elf": "d51a123a8b48ac2b7e8f5836bec5b88f45467ff7458c8d73ac11c6a8fc0e87cf",
+  "phase7/quartus/phase7.qsf": "7534a3c6ec0bd4abd1399917cc304f36bec78b58b28301c22956fd84cb2fd345",
+  "phase7/quartus/phase7.sdc": "5c8fafd5689560b86ec88b2f976dcf356f420b96f40c18b91f0c99930dfa2f7c",
+  "phase7/quartus/phase7_profile.qsf": "1e72fd81fe1866f3b593e1a50fd5c732df0eea08e6a84c1c0450b44e8629c543",
+  "phase7/rtl/instruction_cache.v": "49dc144d26415de03448872fc19f7747bf7cf98e1461f918b85f0a0480b140cf",
+  "phase7/rtl/performance.v": "9177d704e99da35525920ac98dfc29988c8e418ed459dc169db23191c8ac87e8",
+  "phase7/rtl/phase7_bus.v": "f00c4d5a943a4a585d87a9214fa87a822c299bfb0429a0d97d26594b0d1c133f",
+  "phase7/rtl/phase7_mailbox.v": "3a945a042b5b5d8020bfbf4b25ac7203e5e6dc12cd6a59140fe8c03e85088e52",
+  "phase7/rtl/phase7_sdram_arbiter.v": "2bfbc232b14d4c8d3d3b4e1c529c3edcca00dda469c5d045955ba4835301ecef",
+  "phase7/rtl/phase7_sdram_controller.v": "db2a6475bdfe7a3aeb2fcc527e8eaade3dda1c3ba1e5534899d95ed250d839f6",
+  "phase7/rtl/phase7_soc.v": "70888881536944553264e0243e2312086a33c666f35f086fed7fba3a12d37710",
+  "phase7/rtl/starter_phase7.v": "21569f87f7ca8f8724c435eb83c0a8d2f4a7465f067f76bab013c913a4491e4d",
+  "phase7/rtl/starter_phase7_profile.v": "b216eebd7d51d81c6f3639b9b01e8984ee95ecc8c9f54f12730082b62678d6bc",
+  "phase7/sim/full.cpp": "76f831aadd9b2b81400324041e974ce254cc27c7e80a36f2745ea7ae510a1bc6",
+  "phase7/sim/full_top.v": "082269fc4fd30d4e32d330c25c6b6ff3f29250b33e6ce5251568fc7c8bcf4696",
+  "phase7/sim/tb_cache.sv": "17357a617879486b9e51a5b724a0d815e3b2a51892ede7832a9a53411e0d156f",
+  "phase7/sim/tb_performance.sv": "836399ea62793c7d442f5e5accf0e715705384c959d1f275e0f33378f3b79d1e"
+}

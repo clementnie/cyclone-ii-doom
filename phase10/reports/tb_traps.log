@@ -1,0 +1,2 @@
+PASS traps: 16 cases
+<checkout>/phase10/sim/tb_traps.sv:48: $finish called at 3920000 (1ps)

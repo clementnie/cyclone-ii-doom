@@ -1,0 +1,3 @@
+PASS tb_framebuffer_soc
+PASS timed keyboard
+PASS tb_mmio

@@ -1,0 +1,22 @@
++-------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                           ;
++-----------------------+-----------------------+----------+----------+----------+----------+
+; From Clock            ; To Clock              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------+-----------------------+----------+----------+----------+----------+
+; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 1665116  ; 0        ; 0        ; 0        ;
+; sdram_pin             ; clocks|pll|pll|clk[0] ; 16       ; 0        ; 0        ; 0        ;
+; clocks|pll|pll|clk[0] ; sdram_pin             ; 51       ; 0        ; 0        ; 0        ;
++-----------------------+-----------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
++-------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                            ;
++-----------------------+-----------------------+----------+----------+----------+----------+
+; From Clock            ; To Clock              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------+-----------------------+----------+----------+----------+----------+
+; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 1665116  ; 0        ; 0        ; 0        ;
+; sdram_pin             ; clocks|pll|pll|clk[0] ; 16       ; 0        ; 0        ; 0        ;
+; clocks|pll|pll|clk[0] ; sdram_pin             ; 51       ; 0        ; 0        ; 0        ;
++-----------------------+-----------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+

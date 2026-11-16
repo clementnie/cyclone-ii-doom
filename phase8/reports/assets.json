@@ -1,0 +1,18 @@
+{
+  "phase6/assets/doom1.wad": {
+    "bytes": 4196020,
+    "sha256": "1d7d43be501e67d927e415e0b8f3e29c3bf33075e859721816f652a526cac771"
+  },
+  "phase6/firmware/boot.hex": {
+    "bytes": 18432,
+    "sha256": "b24d91401f53d05aefc0dc2d3cbccf9302bc9d6ee749d5bae8e2eca35b924b33"
+  },
+  "phase6/build/upload.hex": {
+    "bytes": 11215853,
+    "sha256": "b2f15356034814b6c642bfe90ca83b448742b6c125b322af2d868c1fcdf01e21"
+  },
+  "phase8/artifacts/doom-rv32i.elf": {
+    "bytes": 473972,
+    "sha256": "d51a123a8b48ac2b7e8f5836bec5b88f45467ff7458c8d73ac11c6a8fc0e87cf"
+  }
+}

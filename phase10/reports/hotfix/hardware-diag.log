@@ -1,0 +1,68 @@
+Info: *******************************************************************
+Info: Running Quartus II 32-bit SignalTap II
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Copyright (C) 1991-2013 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Sat Nov 14 16:16:24 2026
+Info: Command: quartus_stp -t phase10/build/hotfix/diag.tcl
+ISSP instance info raw: <{0 480 96 OOM6}>
+Verified DOOM6 mailbox: device=@1: EP2C(15|20) (0x020B30DD) index=0 source=480 probe=96 reported_id=OOM6
+END 04000004 want=928c776a probe=E6000007EE65BA8504000004
+END 04000008 want=c81e5556 probe=E6000007730174A304000008
+END 0400000c want=c2834298 probe=E60000071AC4E3920400000C
+END 04000010 want=b800c4b6 probe=E6000007A82E527204000010
+END 04000014 want=c35fe263 probe=E6000007D222253404000014
+END 04000018 want=13d6e8c3 probe=E6000007B46E185504000018
+END 0400001c want=d4d9fa7c probe=E6000007BBC6891E0400001C
+END 04000020 want=0995ce2f probe=E600000709B320CF04000020
+END 04000025 want=d5cda253 probe=E600000775B35A4D04000025
+END 0400002b want=f5eed1d4 probe=E60000071140C8AB0400002B
+END 04000038 want=b8ce8d07 probe=E6000007476298CD04000038
+END 0400003c want=928c776a probe=E6000007707928EF0400003C
+END 04000040 want=c81e5556 probe=E6000007B155588104000040
+END 04000044 want=c2834298 probe=E600000757CE3F6F04000044
+END 04000048 want=b800c4b6 probe=E60000071644299D04000048
+END 0400004c want=c35fe263 probe=E6000007B559D3AF0400004C
+END 04000050 want=13d6e8c3 probe=E6000007B46E185504000050
+END 04000054 want=d4d9fa7c probe=E6000007D12F1AD104000054
+END 04000058 want=0995ce2f probe=E60000078E0C3E4104000058
+END 0400005d want=d5cda253 probe=E600000775B35A4D0400005D
+END 04000063 want=f5eed1d4 probe=E60000071140C8AB04000063
+END 04000070 want=b8ce8d07 probe=E6000007476298CD04000070
+END 04000074 want=928c776a probe=E6000007D834989104000074
+END 04000078 want=c81e5556 probe=E6000007B8AEA6CB04000078
+END 0400007c want=c2834298 probe=E600000754A966040400007C
+END 04000080 want=b800c4b6 probe=E6000007A2B098C004000080
+END 04000084 want=c35fe263 probe=E6000007FCFF2E7704000084
+END 04000088 want=13d6e8c3 probe=E6000007B46E185504000088
+END 0400008c want=d4d9fa7c probe=E6000007EC37356A0400008C
+END 04000090 want=0995ce2f probe=E6000007566BA5BB04000090
+END 04000095 want=d5cda253 probe=E600000775B35A4D04000095
+END 0400009b want=f5eed1d4 probe=E60000071140C8AB0400009B
+END 040000a8 want=b8ce8d07 probe=E6000007476298CD040000A8
+END 040000ac want=c2834298 probe=E6000007431ED847040000AC
+END 040000b0 want=b800c4b6 probe=E60000076D9469CC040000B0
+END 040000b4 want=c35fe263 probe=E6000007DFAC2C01040000B4
+END 040000b8 want=13d6e8c3 probe=E6000007B46E1855040000B8
+END 040000bc want=d4d9fa7c probe=E60000073D12360E040000BC
+END 040000c0 want=0995ce2f probe=E6000007C665B3C3040000C0
+END 040000c5 want=d5cda253 probe=E600000775B35A4D040000C5
+END 040000cb want=f5eed1d4 probe=E60000071140C8AB040000CB
+END 040000d8 want=b8ce8d07 probe=E6000007476298CD040000D8
+Info (23030): Evaluation of Tcl script phase10/build/hotfix/diag.tcl was successful
+Info: Quartus II 32-bit SignalTap II was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 139 megabytes
+    Info: Processing ended: Sat Nov 14 16:16:24 2026
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00

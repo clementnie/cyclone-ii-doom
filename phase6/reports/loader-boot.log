@@ -1,0 +1,98 @@
+cycles=0 pc=0 retired=0
+cycles=100000000 pc=2a0 retired=30399083
+cycles=200000000 pc=320 retired=60364544
+cycles=300000000 pc=320 retired=90189106
+cycles=400000000 pc=200517a4 retired=119937307
+cycles=500000000 pc=200517a4 retired=149761869
+                           Doom Generic 0.1
+Z_Init: Init zone memory allocation daemon. 
+zone memory: 0x200f6bf0, 200000 allocated for zone
+Using . for configuration and saves
+V_Init: allocate screens.
+M_LoadDefaults: Load system defaults.
+cycles=600000000 pc=20051b90 retired=179564538
+saving config in .default.cfg
+W_Init: Init WADfiles.
+ adding doom1.wad
+Using ./.savegame/ for savegames
+===========================================================================
+                            DOOM Shareware
+===========================================================================
+ Doom Generic is free software, covered by the GNU General Public
+ License.  There is NO warranty; not even for MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE. You are welcome to change and distribute
+ copies under certain conditions. See the source for more information.
+===========================================================================
+I_Init: Setting up machine state.
+M_Init: Init miscellaneous info.
+R_Init: Init DOOM refresh daemon - ...................
+P_Init: Init Playloop state.
+S_Init: Setting up sound.
+D_CheckNetGame: Checking network game status.
+startskill 2  deathmatch: 0  startmap: 1  startepisode: 1
+player 1 of 1 (1 nodes)
+Emulating the behavior of the 'Doom 1.9' executable.
+HU_Init: Setting up heads up display.
+ST_Init: Init status bar.
+I_InitGraphics: framebuffer: x_res: 320, y_res: 200, x_virtual: 320, y_virtual: 200, bpp: 8
+I_InitGraphics: framebuffer: RGBA: 0000, red_off: 0, green_off: 0, blue_off: 0, transp_off: 0
+I_InitGraphics: DOOM screen size: w x h: 320 x 200
+I_InitGraphics: Auto-scaling factor: 1
+cycles=700000000 pc=200536e8 retired=208662871
+FRAME 1 CRC32=f56d0a6a cycles=735780309
+FRAME 2 CRC32=576d616b cycles=743340588
+FRAME 3 CRC32=675b388a cycles=750059208
+FRAME 4 CRC32=120913b3 cycles=756780469
+FRAME 5 CRC32=587e277c cycles=762660183
+FRAME 6 CRC32=bd4583d5 cycles=767700334
+FRAME 7 CRC32=f501eca2 cycles=771900772
+FRAME 8 CRC32=15c783b5 cycles=776100509
+FRAME 9 CRC32=f193c56b cycles=779459661
+FRAME 10 CRC32=164ce62a cycles=782820523
+FRAME 11 CRC32=50c3c06f cycles=786179725
+FRAME 12 CRC32=50c3c06f cycles=789539923
+cycles=800000000 pc=2004362c retired=238152834
+FRAME 13 CRC32=eb41071c cycles=805499813
+FRAME 14 CRC32=ab87bffc cycles=821459483
+FRAME 15 CRC32=e1456529 cycles=837419496
+FRAME 16 CRC32=f619e506 cycles=853379406
+FRAME 17 CRC32=e42dfe53 cycles=869340635
+FRAME 18 CRC32=a95cf9cf cycles=885300825
+cycles=900000000 pc=20053688 retired=268126803
+FRAME 19 CRC32=b12c2484 cycles=901259573
+FRAME 20 CRC32=aaee3f7 cycles=917220781
+FRAME 21 CRC32=ac3462b5 cycles=933180216
+FRAME 22 CRC32=e1456529 cycles=949139531
+FRAME 23 CRC32=f3717e7c cycles=965100104
+FRAME 24 CRC32=47dfe46b cycles=981059605
+FRAME 25 CRC32=aaee3f7 cycles=997020703
+cycles=1000000000 pc=200536e0 retired=298225856
+FRAME 26 CRC32=597dcc60 cycles=1012979229
+FRAME 27 CRC32=ffe74d22 cycles=1028940025
+FRAME 28 CRC32=44658a51 cycles=1044900614
+FRAME 29 CRC32=47dfe46b cycles=1060860387
+FRAME 30 CRC32=f3717e7c cycles=1076819699
+FRAME 31 CRC32=47dfe46b cycles=1092779736
+cycles=1100000000 pc=200536d0 retired=328315256
+FRAME 32 CRC32=aaee3f7 cycles=1108740664
+FRAME 33 CRC32=44658a51 cycles=1124700094
+FRAME 34 CRC32=ffe74d22 cycles=1140659865
+FRAME 35 CRC32=e2ff0b13 cycles=1156620715
+FRAME 36 CRC32=e42dfe53 cycles=1172580502
+FRAME 37 CRC32=50836444 cycles=1188539440
+cycles=1200000000 pc=200435cc retired=358326740
+FRAME 38 CRC32=e42dfe53 cycles=1204500066
+FRAME 39 CRC32=42b77f11 cycles=1220460695
+FRAME 40 CRC32=44658a51 cycles=1236419217
+FRAME 41 CRC32=597dcc60 cycles=1252380679
+FRAME 42 CRC32=e2ff0b13 cycles=1268339928
+FRAME 43 CRC32=47dfe46b cycles=1284299758
+cycles=1300000000 pc=2005367c retired=388318522
+FRAME 44 CRC32=f3717e7c cycles=1300260704
+FRAME 45 CRC32=55ebff3e cycles=1316220598
+FRAME 46 CRC32=42b77f11 cycles=1332180573
+FRAME 47 CRC32=a95cf9cf cycles=1348139428
+FRAME 48 CRC32=12de3ebc cycles=1364099404
+FRAME 49 CRC32=a95cf9cf cycles=1380060144
+FRAME 50 CRC32=e42dfe53 cycles=1396020244
+RESULT pass=1 cycles=1396020244 stack=1568 heap_span=2388928 wall=127.648s

@@ -1,0 +1,29 @@
+{
+  "scope": "Two adjacent startup gameplay presentation intervals in bounded RTL simulation; not a physical FPS result",
+  "mailbox_observations": [
+    [
+      10,
+      1805992213
+    ],
+    [
+      11,
+      1815232185
+    ],
+    [
+      12,
+      1824472181
+    ]
+  ],
+  "cycles_per_interval": [
+    9239972,
+    9239996
+  ],
+  "fps_per_interval": [
+    5.411271809048772,
+    5.411257753791236
+  ],
+  "mean_fps": 5.4112647814108765,
+  "steady_gameplay_verified": false,
+  "physical_fps": null,
+  "target_20fps_established": false
+}

@@ -1,0 +1,2 @@
+PASS RV32M: 1024 directed/random MUL/MULH/MULHSU/MULHU/DIV/DIVU/REM/REMU, zero divisors and signed overflow
+<checkout>/phase9/sim/tb_m.sv:28: $finish called at 829440000 (1ps)

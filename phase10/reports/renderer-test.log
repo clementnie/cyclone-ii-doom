@@ -1,0 +1,1 @@
+PASS renderer: 1080 actual/oracle column, translated sprite and span comparisons at 100/120/200 rows, shifted view windows and nearest-row fuzz; FixedDiv 1000000 edge/random pairs

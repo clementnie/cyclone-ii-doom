@@ -1,0 +1,46 @@
++---------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                             ;
++-----------------------+-----------------------+------------+----------+----------+----------+
+; From Clock            ; To Clock              ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------+-----------------------+------------+----------+----------+----------+
+; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 6851278    ; 0        ; 0        ; 0        ;
+; jtag_user             ; clocks|pll|pll|clk[0] ; false path ; 0        ; 0        ; 0        ;
+; sdram_pin             ; clocks|pll|pll|clk[0] ; 16         ; 0        ; 0        ; 0        ;
+; clocks|pll|pll|clk[0] ; jtag_user             ; false path ; 0        ; 0        ; 0        ;
+; jtag_user             ; jtag_user             ; 10779      ; 0        ; 52       ; 0        ;
+; clocks|pll|pll|clk[0] ; sdram_pin             ; 51         ; 0        ; 0        ; 0        ;
++-----------------------+-----------------------+------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
++---------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                              ;
++-----------------------+-----------------------+------------+----------+----------+----------+
+; From Clock            ; To Clock              ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------+-----------------------+------------+----------+----------+----------+
+; clocks|pll|pll|clk[0] ; clocks|pll|pll|clk[0] ; 6851278    ; 0        ; 0        ; 0        ;
+; jtag_user             ; clocks|pll|pll|clk[0] ; false path ; 0        ; 0        ; 0        ;
+; sdram_pin             ; clocks|pll|pll|clk[0] ; 16         ; 0        ; 0        ; 0        ;
+; clocks|pll|pll|clk[0] ; jtag_user             ; false path ; 0        ; 0        ; 0        ;
+; jtag_user             ; jtag_user             ; 10779      ; 0        ; 52       ; 0        ;
+; clocks|pll|pll|clk[0] ; sdram_pin             ; 51         ; 0        ; 0        ; 0        ;
++-----------------------+-----------------------+------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
++--------------------------------------------------------------------+
+; Recovery Transfers                                                 ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; jtag_user  ; jtag_user ; 506      ; 0        ; 1        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
++--------------------------------------------------------------------+
+; Removal Transfers                                                  ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; jtag_user  ; jtag_user ; 506      ; 0        ; 1        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+

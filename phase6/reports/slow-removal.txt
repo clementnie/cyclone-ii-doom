@@ -1,0 +1,1624 @@
+----------------
+; Command Info ;
+----------------
+Report Timing: Found 20 removal paths (0 violated).  Worst case slack is 1.674 
+
+Tcl Command:
+    report_timing -removal -file ../reports/slow-removal.txt -npaths 20 -detail full_path
+
+Options:
+    -removal 
+    -npaths 20 
+    -detail full_path 
+    -file {../reports/slow-removal.txt} 
+
+Delay Model:
+    Slow Model
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Summary of Paths                                                                                                                                                                                                                                                   ;
++-------+--------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                        ; To Node                                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.674 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg                            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[4]         ; jtag_user    ; jtag_user   ; 0.000        ; 0.000      ; 1.960      ;
+; 1.674 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg                            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0    ; jtag_user    ; jtag_user   ; 0.000        ; 0.000      ; 1.960      ;
+; 1.721 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[9]      ; jtag_user    ; jtag_user   ; 0.000        ; 0.001      ; 2.008      ;
+; 1.721 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[8]      ; jtag_user    ; jtag_user   ; 0.000        ; 0.001      ; 2.008      ;
+; 1.721 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[7]      ; jtag_user    ; jtag_user   ; 0.000        ; 0.001      ; 2.008      ;
+; 1.721 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[6]      ; jtag_user    ; jtag_user   ; 0.000        ; 0.001      ; 2.008      ;
+; 1.721 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[5]      ; jtag_user    ; jtag_user   ; 0.000        ; 0.001      ; 2.008      ;
+; 1.721 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[4]      ; jtag_user    ; jtag_user   ; 0.000        ; 0.001      ; 2.008      ;
+; 1.721 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[3]      ; jtag_user    ; jtag_user   ; 0.000        ; 0.001      ; 2.008      ;
+; 1.721 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2]      ; jtag_user    ; jtag_user   ; 0.000        ; 0.001      ; 2.008      ;
+; 1.721 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[1]      ; jtag_user    ; jtag_user   ; 0.000        ; 0.001      ; 2.008      ;
+; 1.721 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[0]      ; jtag_user    ; jtag_user   ; 0.000        ; 0.001      ; 2.008      ;
+; 1.721 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg ; jtag_user    ; jtag_user   ; 0.000        ; 0.001      ; 2.008      ;
+; 1.721 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg ; jtag_user    ; jtag_user   ; 0.000        ; 0.001      ; 2.008      ;
+; 1.735 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg                ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]     ; jtag_user    ; jtag_user   ; 0.000        ; -0.001     ; 2.020      ;
+; 1.768 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg                            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[0]     ; jtag_user    ; jtag_user   ; 0.000        ; -0.003     ; 2.051      ;
+; 1.768 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg                            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]     ; jtag_user    ; jtag_user   ; 0.000        ; -0.003     ; 2.051      ;
+; 1.768 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg                            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3]       ; jtag_user    ; jtag_user   ; 0.000        ; -0.003     ; 2.051      ;
+; 1.768 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg                            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][1]       ; jtag_user    ; jtag_user   ; 0.000        ; -0.003     ; 2.051      ;
+; 1.768 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg                            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][2]       ; jtag_user    ; jtag_user   ; 0.000        ; -0.003     ; 2.051      ;
++-------+--------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+Path #1: Removal slack is 1.674 
+===============================================================================
++------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                   ;
++--------------------+---------------------------------------------------------------------------+
+; Property           ; Value                                                                     ;
++--------------------+---------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg     ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[4] ;
+; Launch Clock       ; jtag_user                                                                 ;
+; Latch Clock        ; jtag_user                                                                 ;
+; Data Arrival Time  ; 6.880                                                                     ;
+; Data Required Time ; 5.206                                                                     ;
+; Slack              ; 1.674                                                                     ;
++--------------------+---------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 1.960 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.835       ; 42         ; 0.835 ; 0.835 ;
+;    Cell                ;       ; 2     ; 0.848       ; 43         ; 0.000 ; 0.848 ;
+;    uTco                ;       ; 1     ; 0.277       ; 14         ; 0.277 ; 0.277 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                     ;
++---------+---------+----+------+--------+------------------+---------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                   ;
++---------+---------+----+------+--------+------------------+---------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                          ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                            ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                              ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                              ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|clr_reg|clk                      ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg     ;
+; 6.880   ; 1.960   ;    ;      ;        ;                  ; data path                                                                 ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg     ;
+;   5.197 ;   0.000 ; RR ; CELL ; 12     ; LCFF_X38_Y16_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|clr_reg|regout                   ;
+;   6.032 ;   0.835 ; RR ; IC   ; 1      ; LCFF_X37_Y16_N1  ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[4]|aclr                 ;
+;   6.880 ;   0.848 ; RF ; CELL ; 1      ; LCFF_X37_Y16_N1  ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[4] ;
++---------+---------+----+------+--------+------------------+---------------------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                   ;
++---------+---------+----+------+--------+-----------------+---------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location        ; Element                                                                   ;
++---------+---------+----+------+--------+-----------------+---------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                 ; latch edge time                                                           ;
+; 4.920   ; 4.920   ;    ;      ;        ;                 ; clock path                                                                ;
+;   0.000 ;   0.000 ;    ;      ;        ;                 ; source latency                                                            ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0  ; altera_internal_jtag|tckutap                                              ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                              ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X37_Y16_N1 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[4]|clk                  ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X37_Y16_N1 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[4] ;
+; 4.920   ; 0.000   ;    ;      ;        ;                 ; clock uncertainty                                                         ;
+; 5.206   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X37_Y16_N1 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[4] ;
++---------+---------+----+------+--------+-----------------+---------------------------------------------------------------------------+
+
+
+Path #2: Removal slack is 1.674 
+===============================================================================
++-----------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                        ;
++--------------------+--------------------------------------------------------------------------------+
+; Property           ; Value                                                                          ;
++--------------------+--------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg          ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0 ;
+; Launch Clock       ; jtag_user                                                                      ;
+; Latch Clock        ; jtag_user                                                                      ;
+; Data Arrival Time  ; 6.880                                                                          ;
+; Data Required Time ; 5.206                                                                          ;
+; Slack              ; 1.674                                                                          ;
++--------------------+--------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.000 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 1.960 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.835       ; 42         ; 0.835 ; 0.835 ;
+;    Cell                ;       ; 2     ; 0.848       ; 43         ; 0.000 ; 0.848 ;
+;    uTco                ;       ; 1     ; 0.277       ; 14         ; 0.277 ; 0.277 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                          ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                        ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                               ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                     ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                 ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                   ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                   ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                     ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|clr_reg|clk                           ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg          ;
+; 6.880   ; 1.960   ;    ;      ;        ;                  ; data path                                                                      ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg          ;
+;   5.197 ;   0.000 ; RR ; CELL ; 12     ; LCFF_X38_Y16_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|clr_reg|regout                        ;
+;   6.032 ;   0.835 ; RR ; IC   ; 1      ; LCFF_X37_Y16_N3  ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0|aclr                 ;
+;   6.880 ;   0.848 ; RF ; CELL ; 1      ; LCFF_X37_Y16_N3  ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0 ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                        ;
++---------+---------+----+------+--------+-----------------+--------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location        ; Element                                                                        ;
++---------+---------+----+------+--------+-----------------+--------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                 ; latch edge time                                                                ;
+; 4.920   ; 4.920   ;    ;      ;        ;                 ; clock path                                                                     ;
+;   0.000 ;   0.000 ;    ;      ;        ;                 ; source latency                                                                 ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0  ; altera_internal_jtag|tckutap                                                   ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                   ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                     ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X37_Y16_N3 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0|clk                  ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X37_Y16_N3 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0 ;
+; 4.920   ; 0.000   ;    ;      ;        ;                 ; clock uncertainty                                                              ;
+; 5.206   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X37_Y16_N3 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|node_ena[1]~reg0 ;
++---------+---------+----+------+--------+-----------------+--------------------------------------------------------------------------------+
+
+
+Path #3: Removal slack is 1.721 
+===============================================================================
++-----------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                          ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[9]                     ;
+; Launch Clock       ; jtag_user                                                                                        ;
+; Latch Clock        ; jtag_user                                                                                        ;
+; Data Arrival Time  ; 6.928                                                                                            ;
+; Data Required Time ; 5.207                                                                                            ;
+; Slack              ; 1.721                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.001 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.008 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.883       ; 43         ; 0.883 ; 0.883 ;
+;    Cell                ;       ; 2     ; 0.848       ; 42         ; 0.000 ; 0.848 ;
+;    uTco                ;       ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.319       ; 87         ; 0.997 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                            ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                                          ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                                                 ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                                       ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                                   ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                                     ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                                     ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                                       ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|clk                                 ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; 6.928   ; 2.008   ;    ;      ;        ;                  ; data path                                                                                        ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+;   5.197 ;   0.000 ; RR ; CELL ; 15     ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|regout                              ;
+;   6.080 ;   0.883 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[9]|aclr                                     ;
+;   6.928 ;   0.848 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[9]                     ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                       ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                      ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; latch edge time                                                              ;
+; 4.921   ; 4.921   ;    ;      ;        ;                  ; clock path                                                                   ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                               ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                 ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                 ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                   ;
+;   4.319 ;   0.997 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[9]|clk                  ;
+;   4.921 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[9] ;
+; 4.921   ; 0.000   ;    ;      ;        ;                  ; clock uncertainty                                                            ;
+; 5.207   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X42_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[9] ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+
+
+Path #4: Removal slack is 1.721 
+===============================================================================
++-----------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                          ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[8]                     ;
+; Launch Clock       ; jtag_user                                                                                        ;
+; Latch Clock        ; jtag_user                                                                                        ;
+; Data Arrival Time  ; 6.928                                                                                            ;
+; Data Required Time ; 5.207                                                                                            ;
+; Slack              ; 1.721                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.001 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.008 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.883       ; 43         ; 0.883 ; 0.883 ;
+;    Cell                ;       ; 2     ; 0.848       ; 42         ; 0.000 ; 0.848 ;
+;    uTco                ;       ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.319       ; 87         ; 0.997 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                            ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                                          ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                                                 ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                                       ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                                   ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                                     ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                                     ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                                       ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|clk                                 ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; 6.928   ; 2.008   ;    ;      ;        ;                  ; data path                                                                                        ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+;   5.197 ;   0.000 ; RR ; CELL ; 15     ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|regout                              ;
+;   6.080 ;   0.883 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N23 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[8]|aclr                                     ;
+;   6.928 ;   0.848 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N23 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[8]                     ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                       ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                      ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; latch edge time                                                              ;
+; 4.921   ; 4.921   ;    ;      ;        ;                  ; clock path                                                                   ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                               ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                 ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                 ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                   ;
+;   4.319 ;   0.997 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N23 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[8]|clk                  ;
+;   4.921 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N23 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[8] ;
+; 4.921   ; 0.000   ;    ;      ;        ;                  ; clock uncertainty                                                            ;
+; 5.207   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X42_Y16_N23 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[8] ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+
+
+Path #5: Removal slack is 1.721 
+===============================================================================
++-----------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                          ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[7]                     ;
+; Launch Clock       ; jtag_user                                                                                        ;
+; Latch Clock        ; jtag_user                                                                                        ;
+; Data Arrival Time  ; 6.928                                                                                            ;
+; Data Required Time ; 5.207                                                                                            ;
+; Slack              ; 1.721                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.001 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.008 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.883       ; 43         ; 0.883 ; 0.883 ;
+;    Cell                ;       ; 2     ; 0.848       ; 42         ; 0.000 ; 0.848 ;
+;    uTco                ;       ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.319       ; 87         ; 0.997 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                            ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                                          ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                                                 ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                                       ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                                   ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                                     ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                                     ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                                       ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|clk                                 ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; 6.928   ; 2.008   ;    ;      ;        ;                  ; data path                                                                                        ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+;   5.197 ;   0.000 ; RR ; CELL ; 15     ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|regout                              ;
+;   6.080 ;   0.883 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N25 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[7]|aclr                                     ;
+;   6.928 ;   0.848 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N25 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[7]                     ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                       ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                      ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; latch edge time                                                              ;
+; 4.921   ; 4.921   ;    ;      ;        ;                  ; clock path                                                                   ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                               ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                 ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                 ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                   ;
+;   4.319 ;   0.997 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N25 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[7]|clk                  ;
+;   4.921 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N25 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[7] ;
+; 4.921   ; 0.000   ;    ;      ;        ;                  ; clock uncertainty                                                            ;
+; 5.207   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X42_Y16_N25 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[7] ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+
+
+Path #6: Removal slack is 1.721 
+===============================================================================
++-----------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                          ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[6]                     ;
+; Launch Clock       ; jtag_user                                                                                        ;
+; Latch Clock        ; jtag_user                                                                                        ;
+; Data Arrival Time  ; 6.928                                                                                            ;
+; Data Required Time ; 5.207                                                                                            ;
+; Slack              ; 1.721                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.001 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.008 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.883       ; 43         ; 0.883 ; 0.883 ;
+;    Cell                ;       ; 2     ; 0.848       ; 42         ; 0.000 ; 0.848 ;
+;    uTco                ;       ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.319       ; 87         ; 0.997 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                            ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                                          ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                                                 ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                                       ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                                   ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                                     ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                                     ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                                       ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|clk                                 ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; 6.928   ; 2.008   ;    ;      ;        ;                  ; data path                                                                                        ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+;   5.197 ;   0.000 ; RR ; CELL ; 15     ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|regout                              ;
+;   6.080 ;   0.883 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N19 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[6]|aclr                                     ;
+;   6.928 ;   0.848 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N19 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[6]                     ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                       ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                      ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; latch edge time                                                              ;
+; 4.921   ; 4.921   ;    ;      ;        ;                  ; clock path                                                                   ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                               ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                 ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                 ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                   ;
+;   4.319 ;   0.997 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N19 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[6]|clk                  ;
+;   4.921 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N19 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[6] ;
+; 4.921   ; 0.000   ;    ;      ;        ;                  ; clock uncertainty                                                            ;
+; 5.207   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X42_Y16_N19 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[6] ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+
+
+Path #7: Removal slack is 1.721 
+===============================================================================
++-----------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                          ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[5]                     ;
+; Launch Clock       ; jtag_user                                                                                        ;
+; Latch Clock        ; jtag_user                                                                                        ;
+; Data Arrival Time  ; 6.928                                                                                            ;
+; Data Required Time ; 5.207                                                                                            ;
+; Slack              ; 1.721                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.001 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.008 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.883       ; 43         ; 0.883 ; 0.883 ;
+;    Cell                ;       ; 2     ; 0.848       ; 42         ; 0.000 ; 0.848 ;
+;    uTco                ;       ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.319       ; 87         ; 0.997 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                            ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                                          ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                                                 ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                                       ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                                   ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                                     ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                                     ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                                       ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|clk                                 ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; 6.928   ; 2.008   ;    ;      ;        ;                  ; data path                                                                                        ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+;   5.197 ;   0.000 ; RR ; CELL ; 15     ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|regout                              ;
+;   6.080 ;   0.883 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N15 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[5]|aclr                                     ;
+;   6.928 ;   0.848 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N15 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[5]                     ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                       ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                      ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; latch edge time                                                              ;
+; 4.921   ; 4.921   ;    ;      ;        ;                  ; clock path                                                                   ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                               ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                 ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                 ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                   ;
+;   4.319 ;   0.997 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N15 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[5]|clk                  ;
+;   4.921 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N15 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[5] ;
+; 4.921   ; 0.000   ;    ;      ;        ;                  ; clock uncertainty                                                            ;
+; 5.207   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X42_Y16_N15 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[5] ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+
+
+Path #8: Removal slack is 1.721 
+===============================================================================
++-----------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                          ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[4]                     ;
+; Launch Clock       ; jtag_user                                                                                        ;
+; Latch Clock        ; jtag_user                                                                                        ;
+; Data Arrival Time  ; 6.928                                                                                            ;
+; Data Required Time ; 5.207                                                                                            ;
+; Slack              ; 1.721                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.001 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.008 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.883       ; 43         ; 0.883 ; 0.883 ;
+;    Cell                ;       ; 2     ; 0.848       ; 42         ; 0.000 ; 0.848 ;
+;    uTco                ;       ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.319       ; 87         ; 0.997 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                            ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                                          ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                                                 ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                                       ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                                   ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                                     ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                                     ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                                       ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|clk                                 ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; 6.928   ; 2.008   ;    ;      ;        ;                  ; data path                                                                                        ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+;   5.197 ;   0.000 ; RR ; CELL ; 15     ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|regout                              ;
+;   6.080 ;   0.883 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N9  ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[4]|aclr                                     ;
+;   6.928 ;   0.848 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N9  ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[4]                     ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                      ;
++---------+---------+----+------+--------+-----------------+------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location        ; Element                                                                      ;
++---------+---------+----+------+--------+-----------------+------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                 ; latch edge time                                                              ;
+; 4.921   ; 4.921   ;    ;      ;        ;                 ; clock path                                                                   ;
+;   0.000 ;   0.000 ;    ;      ;        ;                 ; source latency                                                               ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0  ; altera_internal_jtag|tckutap                                                 ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                 ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                   ;
+;   4.319 ;   0.997 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N9 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[4]|clk                  ;
+;   4.921 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N9 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[4] ;
+; 4.921   ; 0.000   ;    ;      ;        ;                 ; clock uncertainty                                                            ;
+; 5.207   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X42_Y16_N9 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[4] ;
++---------+---------+----+------+--------+-----------------+------------------------------------------------------------------------------+
+
+
+Path #9: Removal slack is 1.721 
+===============================================================================
++-----------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                          ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[3]                     ;
+; Launch Clock       ; jtag_user                                                                                        ;
+; Latch Clock        ; jtag_user                                                                                        ;
+; Data Arrival Time  ; 6.928                                                                                            ;
+; Data Required Time ; 5.207                                                                                            ;
+; Slack              ; 1.721                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.001 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.008 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.883       ; 43         ; 0.883 ; 0.883 ;
+;    Cell                ;       ; 2     ; 0.848       ; 42         ; 0.000 ; 0.848 ;
+;    uTco                ;       ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.319       ; 87         ; 0.997 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                            ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                                          ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                                                 ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                                       ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                                   ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                                     ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                                     ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                                       ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|clk                                 ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; 6.928   ; 2.008   ;    ;      ;        ;                  ; data path                                                                                        ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+;   5.197 ;   0.000 ; RR ; CELL ; 15     ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|regout                              ;
+;   6.080 ;   0.883 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N5  ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[3]|aclr                                     ;
+;   6.928 ;   0.848 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N5  ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[3]                     ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                      ;
++---------+---------+----+------+--------+-----------------+------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location        ; Element                                                                      ;
++---------+---------+----+------+--------+-----------------+------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                 ; latch edge time                                                              ;
+; 4.921   ; 4.921   ;    ;      ;        ;                 ; clock path                                                                   ;
+;   0.000 ;   0.000 ;    ;      ;        ;                 ; source latency                                                               ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0  ; altera_internal_jtag|tckutap                                                 ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                 ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                   ;
+;   4.319 ;   0.997 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N5 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[3]|clk                  ;
+;   4.921 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N5 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[3] ;
+; 4.921   ; 0.000   ;    ;      ;        ;                 ; clock uncertainty                                                            ;
+; 5.207   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X42_Y16_N5 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[3] ;
++---------+---------+----+------+--------+-----------------+------------------------------------------------------------------------------+
+
+
+Path #10: Removal slack is 1.721 
+===============================================================================
++-----------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                          ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2]                     ;
+; Launch Clock       ; jtag_user                                                                                        ;
+; Latch Clock        ; jtag_user                                                                                        ;
+; Data Arrival Time  ; 6.928                                                                                            ;
+; Data Required Time ; 5.207                                                                                            ;
+; Slack              ; 1.721                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.001 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.008 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.883       ; 43         ; 0.883 ; 0.883 ;
+;    Cell                ;       ; 2     ; 0.848       ; 42         ; 0.000 ; 0.848 ;
+;    uTco                ;       ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.319       ; 87         ; 0.997 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                            ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                                          ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                                                 ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                                       ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                                   ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                                     ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                                     ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                                       ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|clk                                 ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; 6.928   ; 2.008   ;    ;      ;        ;                  ; data path                                                                                        ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+;   5.197 ;   0.000 ; RR ; CELL ; 15     ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|regout                              ;
+;   6.080 ;   0.883 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N27 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2]|aclr                                     ;
+;   6.928 ;   0.848 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N27 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2]                     ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                       ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                      ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; latch edge time                                                              ;
+; 4.921   ; 4.921   ;    ;      ;        ;                  ; clock path                                                                   ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                               ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                 ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                 ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                   ;
+;   4.319 ;   0.997 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N27 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2]|clk                  ;
+;   4.921 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N27 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2] ;
+; 4.921   ; 0.000   ;    ;      ;        ;                  ; clock uncertainty                                                            ;
+; 5.207   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X42_Y16_N27 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2] ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+
+
+Path #11: Removal slack is 1.721 
+===============================================================================
++-----------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                          ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[1]                     ;
+; Launch Clock       ; jtag_user                                                                                        ;
+; Latch Clock        ; jtag_user                                                                                        ;
+; Data Arrival Time  ; 6.928                                                                                            ;
+; Data Required Time ; 5.207                                                                                            ;
+; Slack              ; 1.721                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.001 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.008 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.883       ; 43         ; 0.883 ; 0.883 ;
+;    Cell                ;       ; 2     ; 0.848       ; 42         ; 0.000 ; 0.848 ;
+;    uTco                ;       ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.319       ; 87         ; 0.997 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                            ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                                          ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                                                 ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                                       ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                                   ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                                     ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                                     ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                                       ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|clk                                 ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; 6.928   ; 2.008   ;    ;      ;        ;                  ; data path                                                                                        ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+;   5.197 ;   0.000 ; RR ; CELL ; 15     ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|regout                              ;
+;   6.080 ;   0.883 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N13 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[1]|aclr                                     ;
+;   6.928 ;   0.848 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N13 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[1]                     ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                       ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                      ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; latch edge time                                                              ;
+; 4.921   ; 4.921   ;    ;      ;        ;                  ; clock path                                                                   ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                               ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                 ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                 ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                   ;
+;   4.319 ;   0.997 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N13 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[1]|clk                  ;
+;   4.921 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N13 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[1] ;
+; 4.921   ; 0.000   ;    ;      ;        ;                  ; clock uncertainty                                                            ;
+; 5.207   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X42_Y16_N13 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[1] ;
++---------+---------+----+------+--------+------------------+------------------------------------------------------------------------------+
+
+
+Path #12: Removal slack is 1.721 
+===============================================================================
++-----------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                          ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[0]                     ;
+; Launch Clock       ; jtag_user                                                                                        ;
+; Latch Clock        ; jtag_user                                                                                        ;
+; Data Arrival Time  ; 6.928                                                                                            ;
+; Data Required Time ; 5.207                                                                                            ;
+; Slack              ; 1.721                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.001 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.008 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.883       ; 43         ; 0.883 ; 0.883 ;
+;    Cell                ;       ; 2     ; 0.848       ; 42         ; 0.000 ; 0.848 ;
+;    uTco                ;       ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.319       ; 87         ; 0.997 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                            ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                                          ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                                                 ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                                       ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                                   ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                                     ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                                     ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                                       ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|clk                                 ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; 6.928   ; 2.008   ;    ;      ;        ;                  ; data path                                                                                        ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+;   5.197 ;   0.000 ; RR ; CELL ; 15     ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|regout                              ;
+;   6.080 ;   0.883 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N7  ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[0]|aclr                                     ;
+;   6.928 ;   0.848 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N7  ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[0]                     ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                      ;
++---------+---------+----+------+--------+-----------------+------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location        ; Element                                                                      ;
++---------+---------+----+------+--------+-----------------+------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                 ; latch edge time                                                              ;
+; 4.921   ; 4.921   ;    ;      ;        ;                 ; clock path                                                                   ;
+;   0.000 ;   0.000 ;    ;      ;        ;                 ; source latency                                                               ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0  ; altera_internal_jtag|tckutap                                                 ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                 ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                   ;
+;   4.319 ;   0.997 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N7 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[0]|clk                  ;
+;   4.921 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N7 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[0] ;
+; 4.921   ; 0.000   ;    ;      ;        ;                 ; clock uncertainty                                                            ;
+; 5.207   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X42_Y16_N7 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[0] ;
++---------+---------+----+------+--------+-----------------+------------------------------------------------------------------------------+
+
+
+Path #13: Removal slack is 1.721 
+===============================================================================
++-----------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                          ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg                ;
+; Launch Clock       ; jtag_user                                                                                        ;
+; Latch Clock        ; jtag_user                                                                                        ;
+; Data Arrival Time  ; 6.928                                                                                            ;
+; Data Required Time ; 5.207                                                                                            ;
+; Slack              ; 1.721                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.001 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.008 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.883       ; 43         ; 0.883 ; 0.883 ;
+;    Cell                ;       ; 2     ; 0.848       ; 42         ; 0.000 ; 0.848 ;
+;    uTco                ;       ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.319       ; 87         ; 0.997 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                            ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                                          ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                                                 ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                                       ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                                   ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                                     ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                                     ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                                       ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|clk                                 ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; 6.928   ; 2.008   ;    ;      ;        ;                  ; data path                                                                                        ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+;   5.197 ;   0.000 ; RR ; CELL ; 15     ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|regout                              ;
+;   6.080 ;   0.883 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N1  ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg|aclr                                ;
+;   6.928 ;   0.848 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N1  ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg                ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                           ;
++---------+---------+----+------+--------+-----------------+-----------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location        ; Element                                                                           ;
++---------+---------+----+------+--------+-----------------+-----------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                 ; latch edge time                                                                   ;
+; 4.921   ; 4.921   ;    ;      ;        ;                 ; clock path                                                                        ;
+;   0.000 ;   0.000 ;    ;      ;        ;                 ; source latency                                                                    ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0  ; altera_internal_jtag|tckutap                                                      ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                      ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                        ;
+;   4.319 ;   0.997 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N1 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg|clk                  ;
+;   4.921 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N1 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg ;
+; 4.921   ; 0.000   ;    ;      ;        ;                 ; clock uncertainty                                                                 ;
+; 5.207   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X42_Y16_N1 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg ;
++---------+---------+----+------+--------+-----------------+-----------------------------------------------------------------------------------+
+
+
+Path #14: Removal slack is 1.721 
+===============================================================================
++-----------------------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                                          ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; Property           ; Value                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg                ;
+; Launch Clock       ; jtag_user                                                                                        ;
+; Latch Clock        ; jtag_user                                                                                        ;
+; Data Arrival Time  ; 6.928                                                                                            ;
+; Data Required Time ; 5.207                                                                                            ;
+; Slack              ; 1.721                                                                                            ;
++--------------------+--------------------------------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------+
+; Statistics                                                                        ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Property               ; Value ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.001 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.008 ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;       ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;       ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 1     ; 0.883       ; 43         ; 0.883 ; 0.883 ;
+;    Cell                ;       ; 2     ; 0.848       ; 42         ; 0.000 ; 0.848 ;
+;    uTco                ;       ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;       ;       ;             ;            ;       ;       ;
+;   Clock                ;       ;       ;             ;            ;       ;       ;
+;    IC                  ;       ; 2     ; 4.319       ; 87         ; 0.997 ; 3.322 ;
+;    Cell                ;       ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+-------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                                            ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                                          ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                                                 ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                                       ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                                   ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                                     ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                                     ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                                       ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|clk                                 ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+; 6.928   ; 2.008   ;    ;      ;        ;                  ; data path                                                                                        ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm|state[0] ;
+;   5.197 ;   0.000 ; RR ; CELL ; 15     ; LCFF_X38_Y16_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state[0]|regout                              ;
+;   6.080 ;   0.883 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N3  ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg|aclr                                ;
+;   6.928 ;   0.848 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N3  ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg                ;
++---------+---------+----+------+--------+------------------+--------------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                           ;
++---------+---------+----+------+--------+-----------------+-----------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location        ; Element                                                                           ;
++---------+---------+----+------+--------+-----------------+-----------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                 ; latch edge time                                                                   ;
+; 4.921   ; 4.921   ;    ;      ;        ;                 ; clock path                                                                        ;
+;   0.000 ;   0.000 ;    ;      ;        ;                 ; source latency                                                                    ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0  ; altera_internal_jtag|tckutap                                                      ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                      ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                        ;
+;   4.319 ;   0.997 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N3 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg|clk                  ;
+;   4.921 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N3 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg ;
+; 4.921   ; 0.000   ;    ;      ;        ;                 ; clock uncertainty                                                                 ;
+; 5.207   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X42_Y16_N3 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_dr_scan_reg ;
++---------+---------+----+------+--------+-----------------+-----------------------------------------------------------------------------------+
+
+
+Path #15: Removal slack is 1.735 
+===============================================================================
++--------------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                           ;
++--------------------+-----------------------------------------------------------------------------------+
+; Property           ; Value                                                                             ;
++--------------------+-----------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]     ;
+; Launch Clock       ; jtag_user                                                                         ;
+; Latch Clock        ; jtag_user                                                                         ;
+; Data Arrival Time  ; 6.941                                                                             ;
+; Data Required Time ; 5.206                                                                             ;
+; Slack              ; 1.735                                                                             ;
++--------------------+-----------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------+
+; Statistics                                                                         ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Property               ; Value  ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000  ;       ;             ;            ;       ;       ;
+; Clock Skew             ; -0.001 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.020  ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;        ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;        ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 2     ; 4.319       ; 87         ; 0.997 ; 3.322 ;
+;    Cell                ;        ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 1     ; 0.895       ; 44         ; 0.895 ; 0.895 ;
+;    Cell                ;        ; 2     ; 0.848       ; 41         ; 0.000 ; 0.848 ;
+;    uTco                ;        ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;        ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                             ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                           ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                                  ;
+; 4.921   ; 4.921   ;    ;      ;        ;                  ; clock path                                                                        ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                    ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                      ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                      ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                        ;
+;   4.319 ;   0.997 ; RR ; IC   ; 1      ; LCFF_X42_Y16_N1  ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg|clk                  ;
+;   4.921 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X42_Y16_N1  ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg ;
+; 6.941   ; 2.020   ;    ;      ;        ;                  ; data path                                                                         ;
+;   5.198 ;   0.277 ;    ; uTco ; 1      ; LCFF_X42_Y16_N1  ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg ;
+;   5.198 ;   0.000 ; RR ; CELL ; 18     ; LCFF_X42_Y16_N1  ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|virtual_ir_scan_reg|regout               ;
+;   6.093 ;   0.895 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N31 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]|aclr                     ;
+;   6.941 ;   0.848 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N31 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]     ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                        ;
++---------+---------+----+------+--------+------------------+-------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                       ;
++---------+---------+----+------+--------+------------------+-------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; latch edge time                                                               ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                    ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                  ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                  ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                    ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N31 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2]|clk                  ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N31 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2] ;
+; 4.920   ; 0.000   ;    ;      ;        ;                  ; clock uncertainty                                                             ;
+; 5.206   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X38_Y16_N31 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[2] ;
++---------+---------+----+------+--------+------------------+-------------------------------------------------------------------------------+
+
+
+Path #16: Removal slack is 1.768 
+===============================================================================
++----------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                       ;
++--------------------+-------------------------------------------------------------------------------+
+; Property           ; Value                                                                         ;
++--------------------+-------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg         ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[0] ;
+; Launch Clock       ; jtag_user                                                                     ;
+; Latch Clock        ; jtag_user                                                                     ;
+; Data Arrival Time  ; 6.971                                                                         ;
+; Data Required Time ; 5.203                                                                         ;
+; Slack              ; 1.768                                                                         ;
++--------------------+-------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------+
+; Statistics                                                                         ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Property               ; Value  ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000  ;       ;             ;            ;       ;       ;
+; Clock Skew             ; -0.003 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.051  ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;        ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;        ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;        ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 1     ; 0.926       ; 45         ; 0.926 ; 0.926 ;
+;    Cell                ;        ; 2     ; 0.848       ; 41         ; 0.000 ; 0.848 ;
+;    uTco                ;        ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 2     ; 4.315       ; 87         ; 0.993 ; 3.322 ;
+;    Cell                ;        ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                         ;
++---------+---------+----+------+--------+------------------+-------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                       ;
++---------+---------+----+------+--------+------------------+-------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                              ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                    ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                  ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                  ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                    ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|clr_reg|clk                          ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg         ;
+; 6.971   ; 2.051   ;    ;      ;        ;                  ; data path                                                                     ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg         ;
+;   5.197 ;   0.000 ; RR ; CELL ; 12     ; LCFF_X38_Y16_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|clr_reg|regout                       ;
+;   6.123 ;   0.926 ; RR ; IC   ; 1      ; LCFF_X38_Y17_N31 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[0]|aclr                 ;
+;   6.971 ;   0.848 ; RF ; CELL ; 1      ; LCFF_X38_Y17_N31 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[0] ;
++---------+---------+----+------+--------+------------------+-------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                        ;
++---------+---------+----+------+--------+------------------+-------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                       ;
++---------+---------+----+------+--------+------------------+-------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; latch edge time                                                               ;
+; 4.917   ; 4.917   ;    ;      ;        ;                  ; clock path                                                                    ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                  ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                  ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                    ;
+;   4.315 ;   0.993 ; RR ; IC   ; 1      ; LCFF_X38_Y17_N31 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[0]|clk                  ;
+;   4.917 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y17_N31 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[0] ;
+; 4.917   ; 0.000   ;    ;      ;        ;                  ; clock uncertainty                                                             ;
+; 5.203   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X38_Y17_N31 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[0] ;
++---------+---------+----+------+--------+------------------+-------------------------------------------------------------------------------+
+
+
+Path #17: Removal slack is 1.768 
+===============================================================================
++----------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                       ;
++--------------------+-------------------------------------------------------------------------------+
+; Property           ; Value                                                                         ;
++--------------------+-------------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg         ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1] ;
+; Launch Clock       ; jtag_user                                                                     ;
+; Latch Clock        ; jtag_user                                                                     ;
+; Data Arrival Time  ; 6.971                                                                         ;
+; Data Required Time ; 5.203                                                                         ;
+; Slack              ; 1.768                                                                         ;
++--------------------+-------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------+
+; Statistics                                                                         ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Property               ; Value  ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000  ;       ;             ;            ;       ;       ;
+; Clock Skew             ; -0.003 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.051  ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;        ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;        ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;        ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 1     ; 0.926       ; 45         ; 0.926 ; 0.926 ;
+;    Cell                ;        ; 2     ; 0.848       ; 41         ; 0.000 ; 0.848 ;
+;    uTco                ;        ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 2     ; 4.315       ; 87         ; 0.993 ; 3.322 ;
+;    Cell                ;        ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                         ;
++---------+---------+----+------+--------+------------------+-------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                       ;
++---------+---------+----+------+--------+------------------+-------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                              ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                    ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                  ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                  ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                    ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|clr_reg|clk                          ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg         ;
+; 6.971   ; 2.051   ;    ;      ;        ;                  ; data path                                                                     ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg         ;
+;   5.197 ;   0.000 ; RR ; CELL ; 12     ; LCFF_X38_Y16_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|clr_reg|regout                       ;
+;   6.123 ;   0.926 ; RR ; IC   ; 1      ; LCFF_X38_Y17_N21 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]|aclr                 ;
+;   6.971 ;   0.848 ; RF ; CELL ; 1      ; LCFF_X38_Y17_N21 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1] ;
++---------+---------+----+------+--------+------------------+-------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                        ;
++---------+---------+----+------+--------+------------------+-------------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                       ;
++---------+---------+----+------+--------+------------------+-------------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; latch edge time                                                               ;
+; 4.917   ; 4.917   ;    ;      ;        ;                  ; clock path                                                                    ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                                ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                  ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                  ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                    ;
+;   4.315 ;   0.993 ; RR ; IC   ; 1      ; LCFF_X38_Y17_N21 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1]|clk                  ;
+;   4.917 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y17_N21 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1] ;
+; 4.917   ; 0.000   ;    ;      ;        ;                  ; clock uncertainty                                                             ;
+; 5.203   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X38_Y17_N21 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg[1] ;
++---------+---------+----+------+--------+------------------+-------------------------------------------------------------------------------+
+
+
+Path #18: Removal slack is 1.768 
+===============================================================================
++--------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                     ;
++--------------------+-----------------------------------------------------------------------------+
+; Property           ; Value                                                                       ;
++--------------------+-----------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg       ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3] ;
+; Launch Clock       ; jtag_user                                                                   ;
+; Latch Clock        ; jtag_user                                                                   ;
+; Data Arrival Time  ; 6.971                                                                       ;
+; Data Required Time ; 5.203                                                                       ;
+; Slack              ; 1.768                                                                       ;
++--------------------+-----------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------+
+; Statistics                                                                         ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Property               ; Value  ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000  ;       ;             ;            ;       ;       ;
+; Clock Skew             ; -0.003 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.051  ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;        ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;        ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;        ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 1     ; 0.926       ; 45         ; 0.926 ; 0.926 ;
+;    Cell                ;        ; 2     ; 0.848       ; 41         ; 0.000 ; 0.848 ;
+;    uTco                ;        ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 2     ; 4.315       ; 87         ; 0.993 ; 3.322 ;
+;    Cell                ;        ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                       ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                     ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                            ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                  ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                              ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                  ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|clr_reg|clk                        ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg       ;
+; 6.971   ; 2.051   ;    ;      ;        ;                  ; data path                                                                   ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg       ;
+;   5.197 ;   0.000 ; RR ; CELL ; 12     ; LCFF_X38_Y16_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|clr_reg|regout                     ;
+;   6.123 ;   0.926 ; RR ; IC   ; 1      ; LCFF_X38_Y17_N7  ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3]|aclr                 ;
+;   6.971 ;   0.848 ; RF ; CELL ; 1      ; LCFF_X38_Y17_N7  ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3] ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                     ;
++---------+---------+----+------+--------+-----------------+-----------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location        ; Element                                                                     ;
++---------+---------+----+------+--------+-----------------+-----------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                 ; latch edge time                                                             ;
+; 4.917   ; 4.917   ;    ;      ;        ;                 ; clock path                                                                  ;
+;   0.000 ;   0.000 ;    ;      ;        ;                 ; source latency                                                              ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0  ; altera_internal_jtag|tckutap                                                ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2      ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                  ;
+;   4.315 ;   0.993 ; RR ; IC   ; 1      ; LCFF_X38_Y17_N7 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3]|clk                  ;
+;   4.917 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y17_N7 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3] ;
+; 4.917   ; 0.000   ;    ;      ;        ;                 ; clock uncertainty                                                           ;
+; 5.203   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X38_Y17_N7 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][3] ;
++---------+---------+----+------+--------+-----------------+-----------------------------------------------------------------------------+
+
+
+Path #19: Removal slack is 1.768 
+===============================================================================
++--------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                     ;
++--------------------+-----------------------------------------------------------------------------+
+; Property           ; Value                                                                       ;
++--------------------+-----------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg       ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][1] ;
+; Launch Clock       ; jtag_user                                                                   ;
+; Latch Clock        ; jtag_user                                                                   ;
+; Data Arrival Time  ; 6.971                                                                       ;
+; Data Required Time ; 5.203                                                                       ;
+; Slack              ; 1.768                                                                       ;
++--------------------+-----------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------+
+; Statistics                                                                         ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Property               ; Value  ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000  ;       ;             ;            ;       ;       ;
+; Clock Skew             ; -0.003 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.051  ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;        ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;        ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;        ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 1     ; 0.926       ; 45         ; 0.926 ; 0.926 ;
+;    Cell                ;        ; 2     ; 0.848       ; 41         ; 0.000 ; 0.848 ;
+;    uTco                ;        ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 2     ; 4.315       ; 87         ; 0.993 ; 3.322 ;
+;    Cell                ;        ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                       ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                     ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                            ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                  ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                              ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                  ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|clr_reg|clk                        ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg       ;
+; 6.971   ; 2.051   ;    ;      ;        ;                  ; data path                                                                   ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg       ;
+;   5.197 ;   0.000 ; RR ; CELL ; 12     ; LCFF_X38_Y16_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|clr_reg|regout                     ;
+;   6.123 ;   0.926 ; RR ; IC   ; 1      ; LCFF_X38_Y17_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][1]|aclr                 ;
+;   6.971 ;   0.848 ; RF ; CELL ; 1      ; LCFF_X38_Y17_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][1] ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                      ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                     ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; latch edge time                                                             ;
+; 4.917   ; 4.917   ;    ;      ;        ;                  ; clock path                                                                  ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                              ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                  ;
+;   4.315 ;   0.993 ; RR ; IC   ; 1      ; LCFF_X38_Y17_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][1]|clk                  ;
+;   4.917 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y17_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][1] ;
+; 4.917   ; 0.000   ;    ;      ;        ;                  ; clock uncertainty                                                           ;
+; 5.203   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X38_Y17_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][1] ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------+
+
+
+Path #20: Removal slack is 1.768 
+===============================================================================
++--------------------------------------------------------------------------------------------------+
+; Path Summary                                                                                     ;
++--------------------+-----------------------------------------------------------------------------+
+; Property           ; Value                                                                       ;
++--------------------+-----------------------------------------------------------------------------+
+; From Node          ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg       ;
+; To Node            ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][2] ;
+; Launch Clock       ; jtag_user                                                                   ;
+; Latch Clock        ; jtag_user                                                                   ;
+; Data Arrival Time  ; 6.971                                                                       ;
+; Data Required Time ; 5.203                                                                       ;
+; Slack              ; 1.768                                                                       ;
++--------------------+-----------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------------+
+; Statistics                                                                         ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Property               ; Value  ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Removal Relationship   ; 0.000  ;       ;             ;            ;       ;       ;
+; Clock Skew             ; -0.003 ;       ;             ;            ;       ;       ;
+; Data Delay             ; 2.051  ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;        ; 0     ;             ;            ;       ;       ;
+; Physical Delays        ;        ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 2     ; 4.318       ; 87         ; 0.996 ; 3.322 ;
+;    Cell                ;        ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
+;   Data                 ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 1     ; 0.926       ; 45         ; 0.926 ; 0.926 ;
+;    Cell                ;        ; 2     ; 0.848       ; 41         ; 0.000 ; 0.848 ;
+;    uTco                ;        ; 1     ; 0.277       ; 13         ; 0.277 ; 0.277 ;
+;  Required Path         ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 2     ; 4.315       ; 87         ; 0.993 ; 3.322 ;
+;    Cell                ;        ; 2     ; 0.602       ; 12         ; 0.000 ; 0.602 ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                                                       ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                     ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; launch edge time                                                            ;
+; 4.920   ; 4.920   ;    ;      ;        ;                  ; clock path                                                                  ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                              ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                  ;
+;   4.318 ;   0.996 ; RR ; IC   ; 1      ; LCFF_X38_Y16_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|clr_reg|clk                        ;
+;   4.920 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y16_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg       ;
+; 6.971   ; 2.051   ;    ;      ;        ;                  ; data path                                                                   ;
+;   5.197 ;   0.277 ;    ; uTco ; 1      ; LCFF_X38_Y16_N11 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|clr_reg       ;
+;   5.197 ;   0.000 ; RR ; CELL ; 12     ; LCFF_X38_Y16_N11 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|clr_reg|regout                     ;
+;   6.123 ;   0.926 ; RR ; IC   ; 1      ; LCFF_X38_Y17_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][2]|aclr                 ;
+;   6.971 ;   0.848 ; RF ; CELL ; 1      ; LCFF_X38_Y17_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][2] ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                                                      ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------+
+; Total   ; Incr    ; RF ; Type ; Fanout ; Location         ; Element                                                                     ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------+
+; 0.000   ; 0.000   ;    ;      ;        ;                  ; latch edge time                                                             ;
+; 4.917   ; 4.917   ;    ;      ;        ;                  ; clock path                                                                  ;
+;   0.000 ;   0.000 ;    ;      ;        ;                  ; source latency                                                              ;
+;   0.000 ;   0.000 ;    ;      ; 1      ; JTAG_X1_Y14_N0   ; altera_internal_jtag|tckutap                                                ;
+;   3.322 ;   3.322 ; RR ; IC   ; 1      ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|inclk[0]                                ;
+;   3.322 ;   0.000 ; RR ; CELL ; 1047   ; CLKCTRL_G2       ; altera_internal_jtag~TCKUTAPclkctrl|outclk                                  ;
+;   4.315 ;   0.993 ; RR ; IC   ; 1      ; LCFF_X38_Y17_N29 ; auto_hub|\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][2]|clk                  ;
+;   4.917 ;   0.602 ; RR ; CELL ; 1      ; LCFF_X38_Y17_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][2] ;
+; 4.917   ; 0.000   ;    ;      ;        ;                  ; clock uncertainty                                                           ;
+; 5.203   ; 0.286   ;    ; uTh  ; 1      ; LCFF_X38_Y17_N29 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][2] ;
++---------+---------+----+------+--------+------------------+-----------------------------------------------------------------------------+
+
+

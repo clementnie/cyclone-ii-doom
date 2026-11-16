@@ -1,0 +1,2 @@
+PASS framebuffer MMIO: 18 request/held-valid, palette, status and access-fault checks
+<checkout>/phase10/build/tb_mmio.sv:29: $finish called at 1910000 (1ps)

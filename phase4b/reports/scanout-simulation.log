@@ -1,0 +1,6 @@
+make: Entering directory '<checkout>/phase4b'
+/tmp/de2-iverilog/usr/bin/iverilog -B /tmp/de2-iverilog/usr/lib/ivl -g2012 -Wall -s tb_scanout -o build/tb_scanout sim/tb_scanout.sv rtl/framebuffer.v
+/tmp/de2-iverilog/usr/bin/vvp build/tb_scanout
+PASS scanout: 2100000 reference pixels, palette, swap, forced late DMA/error, reset; grants=124561
+sim/tb_scanout.sv:59: $finish called at 169216440000 (1ps)
+make: Leaving directory '<checkout>/phase4b'
